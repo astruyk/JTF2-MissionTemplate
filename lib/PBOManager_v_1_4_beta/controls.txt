@@ -1,0 +1,11 @@
+	Hotkeys
+
+F2 - Rename
+Ctrl+C - Copy
+Ctrl+X - Cut
+Ctrl+V - Paste
+
+	Drag&Drop
+
+LeftMouseDrag - Cut
+Ctrl+LeftMouseDrag - Copy

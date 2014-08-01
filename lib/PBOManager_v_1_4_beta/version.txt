@@ -1,0 +1,22 @@
+v.1.0 beta
+ - basic version
+
+v.1.1 beta
+ -fixed: pbo file curruption after properties change ($prefix$, $product$ e.t.c.)
+ -fixed: programm crash after pressing Ctrl+A then Delete
+ -added: installer
+ -added: association with *.pbo files
+ -added: "create > pbo file" to system context menu
+
+v.1.2 beta
+ -added: shell extension for windows explorer
+ -added: PBOConsole -dialog start paremeter
+ -fixed: PBOConsole crashes trying to pack a folder to PBO
+
+v.1.3 beta
+ -added support of "non-resistance" (CWC) pbo files
+ -added automatic SHA1 checksum calulation for PBO's
+
+ v.1.4 beta
+ -fixed: incorrect timestamps after unpacking files from *.pbo
+ -added *.ifa support
