@@ -50,7 +50,7 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 // F3 - Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] spawn f_fnc_SetLocalFTMemberMarkers;
+//[] spawn f_fnc_SetLocalFTMemberMarkers;
 
 // ====================================================================================
 
@@ -182,7 +182,7 @@ f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear?
 // 1 - cache only non-leaders and non-drivers
 // 2 - cache all non-moving units, always exclude vehicle drivers
 // 3 - cache all units, incl. group leaders and vehicle drivers
-f_var_cachingAggressiveness = 2;
+f_var_cachingAggressiveness = 1;
 
 // ====================================================================================
 
