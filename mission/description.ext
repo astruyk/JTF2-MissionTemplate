@@ -13,8 +13,8 @@ class Header
 // ============================================================================================
 
 // F3 - Loading Screen
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 onLoadName = "*** Insert mission name here. ***";
 onLoadMission = "Made with the F3 Mission Development Framework";
 author = "*** Insert mission author name here. ***";
@@ -32,8 +32,8 @@ enableDebugConsole = 1;
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-respawn = 1;
-respawndelay = 3;
+respawn = 3;
+respawndelay = 30;
 respawnOnStart = 0;
 respawnTemplates[] = {"f_spectator","f_JIP"};
 

@@ -3936,22 +3936,30 @@ class Mission
 	};
 	class Markers
 	{
-		items=2;
+		items=4;
 		class Item0
 		{
-			position[]={14895.729,15.280982,17381.732};
-			name="f_insert";
-			text="insert";
-			type="mil_start";
-			angle=41.348423;
+			position[]={14633.526,17.91,16762.932};
+			name="respawn_west";
+			type="Empty";
 		};
 		class Item1
 		{
-			position[]={14850.49,16.111565,17330.52};
-			name="f_extract";
-			text="extract";
-			type="mil_end";
-			angle=41.348423;
+			position[]={22983.764,4.6243944,18866.369};
+			name="respawn_east";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={14624.842,17.91,16754.578};
+			name="respawn_civilian";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={9171.0762,14.408102,21653.186};
+			name="respawn_guerrila";
+			type="Empty";
 		};
 	};
 };
