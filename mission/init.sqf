@@ -1,9 +1,18 @@
+// Give zeus control of preplaced and automatically spawned units
+if (isServer) then
+{
+	// TODO - this can probably be a single loop. Oh well. This is easy.
+	[zeusModule1,true] execVM "ADV_zeus.sqf";
+	[zeusModule2,true] execVM "ADV_zeus.sqf";
+};
+
 // ====================================================================================
 
 // F3 - Disable Saving and Auto Saving
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 enableSaving [false, false];
+
 
 // ====================================================================================
 
