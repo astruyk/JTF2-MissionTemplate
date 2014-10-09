@@ -36,7 +36,8 @@ class Mission
 		"A3_Modules_F",
 		"A3_Characters_F_Bootcamp",
 		"A3_Characters_F_EPC",
-		"A3_Modules_F_Curator_Curator"
+		"A3_Modules_F_Curator_Curator",
+		"a3_soft_f_offroad_01"
 	};
 	addOnsAuto[]=
 	{
@@ -47,7 +48,6 @@ class Mission
 		"A3_Characters_F_INDEP",
 		"A3_Characters_F_Civil",
 		"A3_Modules_F",
-		"A3_Characters_F_Bootcamp",
 		"A3_Modules_F_Curator_Curator",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Heli_Light_02",
@@ -68,14 +68,15 @@ class Mission
 		"A3_Soft_F_MRAP_02",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
 		"A3_Soft_F_Truck",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Co-Op Mission Template";
-		overviewText="*** Insert mission description here. ***";
+		briefingName="JTF2 Dynamic Mission Template (v.0)";
+		overviewText="A blank mission template for zeus missions.";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0;
