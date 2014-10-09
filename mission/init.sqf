@@ -38,7 +38,7 @@ enableSentences false;
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_briefing = [] execVM "briefing.sqf";
+//f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
@@ -52,7 +52,7 @@ f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
 // F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
+// f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 
 // ====================================================================================
 
@@ -66,7 +66,7 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 // F3 - F3 Folk ARPS Group Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
+// f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
 // ====================================================================================
 
@@ -81,23 +81,23 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_removeBodyDelay = 180;
-// f_var_removeBodyDistance = 500;
-// f_var_doNotRemoveBodies = [];
-// [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+ f_var_removeBodyDelay = 60 * (20);
+ f_var_removeBodyDistance = 800;
+ f_var_doNotRemoveBodies = [];
+ [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
 // F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_viewDistance_default = 1250;
-// f_var_viewDistance_tank = 2000;
-// f_var_viewDistance_car = 2000;
-// f_var_viewDistance_rotaryWing = 2500;
-// f_var_viewDistance_fixedWing = 5000;
-// f_var_viewDistance_crewOnly = true;
-// [] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
+ f_var_viewDistance_default = 1800;
+ f_var_viewDistance_tank = 2500;
+ f_var_viewDistance_car = 2500;
+ f_var_viewDistance_rotaryWing = 3000;
+ f_var_viewDistance_fixedWing = 4000;
+ f_var_viewDistance_crewOnly = false;
+ [] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
 
 // ====================================================================================
 
@@ -155,7 +155,7 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 // F3 - ORBAT Notes
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\briefing\f_orbatNotes.sqf";
+//[] execVM "f\briefing\f_orbatNotes.sqf";
 
 // ====================================================================================
 
@@ -169,7 +169,7 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Mission Timer/Safe Start
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\safeStart\f_safeStart.sqf";
+//[] execVM "f\safeStart\f_safeStart.sqf";
 
 // ====================================================================================
 
