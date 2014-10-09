@@ -9,19 +9,36 @@ _curator = _this select 0;
 _addCivilians = _this select 1;
 
 //adds objects placed in editor:
-_curator addCuratorEditableObjects [vehicles,true];
-_curator addCuratorEditableObjects [(allMissionObjects "Man"),false];
-_curator addCuratorEditableObjects [(allMissionObjects "Air"),true];
-_curator addCuratorEditableObjects [(allMissionObjects "Ammo"),false];
-	
+
+_objectsToAdd = [];
+{
+	if (not (_x getVariable ["ADV_Zeus_Ignore", false])) then
+	{
+		_objectsToAdd pushBack _x;
+	};
+} forEach vehicles + (allMissionObjects "Man") + (allMissionObjects "Air")  + (allMissionObjects "Ammo");
+_curator addCuratorEditableObjects [_objectsToAdd, true];
+
 //makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
 while {true} do {
-	_toAdd = if (!_addCivilians && {(side _x) == civilian}) then {false} else {true};
+	_objectsToAdd = [];
+	
 	{
-		if (_toAdd) then {_curator addCuratorEditableObjects [[_x], true]};
+		if ((_addCivilians || (side _x != civilian)) && (not (_x getVariable ["ADV_Zeus_Ignore", false]))) then
+		{
+			_objectsToAdd pushBack _x;
+		};
 	} forEach allUnits;
-	_curator addCuratorEditableObjects [vehicles, true];
-	sleep 10;
+	
+	{
+		if (not (_x getVariable ["ADV_Zeus_Ignore", false])) then
+		{
+			_objectsToAdd pushBack _x;
+		};
+	} forEach vehicles;
+	
+	_curator addCuratorEditableObjects [_objectsToAdd, true];
+	sleep 20;
 };
 
 if (true) exitWith {};
