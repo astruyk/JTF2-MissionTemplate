@@ -6,6 +6,13 @@ if (isServer) then
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
 };
 
+// Setup the spawn points in a random spot on the map so we support all maps.
+// TODO optimize this - we don't need to compile this multiple times. Should be moved into function library.
+[west] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
+[east] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
+[independent] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
+[civilian] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
+
 // ====================================================================================
 
 // F3 - Disable Saving and Auto Saving
