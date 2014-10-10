@@ -10,6 +10,9 @@ class Header
 	maxPlayers = 453;
 };
 
+// Don't allow any AI units.
+disabledAI = true;
+
 // ============================================================================================
 
 // F3 - Loading Screen
@@ -146,7 +149,7 @@ class Params
             title = "Radio System";
             values[] = {0,1,2};
             texts[] = {"Off","ACRE","TFR"};
-            default = 2;
+            default = 0;
             code = "f_var_radios = %1";
     };
 
