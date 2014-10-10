@@ -63,21 +63,8 @@ if (isServer) then
 		};
 	};
 
-	// TODO just figure out where the base should be, let the players make their own (local) markers.
-	_markerName = [_side] call compile preprocessFileLineNumbers "jtf2\functions\GetMarkerNameForSide.sqf";
-	diag_log ("BASE: " + _markerName);
-	if (((getMarkerPos _markerName) select 0) == 0 && ((getMarkerPos _markerName) select 1) == 0) then
-	{
-		_marker = createMarker [_markerName, [_chosenLocation select 0, _chosenLocation select 1]];
-		_marker setMarkerShape "ICON";
-		_marker setMarkerType "Empty";
-	}
-	else
-	{
-		_markerName setMarkerPos [_chosenLocation select 0, _chosenLocation select 1];
-	};
-	
-	_variableName = "JTF2_BasePosition_" + _markerName;
+	// Broadcast that we've updated the location of the base.
+	_variableName = "JTF2_BasePosition_" + str(_side);
 	missionNamespace setVariable [_variableName, _chosenLocation];
 	publicVariable _variableName;
 }
