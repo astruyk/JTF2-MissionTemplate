@@ -506,7 +506,6 @@ class CfgFunctions
 		{
 			file = "jtf2\functions";
 			class GetMarkerNameForSide;
-			class MovePlayerToBase;
 			class PositionBase;
 		};
 	};
