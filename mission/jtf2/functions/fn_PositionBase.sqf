@@ -1,19 +1,15 @@
 /*
-	Moves the rewspawn point and player spawn position to a random position on the map so that any
-	map can be used with the mission.
+	Creates a variable that can be checked for a 'base' location for the specified side. By default it will also ensure the
+	respawn marker (e.g. 'respawn_civilian') is created at the same location so that units can spawn there.
 	
 	Parameters:
 		0 - Side - The side for the base to position.
-		1 - 2D Position Array (Optional) - The location to choose for the base.
-		
-		Note: Existing players will be moved to the base location when this is called. Be aware!
+		1 - Boolean (Optional) - Whether or not to ensure the respawn marker for the indicated side exists at that location. Default true.
+		2 - 2D Position Array (Optional) - The location to choose for the base. Default is to use a random location.
 */
 _side = _this select 0;
-_chosenLocation = [];
-if (count _this > 1) then
-{
-	_chosenLocation = _this select 1;
-};
+_ensureSpawnMarkerExist = [_this, 1, true, [true]] call BIS_fnc_param;
+_chosenLocation = [_this, 2, [], [[]], [2,3]] call BIS_fnc_param;
 
 if (isServer) then
 {
@@ -61,6 +57,21 @@ if (isServer) then
 		{
 			_chosenLocation=[(_worldsize/2),(_worldsize/2)];
 		};
+	};
+	
+	// Create or position a marker at the appropriate place. This is a global operation for the side.
+	_markerName = [_side] call JTF2_fnc_GetMarkerNameForSide;
+	_markerLocation = getMarkerPos _markerName;
+	if (_markerLocation select 0 == 0 && _markerLocation select 1 == 0 && _markerLocation select 2 == 0) then
+	{
+		// Marker does not exist. Create it.
+		_marker = createMarker [_markerName, _chosenLocation];
+		_marker setMarkerShape "ICON";
+		_marker setMarkerType "Empty";
+	}
+	else
+	{
+		_markerName setMarkerPos _chosenLocation;
 	};
 
 	// Broadcast that we've updated the location of the base.

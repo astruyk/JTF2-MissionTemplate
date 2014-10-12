@@ -1,3 +1,15 @@
+// JTF 2 Stuff to make Zeus place the initial respawn positions
+// Adapted from: http://forums.bistudio.com/showthread.php?173735-Custom-Zeus-MP-Gamemode-Spawn-Menu
+// Works in conjunction with some respawn settings specified below (in "F3 - Respawn Settings" section)
+class CfgRespawnInventory
+{
+	class WEST1
+	{
+		vehicle = "B_soldier_SL_F" ///Squad Leader
+	};
+};
+// END JTF2
+
 // ============================================================================================
 
 // F3 - Mission Header
@@ -35,10 +47,12 @@ enableDebugConsole = 1;
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-respawn = 1;
+respawn = "BASE";
 respawndelay = 3;
-respawnOnStart = 0;
-respawnTemplates[] = {"f_spectator"};
+respawnDialog = 1;
+respawnOnStart = 1;
+joinUnassigned = 1;
+respawnTemplates[] = {"MenuPosition"};
 //respawnTemplates[] = {"f_spectator","f_JIP"};
 
 // ============================================================================================
@@ -483,6 +497,18 @@ class CfgFunctions
 		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
 
+	};
+	
+	class JTF2
+	{
+		tag = "JTF2";
+		class functions
+		{
+			file = "jtf2\functions";
+			class GetMarkerNameForSide;
+			class MovePlayerToBase;
+			class PositionBase;
+		};
 	};
 };
 

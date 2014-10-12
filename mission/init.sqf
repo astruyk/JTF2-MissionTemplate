@@ -6,12 +6,9 @@ if (isServer) then
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
 };
 
-// Setup the spawn points in a random spot on the map so we support all maps.
-// TODO optimize this - we don't need to compile this multiple times. Should be moved into function library.
-[west] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
-[east] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
-[independent] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
-[civilian] call compile preprocessFileLineNumbers "jtf2\functions\PositionBase.sqf";
+// JTF2 Zeus respawn loadouts. Works in conjunction with classes in Description.ext file
+//[west, "WEST1"] call BIS_fnc_addRespawnInventory;
+// END JTF2 Zeus respawn stuff
 
 // ====================================================================================
 
