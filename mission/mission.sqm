@@ -84,8 +84,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14663.812,17.91,16789.916};
-					azimut=-216.106;
+					position[]={14446.362,17.800421,16010.82};
 					id=0;
 					side="CIV";
 					vehicle="C_man_polo_1_F";
@@ -95,6 +94,8 @@ class Mission
 					text="zeus1";
 					init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 					description="Primary GM";
+					syncId=0;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -106,8 +107,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14655.366,17.91,16781.904};
-					azimut=141.345;
+					position[]={14446.164,17.79911,16013.165};
 					id=1;
 					side="CIV";
 					vehicle="C_man_polo_2_F";
@@ -117,6 +117,8 @@ class Mission
 					text="zeus2";
 					init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 					description="Secondary GM";
+					syncId=1;
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -128,7 +130,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14669.457,17.91,16786.568};
+					position[]={14448.621,17.799999,16010.755};
 					class args
 					{
 						items=4;
@@ -164,8 +166,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule1";
-					syncId=0;
-					synchronizations[]={3};
+					syncId=2;
+					synchronizations[]={5,0};
 				};
 			};
 		};
@@ -177,7 +179,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14660.015,17.91,16777.416};
+					position[]={14448.581,17.799141,16013.145};
 					class args
 					{
 						items=4;
@@ -213,8 +215,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule2";
-					syncId=1;
-					synchronizations[]={3};
+					syncId=3;
+					synchronizations[]={5,1};
 				};
 			};
 		};
@@ -608,7 +610,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15078.449,18.01,16650.656};
+					position[]={14454.455,17.799999,16011.953};
 					class args
 					{
 						items=4;
@@ -645,8 +647,8 @@ class Mission
 					skill=0.60000002;
 					text="zeusRespawn";
 					description="Civilian Respawn Position";
-					syncId=2;
-					synchronizations[]={3};
+					syncId=4;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -658,7 +660,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14892.26,17.91,16685.014};
+					position[]={14451.11,17.799999,16012.005};
 					class args
 					{
 						items=2;
@@ -681,8 +683,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={0,1,2};
+					syncId=5;
+					synchronizations[]={2,3,4};
 				};
 			};
 		};
@@ -1263,7 +1265,7 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={14474.404,17.800564,15982.672};
+					position[]={14470.661,17.803944,15983.878};
 					id=83;
 					side="GUER";
 					vehicle="I_pilot_F";
@@ -1275,7 +1277,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={14477.176,17.801737,15980.76};
+					position[]={14472.83,17.803843,15981.785};
 					special="NONE";
 					id=84;
 					side="GUER";
@@ -1287,7 +1289,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={14480.053,17.798502,15980.534};
+					position[]={14475.524,17.80101,15981.74};
 					special="NONE";
 					id=85;
 					side="GUER";
@@ -1299,7 +1301,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={14482.986,17.79899,15980.589};
+					position[]={14478.339,17.798071,15981.553};
 					special="NONE";
 					id=86;
 					side="GUER";
