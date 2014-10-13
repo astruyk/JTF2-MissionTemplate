@@ -59,19 +59,29 @@ if (isServer) then
 		};
 	};
 	
-	// Create or position a marker at the appropriate place. This is a global operation for the side.
-	_markerName = [_side] call JTF2_fnc_GetMarkerNameForSide;
-	_markerLocation = getMarkerPos _markerName;
-	if (_markerLocation select 0 == 0 && _markerLocation select 1 == 0 && _markerLocation select 2 == 0) then
+	if (not isNil "zeusRespawn") then
 	{
-		// Marker does not exist. Create it.
-		_marker = createMarker [_markerName, _chosenLocation];
-		_marker setMarkerShape "ICON";
-		_marker setMarkerType "Empty";
+		// If there's a zeus respawn marker on the map, reposition it to the chosen base location.
+		zeusRespawn setPos _chosenLocation;
 	}
 	else
 	{
-		_markerName setMarkerPos _chosenLocation;
+		// Otherwise we'll check for a marker to respawn at instead.
+	
+		// Create or position a marker at the appropriate place. This is a global operation for the side.
+		_markerName = [_side] call JTF2_fnc_GetMarkerNameForSide;
+		_markerLocation = getMarkerPos _markerName;
+		if (_markerLocation select 0 == 0 && _markerLocation select 1 == 0 && _markerLocation select 2 == 0) then
+		{
+			// Marker does not exist. Create it.
+			_marker = createMarker [_markerName, _chosenLocation];
+			_marker setMarkerShape "ICON";
+			_marker setMarkerType "Empty";
+		}
+		else
+		{
+			_markerName setMarkerPos _chosenLocation;
+		};
 	};
 
 	// Broadcast that we've updated the location of the base.
