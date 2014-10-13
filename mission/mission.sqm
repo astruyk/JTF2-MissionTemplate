@@ -37,7 +37,8 @@ class Mission
 		"A3_Characters_F_Bootcamp",
 		"A3_Characters_F_EPC",
 		"A3_Modules_F_Curator_Curator",
-		"a3_soft_f_offroad_01"
+		"a3_soft_f_offroad_01",
+		"A3_Modules_F_Multiplayer"
 	};
 	addOnsAuto[]=
 	{
@@ -45,6 +46,7 @@ class Mission
 		"a3_characters_f",
 		"A3_Modules_F_Curator_Curator",
 		"A3_Characters_F_BLUFOR",
+		"A3_Modules_F_Multiplayer",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -70,7 +72,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			side="CIV";
@@ -159,6 +161,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule1";
+					syncId=0;
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -206,6 +210,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule2";
+					syncId=1;
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -759,6 +765,92 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					description="Pilot";
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15078.449,18.01,16650.656};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Name";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Side";
+						};
+						class Item3
+						{
+							value="2";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Marker";
+						};
+					};
+					id=49;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusRespawn";
+					description="Civilian Respawn Position";
+					syncId=2;
+					synchronizations[]={3};
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14892.26,17.91,16685.014};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleCuratorAddEditableObjects";
+							typeName="Curator";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ModuleCuratorAddEditableObjects";
+							typeName="AddCrew";
+						};
+					};
+					id=50;
+					side="LOGIC";
+					vehicle="ModuleCuratorAddEditableObjects";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=3;
+					synchronizations[]={0,1,2};
 				};
 			};
 		};
