@@ -1,32 +1,26 @@
 // from http://www.armaholic.com/page.php?id=27039
 _veh = _this select 0;
 _soldier = _this select 1;
-_req_headgear = switch (side _soldier) do
-{
-	case west: {"H_PilotHelmetHeli_B"};
-	case east: {"H_PilotHelmetHeli_O"};
-	default { "H_PilotHelmetHeli_B" };
-};
+_req_headgear = ["H_PilotHelmetHeli_B", "H_PilotHelmetHeli_O", "H_PilotHelmetHeli_I"];
 _headgear = headgear _soldier;
 
-if ((_headgear == _req_headgear) && (player == _soldier)) then
+if ((player == _soldier) && (_headgear in _req_headgear)) then
 {
-	player globalchat "condition passed";
+	//player globalchat "condition passed";
 	enabledLaserGuide = addMissionEventHandler [
 		"Draw3D",
 		{
-			_typeOfLaserTarget = switch (side player) do
+			_laze = nearestObjects[player, ["LaserTarget"], 1500];
 			{
-				case west: {"LaserTargetW"};
-				case east: {"LaserTargetE"};
-				default { "LaserTargetW" };
-			};
-			_laze = nearestObjects[player, [_typeOfLaserTarget], 1500];
-			{
-				_laserisinsector = [position player, getdir player, 90, position _x] call BIS_fnc_inAngleSector;
-				_lasernotvisible = lineIntersects [eyePos player, position _x, player];
-				if ( (_laserisinsector) && (!_lasernotvisible) ) then
-				{drawIcon3D ["\A3\ui_f\data\igui\cfg\cursors\attack_ca.paa", [1,0,0,1], visiblePosition _x, 1, 1, 45, ""]};
+				_laserIsInSector = [position player, getdir player, 90, position _x] call BIS_fnc_inAngleSector;
+				_laserNotVisible = lineIntersects [eyePos player, position _x, player, (vehicle player)];
+				if ( (_laserIsInSector) && (!_laserNotVisible) ) then
+				{
+					// Position needs to be calculated using this formula because of comment at https://community.bistudio.com/wiki/drawIcon3D
+					_pos = visiblePositionASL _x;
+					_pos set [2, (_x modelToWorld [0,0,0]) select 2];
+					drawIcon3D ["\A3\ui_f\data\igui\cfg\cursors\known_target_ca.paa", [0.75,0,0,0.9], _pos, 1, 1, 0, ""]
+				};
 			} forEach _laze;
 		}
 	];
