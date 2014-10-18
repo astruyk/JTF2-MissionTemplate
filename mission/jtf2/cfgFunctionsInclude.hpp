@@ -8,5 +8,6 @@ class JTF2
 		class PositionBase;
 		class enableLaserGuide;
 		class initVehicleForLaserGuide;
+		class setupSign;
 	};
 };
