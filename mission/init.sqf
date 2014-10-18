@@ -1,9 +1,15 @@
 // Give zeus control of preplaced and automatically spawned units
-if (isServer) then
+if (isServer && (jtf2_param_add_objects_to_zeus == 1)) then
 {
 	// TODO - this can probably be a single loop. Oh well. This is easy.
 	[zeusModule1,true] execVM "ADV_zeus.sqf";
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
+};
+
+if (jtf2_param_enable_laser_for_helicopters == 1) then
+{
+	// Run script to perform custom init functions on vehicles that are spawned dynamically.
+	[] execVM "jtf2\scripts\InitDynamicVehicles.sqf"
 };
 
 // JTF2 Zeus respawn loadouts. Works in conjunction with classes in Description.ext file

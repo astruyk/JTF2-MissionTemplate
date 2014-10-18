@@ -282,7 +282,25 @@ class Params
 
 // F3 - End of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
-
+	
+	// JTF2 custom params
+	class jtf2_param_add_objects_to_zeus
+	{
+		title = "Add objects to Zeus automatically";
+		values[] = { 1, 0 };
+		texts[] = { "Yes", "No" };
+		default = 1;
+		code = "jtf2_param_add_objects_to_zeus = %1";
+	};
+	
+	class jtf2_param_enable_laser_for_helicopters
+	{
+		title = "Make laser designator visible to helicopter pilots.";
+		values[] = { 1, 0 };
+		texts[] = { "Yes", "No" };
+		default = 1;
+		code = "jtf2_param_enable_laser_for_helicopters = %1";
+	};
 };
 
 // ============================================================================================

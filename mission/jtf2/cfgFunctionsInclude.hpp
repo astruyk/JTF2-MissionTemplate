@@ -7,6 +7,6 @@ class JTF2
 		class GetMarkerNameForSide;
 		class PositionBase;
 		class enableLaserGuide;
-		class initVehicle;
+		class initVehicleForLaserGuide;
 	};
 };
