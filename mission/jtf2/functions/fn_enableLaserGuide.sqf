@@ -10,18 +10,21 @@ if ((player == _soldier) && (_headgear in _req_headgear)) then
 	enabledLaserGuide = addMissionEventHandler [
 		"Draw3D",
 		{
-			_laze = nearestObjects[player, ["LaserTarget"], 1500];
+			if (not isNull player) then
 			{
-				_laserIsInSector = [position player, getdir player, 90, position _x] call BIS_fnc_inAngleSector;
-				_laserNotVisible = lineIntersects [eyePos player, position _x, player, (vehicle player)];
-				if ( (_laserIsInSector) && (!_laserNotVisible) ) then
+				_laze = nearestObjects [player, ["LaserTarget"], 1500];
 				{
-					// Position needs to be calculated using this formula because of comment at https://community.bistudio.com/wiki/drawIcon3D
-					_pos = visiblePositionASL _x;
-					_pos set [2, (_x modelToWorld [0,0,0]) select 2];
-					drawIcon3D ["\A3\ui_f\data\igui\cfg\cursors\known_target_ca.paa", [0.75,0,0,0.9], _pos, 1, 1, 0, ""]
-				};
-			} forEach _laze;
+					_laserIsInSector = [position player, getdir player, 90, position _x] call BIS_fnc_inAngleSector;
+					_laserNotVisible = lineIntersects [eyePos player, position _x, player, (vehicle player)];
+					if ( (_laserIsInSector) && (!_laserNotVisible) ) then
+					{
+						// Position needs to be calculated using this formula because of comment at https://community.bistudio.com/wiki/drawIcon3D
+						_pos = visiblePositionASL _x;
+						_pos set [2, (_x modelToWorld [0,0,0]) select 2];
+						drawIcon3D ["\A3\ui_f\data\igui\cfg\cursors\known_target_ca.paa", [0.75,0,0,0.9], _pos, 1, 1, 0, ""]
+					};
+				} forEach _laze;
+			};
 		}
 	];
 	_veh addEventHandler [
