@@ -53,6 +53,16 @@ Spawn_Caf_Ag_Group =
 		}
 	],
 	[
+		"Delete Units Within 10m",
+		{
+			_objects = nearestObjects [(_this select 0), ["AllVehicles"], 10];
+			{
+				deleteVehicle _x;
+			} forEach _objects;
+			[];
+		}
+	],
+	[
 		"Delete Units Within 100m",
 		{
 			_objects = nearestObjects [(_this select 0), ["AllVehicles"], 100];
