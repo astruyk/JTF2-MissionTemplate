@@ -12,9 +12,6 @@ if (jtf2_param_enable_laser_for_helicopters == 1) then
 	[] execVM "jtf2\scripts\InitDynamicVehicles.sqf"
 };
 
-// Some custom unit definitions for Ares
-[] execVM "Ares_Add_CAF_AG_Units.sqf";
-
 // JTF2 Zeus respawn loadouts. Works in conjunction with classes in Description.ext file
 //[west, "WEST1"] call BIS_fnc_addRespawnInventory;
 // END JTF2 Zeus respawn stuff
