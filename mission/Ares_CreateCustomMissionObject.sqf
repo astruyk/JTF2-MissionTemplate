@@ -44,5 +44,3 @@ else
 		Ares_CustomMissionObjectData pushBack [_optionName, _codeBlock];
 	} forEach _this;
 };
-
-
