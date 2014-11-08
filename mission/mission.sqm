@@ -44,6 +44,7 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
 		"A3_Modules_F_Curator_Curator",
+		"A3_Modules_F_Multiplayer",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -69,7 +70,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=14;
 		class Item0
 		{
 			side="WEST";
@@ -620,7 +621,7 @@ class Mission
 					skill=0.60000002;
 					text="zeusModule1";
 					syncId=0;
-					synchronizations[]={2};
+					synchronizations[]={2,4};
 				};
 			};
 		};
@@ -669,7 +670,7 @@ class Mission
 					skill=0.60000002;
 					text="zeusModule2";
 					syncId=1;
-					synchronizations[]={3};
+					synchronizations[]={3,4};
 				};
 			};
 		};
@@ -718,6 +719,91 @@ class Mission
 					description="Zeus";
 					syncId=3;
 					synchronizations[]={1};
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14450.998,17.799999,16011.906};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleCuratorAddEditableObjects";
+							typeName="Curator";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ModuleCuratorAddEditableObjects";
+							typeName="AddCrew";
+						};
+					};
+					id=41;
+					side="LOGIC";
+					vehicle="ModuleCuratorAddEditableObjects";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={1,0,5};
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14454.12,17.799999,16012.009};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Name";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Side";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Marker";
+						};
+					};
+					id=42;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusRespawn";
+					syncId=5;
+					synchronizations[]={4};
 				};
 			};
 		};
