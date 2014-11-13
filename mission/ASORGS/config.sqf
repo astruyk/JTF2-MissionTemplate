@@ -84,6 +84,36 @@ ASORGS_BackgroundTile = "A3\ui_f\data\GUI\cfg\LoadingScreens\loadingnoise_ca.paa
 
 //Items that should not be shown in any lists
 ASORGS_Blacklist = [];
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 1) then
+{
+	ASORGS_Blacklist = ASORGS_Blacklist + [
+			"Laserdesignator",
+			"optic_Nightstalker",
+			"optic_tws",
+			"optic_tws_mg"
+		];
+};
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 2) then
+{
+	ASORGS_Blacklist = ASORGS_Blacklist + [
+		"Rangefinder",
+		"B_UavTerminal",
+		"O_UavTerminal",
+		"I_UavTerminal",
+		"ItemGPS",
+		"MineDetector",
+		"NVGoggles",
+		"NVGoggles_OPFOR",
+		"NVGoggles_INDEP",
+		"optic_Arco",
+		"optic_Hamr",
+		"optic_SOS",
+		"optic_MRCO",
+		"acc_pointer_IR",
+		"optic_DMS",
+		"optic_LRPS"
+	];
+};
 
 //You can also add a blacklist per side AND/OR per faction. All blacklists that match player when ASORGS is opened will be included. Examples:
 //ASORGS_Blacklist_WEST = []; //hide items for all west units
