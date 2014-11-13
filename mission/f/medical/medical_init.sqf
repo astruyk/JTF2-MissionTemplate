@@ -32,4 +32,9 @@ call
 			[] execVM "f\medical\AGM_clientInit.sqf";
 		};
 	};
+	// X-MedSys
+	if (f_var_medical == 3) exitWith
+	{
+		[] call X39_MedSys_fnc_initMod;
+	};
 };

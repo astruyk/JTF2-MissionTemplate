@@ -175,9 +175,9 @@ class Params
     class f_param_medical
     {
             title = "Medical System";
-            values[] = {0,1,2};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
-            default = 0;
+            values[] = {0,1,2,3};
+            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod","XMedSys"};
+            default = 3;
             code = "f_var_medical = %1";
     };
 
@@ -300,6 +300,15 @@ class Params
 		texts[] = { "Yes", "No" };
 		default = 1;
 		code = "jtf2_param_enable_laser_for_helicopters = %1";
+	};
+	
+	class jtf2_starting_loadouts
+	{
+		title = "Starting loadouts";
+		values[] = { 0, 1 };
+		texts[] = { "Just the basics", "Normal Loadouts" };
+		default = 0;
+		code = "jtf2_param_starting_loadouts = %1";
 	};
 };
 
