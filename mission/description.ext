@@ -7,6 +7,7 @@ class Header
 
 // Don't allow any AI units.
 disabledAI = true;
+enableDebugConsole = 1;  // Admins and hosts
 
 onLoadName = "JTF2 Dynamic Ops";
 onLoadMission = "Mission template for running JTF2 ops with a GM";
@@ -36,7 +37,7 @@ class Params
 	#include "\a3\functions_f\Params\paramWeather.hpp"
 	#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
 	#include "\a3\functions_f\Params\paramGuerFriendly.hpp"
-	#include "\a3\functions_f\Params\paramDebugConsole.hpp"
+	// #include "\a3\functions_f\Params\paramDebugConsole.hpp"
 	
 	class jtf2_param_add_objects_to_zeus
 	{
@@ -83,6 +84,14 @@ class Params
 		title = "Enable IgiLoad Logistics";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
+		default = 1;
+	};
+	
+	class jtf2_param_item_blacklists
+	{
+		title = "Blacklist Items in VAS/ASORGS";
+		values[] = { 0, 1, 2 };
+		texts[] = { "Nothing", "Advanced Items Only", "Advanced Items + Optics" };
 		default = 1;
 	};
 };

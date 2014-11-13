@@ -84,6 +84,7 @@ ASORGS_BackgroundTile = "A3\ui_f\data\GUI\cfg\LoadingScreens\loadingnoise_ca.paa
 
 //Items that should not be shown in any lists
 ASORGS_Blacklist = [];
+
 //You can also add a blacklist per side AND/OR per faction. All blacklists that match player when ASORGS is opened will be included. Examples:
 //ASORGS_Blacklist_WEST = []; //hide items for all west units
 //ASORGS_Blacklist_BLU_F = []; //hide items for all NATO (class name BLU_F) units

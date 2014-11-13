@@ -27,6 +27,43 @@ if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
 	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 };
 
+// Setup variable for the blacklists
+if (isNil "ASORGS_RuntimeBlacklist") then
+{
+	ASORGS_Blacklist = [];
+};
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 1) then
+{
+	ASORGS_Blacklist = ASORGS_Blacklist + [
+			"Laserdesignator",
+			"optic_Nightstalker",
+			"optic_tws",
+			"optic_tws_mg"
+		];
+};
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 2) then
+{
+		ASORGS_Blacklist = ASORGS_Blacklist + [
+			"Rangefinder",
+			"B_UavTerminal",
+			"O_UavTerminal",
+			"I_UavTerminal",
+			"ItemGPS",
+			"MineDetector",
+			"NVGoggles",
+			"NVGoggles_OPFOR",
+			"NVGoggles_INDEP",
+			"optic_Arco",
+			"optic_Hamr",
+			"optic_SOS",
+			"optic_MRCO",
+			"acc_pointer_IR",
+			"optic_DMS",
+			"optic_LRPS"
+		];
+
+};
+
 enableSaving [false, false]; //Don't allow saving
 enableSentences false; // Keep the commander units from saying things automatically
 
@@ -65,3 +102,5 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 // Setup the Ares functionality to allow the spawning of the ammo boxes
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
+
+
