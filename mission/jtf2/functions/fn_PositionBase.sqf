@@ -43,19 +43,36 @@ if (isServer) then
 				"VegetationPalm",
 				"VegetationVineyard"
 			],
-			5000];
+			9000];
 		
 		// Choose a spot within 5-500m of a randomly chosen element
 		if (count _locations > 0) then
 		{
 			_chosenLocation = locationposition (_locations call BIS_fnc_selectRandom);
-			_chosenLocation = _chosenLocation findEmptyPosition [5, 500];
+			_chosenLocation = [
+				_chosenLocation, // Center point
+				10, // Minimum distance from center
+				1000, // Maximum distance from center
+				10, // Minimum size of space
+				0, // 0 - not in water, 1 - either in water or not, 2 - must be in water
+				3,  // Maximum terrain gradient
+				0  // 0 - does not have to be at shore, 1 - must be at shore
+				] call BIS_fnc_findSafePos; // There is more, but I don't care.
 		};
 
-		// If we couldn't find a position around something interesting, use the center of the world.
+		// If we couldn't find a position around something interesting, use the a point around the default world
+		// safe point, but search BIG.
 		if (count _chosenLocation < 1) then
 		{
-			_chosenLocation=[(_worldsize/2),(_worldsize/2)];
+			_chosenLocation=[
+				[], // Center point. passing [] (empty Array), the world's safePositionAnchor entry will be used.
+				10, // Minimum distance from center
+				10000, // Maximum distance from center
+				10, // Minimum size of space
+				0, // 0 - not in water, 1 - either in water or not, 2 - must be in water
+				3,  // Maximum terrain gradient
+				0  // 0 - does not have to be at shore, 1 - must be at shore
+				] call BIS_fnc_findSafePos; // There is more, but I don't care.
 		};
 	};
 	
