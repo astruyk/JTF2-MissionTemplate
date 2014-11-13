@@ -87,8 +87,12 @@ class Params
 	};
 };
 
+#include "ASORGS\menu.hpp"
+#include "VAS\menu.hpp"
 class CfgFunctions
 {
 	#include "jtf2\cfgFunctionsInclude.hpp"
 	#include "dgm\functions\functions.hpp"
+	#include "ASORGS\cfgfunctions.hpp"
+	#include "VAS\cfgfunctions.hpp"
 };

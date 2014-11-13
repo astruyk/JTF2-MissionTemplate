@@ -61,3 +61,7 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 		}];
 	};
 };
+
+// Setup the Ares functionality to allow the spawning of the ammo boxes
+[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
+[] execVm "Ares_AddVasCustomMissionObject.sqf";
