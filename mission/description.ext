@@ -25,7 +25,7 @@ class CfgRespawnInventory
 };
 
 respawn = "BASE";
-respawndelay = 3;
+respawndelay = 0;
 respawnDialog = 1;
 respawnOnStart = 1;
 joinUnassigned = 1;
@@ -33,49 +33,57 @@ respawnTemplates[] = { "MenuPosition" };
 
 class Params
 {
-	class jtf2_add_objects_to_zeus
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+	#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
+	#include "\a3\functions_f\Params\paramGuerFriendly.hpp"
+	#include "\a3\functions_f\Params\paramDebugConsole.hpp"
+	
+	class jtf2_param_add_objects_to_zeus
 	{
 		title = "Add objects to Zeus automatically";
-		values[] = { 1, 0 };
-		texts[] = { "Yes", "No" };
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
 		default = 1;
-		code = "jtf2_param_add_objects_to_zeus = %1";
 	};
 	
-	class jtf2_enable_laser_for_helicopters
+	class jtf2_param_enable_laser_for_helicopters
 	{
 		title = "Make laser designator visible to helicopter pilots.";
-		values[] = { 1, 0 };
-		texts[] = { "Yes", "No" };
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
 		default = 1;
-		code = "jtf2_param_enable_laser_for_helicopters = %1";
 	};
 	
-	class jtf2_starting_loadouts
+	class jtf2_param_starting_loadouts
 	{
 		title = "Starting loadouts";
 		values[] = { 0, 1 };
 		texts[] = { "Just the basics", "Normal Loadouts" };
 		default = 0;
-		code = "jtf2_param_starting_loadouts = %1";
 	};
 	
-	class jtf2_enable_xmed
+	class jtf2_param_enable_xmed
 	{
 		title = "Enable XMed";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
 		default = 1;
-		code = "jtf_param_enable_xmed = %1";
 	};
 	
-	class jtf2_enable_dynamic_groups
+	class jtf2_param_enable_dynamic_groups
 	{
 		title = "Enable Group Joining / leaving";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
 		default = 1;
-		code = "jtf2_param_enable_dynamic_groups = %1";
+	};
+	
+	class jtf2_param_enable_igiLoad
+	{
+		title = "Enable IgiLoad Logistics";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
 	};
 };
 
