@@ -36,7 +36,9 @@ class Mission
 		"A3_Characters_F_EPC",
 		"A3_Modules_F_Curator_Curator",
 		"a3_soft_f_offroad_01",
-		"A3_Modules_F_Multiplayer"
+		"A3_Modules_F_Multiplayer",
+		"A3_Supplies_F_Heli_CargoNets",
+		"A3_Weapons_F_Ammoboxes"
 	};
 	addOnsAuto[]=
 	{

@@ -94,6 +94,14 @@ class Params
 		texts[] = { "Nothing", "Advanced Items Only", "Advanced Items + Optics" };
 		default = 1;
 	};
+	
+	class jtf2_param_start_with_ammoboxes
+	{
+		title = "Ammoboxes at spawn";
+		values[] = { 0, 1, 2, 3};
+		texts[] = { "None", "ASORG Only", "VAS Only", "Both ASORG and VAS" };
+		default = 1;
+	};
 };
 
 #include "ASORGS\menu.hpp"

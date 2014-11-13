@@ -6,6 +6,10 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
 };
 
+// Setup the Ares functionality to allow the spawning of the ammo boxes
+[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
+[] execVm "Ares_AddVasCustomMissionObject.sqf";
+
 if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getParamValue) == 1) then
 {
 	// Run script to perform custom init functions on vehicles that are spawned dynamically.
@@ -34,6 +38,27 @@ if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
 	[west] call JTF2_fnc_PositionBase;
+
+	[] spawn
+	{
+		waitUntil {!isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box"};
+		_ammoBoxParam = "jtf2_param_start_with_ammoboxes" call BIS_fnc_getParamValue;
+		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
+		{
+			// Create ASORG box
+			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Asorgs_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+		};
+		if (_ammoBoxParam == 2 || _ammoBoxParam == 3) then
+		{
+			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Vas_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+		};
+	};
 };
 
 if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) == 0) then
@@ -62,8 +87,6 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 	};
 };
 
-// Setup the Ares functionality to allow the spawning of the ammo boxes
-[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
-[] execVm "Ares_AddVasCustomMissionObject.sqf";
+
 
 
