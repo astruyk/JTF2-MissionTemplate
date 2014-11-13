@@ -68,9 +68,19 @@ class Params
 		default = 1;
 		code = "jtf_param_enable_xmed = %1";
 	};
+	
+	class jtf2_enable_dynamic_groups
+	{
+		title = "Enable Group Joining / leaving";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+		code = "jtf2_param_enable_dynamic_groups = %1";
+	};
 };
 
 class CfgFunctions
 {
 	#include "jtf2\cfgFunctionsInclude.hpp"
+	#include "dgm\functions\functions.hpp"
 };

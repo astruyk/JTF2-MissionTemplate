@@ -6,24 +6,27 @@ if (isServer && (jtf2_param_add_objects_to_zeus == 1)) then
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
 };
 
-if (jtf2_param_enable_laser_for_helicopters == 1) then
+if (!isServer && jtf2_param_enable_laser_for_helicopters == 1) then
 {
 	// Run script to perform custom init functions on vehicles that are spawned dynamically.
 	[] execVM "jtf2\scripts\InitDynamicVehicles.sqf"
 };
 
-if (jtf_param_enable_xmed) then
+if (jtf_param_enable_xmed == 1) then
 {
 	[] call X39_MedSys_fnc_initMod;
+};
+
+if (!isServer && jtf2_param_enable_dynamic_groups == 1) then
+{
+	[player] execVM "scripts\groupsMenu\initGroups.sqf";
 };
 
 enableSaving [false, false]; //Don't allow saving
 enableSentences false; // Keep the commander units from saying things automatically
 
-
-// ====================================================================================
-// F3 - Join Group Action
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[false] execVM "f\groupJoin\f_groupJoinAction.sqf";
-// ====================================================================================
+if (isServer) then
+{
+	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
+	[west] call JTF2_fnc_PositionBase;
+};
