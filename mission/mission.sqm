@@ -39,7 +39,8 @@ class Mission
 		"A3_Modules_F_Multiplayer",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Weapons_F_Ammoboxes",
-		"A3_Characters_F_INDEP"
+		"A3_Characters_F_INDEP",
+		"A3_Characters_F_Civil"
 	};
 	addOnsAuto[]=
 	{
@@ -49,7 +50,7 @@ class Mission
 		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_INDEP",
-		"A3_Characters_F_EPC",
+		"A3_Characters_F_Civil",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -1202,7 +1203,7 @@ class Mission
 					position[]={14446.269,17.799093,16013.179};
 					id=84;
 					side="CIV";
-					vehicle="C_scientist_F";
+					vehicle="C_man_hunter_1_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1225,7 +1226,7 @@ class Mission
 					position[]={14446.219,17.799999,16011.847};
 					id=85;
 					side="CIV";
-					vehicle="C_scientist_F";
+					vehicle="C_man_hunter_1_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
