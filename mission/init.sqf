@@ -41,7 +41,7 @@ if (isServer) then
 
 	[] spawn
 	{
-		waitUntil {!isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box"};
+		waitUntil { !isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box" };
 		_ammoBoxParam = "jtf2_param_start_with_ammoboxes" call BIS_fnc_getParamValue;
 		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
 		{
@@ -87,6 +87,37 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 	};
 };
 
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 1) then
+{
+	ASORGS_Blacklist = ASORGS_Blacklist + [
+			"Laserdesignator",
+			"optic_Nightstalker",
+			"optic_tws",
+			"optic_tws_mg"
+		];
+};
+if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 2) then
+{
+	ASORGS_Blacklist = ASORGS_Blacklist + [
+		"Rangefinder",
+		"B_UavTerminal",
+		"O_UavTerminal",
+		"I_UavTerminal",
+		"ItemGPS",
+		"MineDetector",
+		"NVGoggles",
+		"NVGoggles_OPFOR",
+		"NVGoggles_INDEP",
+		"optic_Arco",
+		"optic_Hamr",
+		"optic_SOS",
+		"optic_MRCO",
+		"acc_pointer_IR",
+		"optic_DMS",
+		"optic_LRPS"
+	];
+};
+// [] call ASORGS_fnc_buildDatabase.sqf;
 
 
 
