@@ -18,7 +18,14 @@ if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getP
 
 if (("jtf2_param_enable_xmed" call BIS_fnc_getParamValue) == 1) then
 {
-	[] call X39_MedSys_fnc_initMod;
+	if (isClass (configFile >> "CfgPatches" >> "X39_MedSys_Scripting")) then
+	{
+		[] call X39_MedSys_fnc_initMod;
+	}
+	else
+	{
+		diag_log "Unable to start xmedSys because the scripting module was not found.";
+	};
 };
 
 if (!isDedicated && ("jtf2_param_enable_dynamic_groups" call BIS_fnc_getParamValue) == 1) then
