@@ -58,14 +58,14 @@ class Params
 	class jtf2_param_starting_loadouts
 	{
 		title = "Starting loadouts";
-		values[] = { 0, 1 };
-		texts[] = { "Just the basics", "Normal Loadouts" };
-		default = 0;
+		values[] = { 0, 1, 2, 3, 4 };
+		texts[] = { "Default", "Basics", "Basics (CADPAT TW)", "Basics (CADPAT AR)", "Basics (JTF2)" };
+		default = 1;
 	};
 	
 	class jtf2_param_enable_xmed
 	{
-		title = "Enable XMed";
+		title = "Enable XMed (ignored if mod not present)";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
 		default = 1;
@@ -89,9 +89,9 @@ class Params
 	
 	class jtf2_param_item_blacklists
 	{
-		title = "Blacklist Items in VAS/ASORGS";
+		title = "ASOR/VAS Item Restrictions";
 		values[] = { 0, 1, 2 };
-		texts[] = { "Nothing", "Advanced Items Only", "Advanced Items + Optics" };
+		texts[] = { "All Items Available", "Remove Thermal Optics", "Remove Thermal + Zoomed Optics" };
 		default = 1;
 	};
 	

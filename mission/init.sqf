@@ -92,7 +92,7 @@ if (isServer) then
 	};
 };
 
-if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) == 0) then
+if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) > 0) then
 {
 	[] spawn {
 		waitUntil { alive player };
@@ -114,6 +114,40 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 			_unit linkItem "ItemCompass";
 			_unit linkItem "ItemRadio";
 			_unit linkItem "ItemWatch";
+			
+			if (isClass (configFile >> "CfgPatches" >> "CFB_Skins") && "jtf2_param_starting_loadouts" call BIS_fnc_getParamValue >= 2) then
+			{
+				_uniformReplacements = [];
+				switch ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) do
+				{
+					case 2: // CADPAT TW
+					{
+						_uniformReplacements = ["CFB_TW_Uniform", "CFB_TW_Rolled_Uniform", "CFB_TW_Tshirt_Uniform"];
+					};
+					case 3: // CADPAT AR
+					{
+						_uniformReplacements = ["CFB_AR_Uniform", "CFB_AR_Rolled_Uniform", "CFB_AR_Tshirt_Uniform"];
+					};
+					case 4: // JTF2
+					{
+						_uniformReplacements = ["CFB_JTF2_Uniform", "CFB_JTF2_Rolled_Uniform", "CFB_JTF2_Tshirt_Uniform"];
+					};
+				};
+				
+				if ((uniform _unit) in ["U_B_HeliPilotCoveralls", "U_I_HeliPilotCoveralls"]) then
+				{
+					_uniformReplacements = ["CFB_RCAF_Helo_Pilot"];
+				};
+				
+				if (count _uniformReplacements > 0) then
+				{
+					_unit forceAddUniform (_uniformReplacements call BIS_fnc_SelectRandom);
+				};
+			}
+			else
+			{
+				diag_log "Unable to use CFB_skins uniforms since mod isn't loaded.";
+			};
 		}];
 	};
 };
@@ -145,9 +179,13 @@ if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 2) then
 		"optic_MRCO",
 		"acc_pointer_IR",
 		"optic_DMS",
-		"optic_LRPS"
+		"optic_LRPS",
+		"optic_NVS"
 	];
 };
+vas_r_items = vas_r_items + ASORGS_Blacklist;
+vas_r_weapons = vas_r_weapons + ASORGS_Blacklist;
+vas_r_magazines = vas_r_magazines + ASORGS_Blacklist;
 // [] call ASORGS_fnc_buildDatabase.sqf;
 
 
