@@ -45,12 +45,14 @@ if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
 	[civilian, zeusRespawn] call JTF2_fnc_PositionBase;
-	[west, zeusRespawn] call JTF2_fnc_PositionBase;
-	[independent, zeusRespawn] call JTF2_fnc_PositionBase;
+	//[west, zeusRespawn] call JTF2_fnc_PositionBase;
+	//[independent, zeusRespawn] call JTF2_fnc_PositionBase;
 
 	[] spawn
 	{
-		waitUntil { !isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box" };
+		waitUntil { !isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box"};
+		sleep 1; // Needed otherwise the BIS_fnc_MP won't trigger correctly and the boxes don't get ammo set right.
+		
 		_ammoBoxParam = "jtf2_param_start_with_ammoboxes" call BIS_fnc_getParamValue;
 		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
 		{
