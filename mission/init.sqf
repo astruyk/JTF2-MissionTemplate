@@ -44,7 +44,9 @@ enableSentences false; // Keep the commander units from saying things automatica
 if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
+	[civilian, zeusRespawn] call JTF2_fnc_PositionBase;
 	[west, zeusRespawn] call JTF2_fnc_PositionBase;
+	[independent, zeusRespawn] call JTF2_fnc_PositionBase;
 
 	[] spawn
 	{
@@ -53,15 +55,35 @@ if (isServer) then
 		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
 		{
 			// Create ASORG box
+			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Asorgs_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			
 			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Asorgs_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			
+			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Asorgs_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
 		};
 		if (_ammoBoxParam == 2 || _ammoBoxParam == 3) then
 		{
+			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Vas_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			
 			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Vas_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
+			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			
+			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Vas_Ammo_Box;
+			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
 		};
