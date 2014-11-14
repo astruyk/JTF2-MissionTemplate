@@ -60,7 +60,7 @@ if (isServer) then
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
 			
-			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Asorgs_Ammo_Box;
+			/*_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Asorgs_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
@@ -68,7 +68,7 @@ if (isServer) then
 			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Asorgs_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];*/
 		};
 		if (_ammoBoxParam == 2 || _ammoBoxParam == 3) then
 		{
@@ -77,7 +77,7 @@ if (isServer) then
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
 			
-			_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Vas_Ammo_Box;
+			/*_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Vas_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
@@ -85,7 +85,7 @@ if (isServer) then
 			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Vas_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
+			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];*/
 		};
 	};
 };
