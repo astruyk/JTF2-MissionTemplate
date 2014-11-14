@@ -52,8 +52,8 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Dynamic Mission Template (v.1.0.0)";
-		overviewText="A blank mission template for zeus missions.";
+		briefingName="JTF2 Dynamic Missions (v.1.0.0)";
+		overviewText="A blank mission template for zeus/MCC missions.";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0;
