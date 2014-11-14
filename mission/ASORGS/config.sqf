@@ -75,8 +75,8 @@ ASORGS_brightMaps = []; //pja305 v6 or less
 ASORGS_UniformSideRestriction = true;
 
 //Background logo. Can be in a mod or in a mission. .paa (recommended) or .jpg
-ASORGS_BackgroundLogo = "A3\ui_f\data\Logos\arma3_expansion_ca.paa";
-//ASORGS_BackgroundLogo = "clan_logo.jpg"; //Image in your mission folder.
+//ASORGS_BackgroundLogo = "A3\ui_f\data\Logos\arma3_expansion_ca.paa";
+ASORGS_BackgroundLogo = "ASOR_bg.paa"; //Image in your mission folder.
 //ASORGS_BackgroundLogo = "clan-textures\clan_logo.paa"; //Image in clan-textures.pbo addon
 
 //Background tile (Arma 3 loading screen noise)
