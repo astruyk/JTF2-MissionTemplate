@@ -37,7 +37,7 @@ enableSentences false; // Keep the commander units from saying things automatica
 if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
-	[west] call JTF2_fnc_PositionBase;
+	[west, zeusRespawn] call JTF2_fnc_PositionBase;
 
 	[] spawn
 	{
