@@ -34,9 +34,9 @@ respawnTemplates[] = { "MenuPosition" };
 
 class Params
 {
-	#include "\a3\functions_f\Params\paramWeather.hpp"
-	#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
-	#include "\a3\functions_f\Params\paramGuerFriendly.hpp"
+	// #include "\a3\functions_f\Params\paramWeather.hpp"
+	// #include "\a3\functions_f\Params\paramDaytimeHour.hpp"
+	// #include "\a3\functions_f\Params\paramGuerFriendly.hpp"
 	// #include "\a3\functions_f\Params\paramDebugConsole.hpp"
 	
 	class jtf2_param_add_objects_to_zeus
