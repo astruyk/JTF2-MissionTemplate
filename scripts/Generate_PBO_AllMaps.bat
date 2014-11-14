@@ -6,3 +6,4 @@ call .\Generate_PBO.bat Utes
 call .\Generate_PBO.bat Zargabad
 call .\Generate_PBO.bat Bystrica
 call .\Generate_PBO.bat Wake
+call .\Generate_PBO.bat VR
