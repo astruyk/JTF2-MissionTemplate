@@ -5,3 +5,4 @@ call .\Generate_PBO.bat Woodland_ACR
 call .\Generate_PBO.bat Utes
 call .\Generate_PBO.bat Zargabad
 call .\Generate_PBO.bat Bystrica
+call .\Generate_PBO.bat Wake
