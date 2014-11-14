@@ -14,6 +14,14 @@ if (isServer) then
 	// Get the size of the current map
 	_worldsize = getnumber (configfile >> "CfgWorlds" >> worldname >> "mapSize");
 	_chosenLocation = [(_worldsize/2),(_worldsize/2)];
+	if (_chosenLocation select 0 == 0 && _chosenLocation select 1 == 0) then
+	{
+		_centerPosition = getArray (configfile >> "CfgWorlds" >> worldname >> "centerPosition");
+		_centerX = _centerPosition select 0;
+		_centerY = _centerPosition select 1;
+		_chosenLocation = [_centerX + (random (2 * _centerX) - _centerX), _centerY + (random (2 * _centerY) - _centerY), 0];
+	};
+	
 	_locations = nearestLocations [
 		_chosenLocation,
 		[
@@ -71,7 +79,11 @@ if (isServer) then
 			] call BIS_fnc_findSafePos; // There is more, but I don't care.
 	};
 	
-	_respawnObject setPos [_chosenLocation select 0, _chosenLocation select 1, 0];
+	// Always make sure we're putting objects on the ground (sometimes apparently the findSafePos puts things way up in the sky).
+	_chosenLocation = [_chosenLocation select 0, _chosenLocation select 1, 0];
+	
+	// Move the respawn marker into position
+	_respawnObject setPos _chosenLocation;
 
 	// Broadcast that we've updated the location of the base.
 	_variableName = "JTF2_BasePosition_" + str(_side);
