@@ -188,5 +188,8 @@ vas_r_weapons = vas_r_weapons + ASORGS_Blacklist;
 vas_r_magazines = vas_r_magazines + ASORGS_Blacklist;
 // [] call ASORGS_fnc_buildDatabase.sqf;
 
-
+ west setFriend [resistance, 0];
+ resistance setFriend [west, 0];
+ east setFriend [resistance, 0];
+ resistance setFriend [east, 0];
 
