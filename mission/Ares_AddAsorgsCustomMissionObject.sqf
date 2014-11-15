@@ -14,4 +14,4 @@ Ares_Create_Asorgs_Ammo_Box =
 		_ammoBox;
 	};
 
-["ASORGS Ammo Box", {[_this select 0] call Ares_Create_Asorgs_Ammo_Box;}] execVm "Ares_CreateCustomMissionObject.sqf";
+["ASORGS Ammo Box", { [[_this select 0], "Ares_Create_Asorgs_Ammo_Box", false] call BIS_fnc_MP; }] execVm "Ares_CreateCustomMissionObject.sqf";
