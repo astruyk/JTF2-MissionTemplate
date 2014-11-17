@@ -1,3 +1,12 @@
+// Setup the Ares functionality to allow the spawning of the ammo boxes
+[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
+[] execVm "Ares_AddVasCustomMissionObject.sqf";
+[] execVM "Ares_AddXmedCustomMissionObject.sqf";
+[] execVM "Ares_AddDgmGroupSwitchCustomMissionObject.sqf";
+
+enableSaving [false, false]; //Don't allow saving
+enableSentences false; // Keep the commander units from saying things automatically
+
 if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) == 1) then
 {
 	// Give zeus control of preplaced and automatically spawned units
@@ -5,12 +14,6 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 	[zeusModule1,true] execVM "ADV_zeus.sqf";
 	[zeusModule2,true] execVM "ADV_zeus.sqf";
 };
-
-// Setup the Ares functionality to allow the spawning of the ammo boxes
-[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
-[] execVm "Ares_AddVasCustomMissionObject.sqf";
-[] execVM "Ares_AddXmedCustomMissionObject.sqf";
-[] execVM "Ares_AddDgmGroupSwitchCustomMissionObject.sqf";
 
 if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getParamValue) == 1) then
 {
@@ -30,25 +33,15 @@ if (("jtf2_param_enable_xmed" call BIS_fnc_getParamValue) == 1) then
 	};
 };
 
-if (!isDedicated && ("jtf2_param_enable_dynamic_groups" call BIS_fnc_getParamValue) == 1) then
-{
-	[player] execVM "scripts\groupsMenu\initGroups.sqf";
-};
-
 if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
 {
 	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 };
 
-enableSaving [false, false]; //Don't allow saving
-enableSentences false; // Keep the commander units from saying things automatically
-
 if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
 	[civilian, zeusRespawn] call JTF2_fnc_PositionBase;
-	//[west, zeusRespawn] call JTF2_fnc_PositionBase;
-	//[independent, zeusRespawn] call JTF2_fnc_PositionBase;
 
 	[] spawn
 	{
@@ -63,16 +56,6 @@ if (isServer) then
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
-			
-			/*_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Asorgs_Ammo_Box;
-			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
-			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
-			
-			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Asorgs_Ammo_Box;
-			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
-			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];*/
 		};
 		if (_ammoBoxParam == 2 || _ammoBoxParam == 3) then
 		{
@@ -80,16 +63,6 @@ if (isServer) then
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
-			
-			/*_ammoCrate = [JTF2_BasePosition_West] call Ares_Create_Vas_Ammo_Box;
-			_ammoCrate setVehiclePosition [JTF2_BasePosition_West, [], 10];
-			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
-			
-			_ammoCrate = [JTF2_BasePosition_Guer] call Ares_Create_Vas_Ammo_Box;
-			_ammoCrate setVehiclePosition [JTF2_BasePosition_Guer, [], 10];
-			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
-			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];*/
 		};
 	};
 };
