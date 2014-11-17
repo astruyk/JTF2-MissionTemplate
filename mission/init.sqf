@@ -10,6 +10,7 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
+[] execVM "Ares_AddDgmGroupSwitchCustomMissionObject.sqf";
 
 if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getParamValue) == 1) then
 {
