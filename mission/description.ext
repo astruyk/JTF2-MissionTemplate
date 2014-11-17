@@ -94,6 +94,14 @@ class Params
 		texts[] = { "None", "ASORG Only", "VAS Only", "Both ASORG and VAS" };
 		default = 1;
 	};
+	
+	class jtf2_param_allow_grass_changes
+	{
+		title = "Allow players to change grass view settings";
+		values[] = { 0, 1, 2 };
+		texts[] = { "No", "Yes - But don't let them turn it off completely", "Yes - allow everything" };
+		default = 0;
+	};
 };
 
 #include "ASORGS\menu.hpp"

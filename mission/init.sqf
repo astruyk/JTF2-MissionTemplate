@@ -168,3 +168,8 @@ vas_r_magazines = vas_r_magazines + ASORGS_Blacklist;
  east setFriend [resistance, 0];
  resistance setFriend [east, 0];
 
+ switch ("jtf2_param_allow_grass_changes" call BIS_fnc_getParamValue) do
+ {
+	case 0: { tawvd_disableGrassChanges = true; };
+	case 1: { tawvd_disablenone = true; };
+ };
