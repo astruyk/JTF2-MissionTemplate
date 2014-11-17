@@ -107,6 +107,7 @@ class Params
 #include "ASORGS\menu.hpp"
 #include "VAS\menu.hpp"
 #include "taw_vd\dialog.hpp"
+#include "DGM\resources\defines.hpp"
 #include "DGM\resources\dialog.hpp"
 
 class CfgFunctions
