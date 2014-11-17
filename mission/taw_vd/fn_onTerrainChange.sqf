@@ -10,7 +10,7 @@ _type = [_this,0,"",[""]] call BIS_fnc_param;
 if(_type == "") exitWith {};
 
 if (not isNil "tawvd_disableGrassChanges") exitWith {
-	player commandChat "This feature has been disabled by the mission maker.";
+	systemChat  "This feature is currently disabled.";
 };
 
 switch (_type) do
@@ -20,7 +20,7 @@ switch (_type) do
 		if(isNil "tawvd_disablenone") then {
 			setTerrainGrid 50;
 		} else {
-			player commandChat "This feature has been disabled by the mission maker.";
+			systemChat  "This option is current disabled.";
 		};
 	case "low": {setTerrainGrid 30;};
 	case "norm": {setTerrainGrid 12.5;};
