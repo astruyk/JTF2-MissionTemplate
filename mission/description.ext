@@ -107,13 +107,10 @@ class Params
 #include "ASORGS\menu.hpp"
 #include "VAS\menu.hpp"
 #include "taw_vd\dialog.hpp"
-#include "DGM\resources\defines.hpp"
-#include "DGM\resources\dialog.hpp"
 
 class CfgFunctions
 {
 	#include "jtf2\cfgFunctionsInclude.hpp"
-	#include "dgm\functions\functions.hpp"
 	#include "ASORGS\cfgfunctions.hpp"
 	#include "VAS\cfgfunctions.hpp"
 	#include "taw_vd\CfgFunctions.hpp"
