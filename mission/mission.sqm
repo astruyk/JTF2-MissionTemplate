@@ -76,7 +76,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=22;
+		items=24;
 		class Item0
 		{
 			side="WEST";
@@ -480,7 +480,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={14464.146,17.80447,15995.552};
+					position[]={14464.404,17.804127,15995.552};
 					id=35;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
@@ -1235,6 +1235,86 @@ class Mission
 					description="Zeus";
 					syncId=5;
 					synchronizations[]={0};
+				};
+			};
+		};
+		class Item22
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={14468.895,17.798752,15997.039};
+					id=86;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					description="EOD Team Lead";
+				};
+				class Item1
+				{
+					position[]={14468.894,17.799999,15995.447};
+					id=87;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="EOD Specialist";
+				};
+				class Item2
+				{
+					position[]={14470.591,17.798611,15995.448};
+					id=88;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="EOD Specialist";
+				};
+			};
+		};
+		class Item23
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={14469.79,17.818701,15976.945};
+					id=89;
+					side="GUER";
+					vehicle="I_Soldier_exp_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					description="EOD Team Lead";
+				};
+				class Item1
+				{
+					position[]={14469.737,17.823366,15975.248};
+					id=90;
+					side="GUER";
+					vehicle="I_Soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="EOD Specialist";
+				};
+				class Item2
+				{
+					position[]={14471.637,17.818436,15975.198};
+					id=91;
+					side="GUER";
+					vehicle="I_Soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					description="EOD Specialist";
 				};
 			};
 		};
