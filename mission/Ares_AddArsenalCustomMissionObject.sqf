@@ -19,6 +19,8 @@ Ares_Create_Arsenal_Ammo_Box =
 		clearItemCargoGlobal _ammoBox;
 		clearBackpackCargoGlobal _ammoBox;
 		
+		// Go through and gather all the items declared in 'CfgWeapons'. This includes most items, vests
+		// and uniforms.
 		_allWeaponsClasses = (configFile >> "CfgWeapons") call BIS_fnc_getCfgSubClasses;
 		_weapons = [];
 		_items = [];
@@ -77,10 +79,126 @@ Ares_Create_Arsenal_Ammo_Box =
 				};
 			};
 		} forEach _allWeaponsClasses;
-		
-		// Add all the items
 		[_ammoBox, _weapons, true] call BIS_fnc_addVirtualWeaponCargo;
 		[_ammoBox, _items, true] call BIS_fnc_addVirtualItemCargo;
+		
+		// Gather up all the magazines that are declared. This includes explosives and grenades.
+		_allMagazineClasses = (configFile >> "CfgMagazines") call BIS_fnc_getCfgSubClasses;
+		_magazines = [];
+		{
+			_className = _x;
+			
+			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
+			{
+				_config = configFile >> "CfgVehicles" >> _className;
+				_displayName = getText(_config >> "displayName");
+				_picture = getText(_config >> "picture");
+				_scope = getNumber(_config >> "scope");
+				
+				if (_scope >= 2 && _displayName != "" && _picture != "") then
+				{
+					diag_log format ["Adding magazine: %1", _className];
+					_magazines pushBack _className;
+				}
+				else
+				{
+					diag_log format ["Skipped magazine: %1", _className];
+				};
+			}
+			else
+			{
+				diag_log format["Blacklisted: %1", _className];
+			};
+		} forEach _allMagazineClasses;
+		[_ammoBox, _magazines, true] call BIS_fnc_addVirtualMagazineCargo;
+		
+		// Gather up all the backpacks that are declared. They're vehicles. Awesome.
+		_allVehicleClasses = (configFile >> "CfgVehicles") call BIS_fnc_getCfgSubClasses;
+		_backpacks = [];
+		{
+			_className = _x;
+			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
+			{
+				_config = configFile >> "CfgVehicles" >> _className;
+				_displayName = getText(_config >> "displayName");
+				_picture = getText(_config >> "picture");
+				_scope = getNumber(_config >> "scope");
+				_isBackpack = getNumber(_config >> "isbackpack");
+				
+				if (_scope >= 2 && _isBackpack == 1 && _displayName != "" && _picture != "") then
+				{
+					diag_log format ["Adding backpack: %1", _className];
+					_backpacks pushBack _className;
+				}
+				else
+				{
+					diag_log format ["Skipped backpack: %1", _className];
+				};
+			}
+			else
+			{
+				diag_log format["Blacklisted: %1", _className];
+			};
+		} forEach _allVehicleClasses;
+		[_ammoBox, _backpacks select 0, true] call BIS_fnc_addVirtualBackpackCargo;
+		
+		// TODO CfgGlasses
+		_allGlassesClasses = (configFile >> "CfgGlasses") call BIS_fnc_getCfgSubClasses;
+		_glasses = [];
+		{
+			_className = _x;
+			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
+			{
+				_config = configFile >> "CfgVehicles" >> _className;
+				_displayName = getText(_config >> "displayName");
+				_picture = getText(_config >> "picture");
+				_scope = getNumber(_config >> "scope");
+				
+				if (_scope >= 2 && _displayName != "" && _picture != "") then
+				{
+					diag_log format ["Adding glasses: %1", _className];
+					_glasses pushBack _className;
+				}
+				else
+				{
+					diag_log format ["Skipped glasses: %1", _className];
+				};
+			}
+			else
+			{
+				diag_log format["Blacklisted: %1", _className];
+			};
+		} forEach _allGlassesClasses;
+		[_ammoBox, _glasses, true] call BIS_fnc_addVirtualItemCargo;
+		
+		// TODO CfgUnitInsignia
+		_allInsigniaClasses = (configFile >> "CfgUnitInsignia") call BIS_fnc_getCfgSubClasses;
+		_insignia = [];
+		{
+			_className = _x;
+			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
+			{
+				_config = configFile >> "CfgVehicles" >> _className;
+				_displayName = getText(_config >> "displayName");
+				_picture = getText(_config >> "picture");
+				_scope = getNumber(_config >> "scope");
+				
+				if (_scope >= 2 && _displayName != "" && _picture != "") then
+				{
+					diag_log format ["Adding insignia: %1", _className];
+					_insignia pushBack _className;
+				}
+				else
+				{
+					diag_log format ["Skipped insignia: %1", _className];
+				};
+			}
+			else
+			{
+				diag_log format["Blacklisted: %1", _className];
+			};
+		} forEach _allInsigniaClasses;
+		[_ammoBox, _insignia, true] call BIS_fnc_addVirtualItemCargo;
 		
 		// Make sure the box is configured as an arsenal box.
 		["AmmoboxInit", [_ammoBox, false, {true}]] call BIS_fnc_arsenal;
