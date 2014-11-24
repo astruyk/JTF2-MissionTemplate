@@ -114,10 +114,52 @@ Ares_Create_Arsenal_Ammo_Box =
 		
 		// Gather up all the backpacks that are declared. They're vehicles. Awesome.
 		_allVehicleClasses = (configFile >> "CfgVehicles") call BIS_fnc_getCfgSubClasses;
+		_backpackBlacklist = Ares_Arsenal_Ammo_Box_BlackList + 
+			[
+				"B_Respawn_TentDome_F",
+				"B_Respawn_TentA_F",
+				"B_Respawn_Sleeping_bag_F",
+				"B_Respawn_Sleeping_bag_blue_F",
+				"B_Respawn_Sleeping_bag_brown_F",
+				"O_UAV_01_backpack_F",
+				"I_UAV_01_backpack_F",
+				"O_HMG_01_support_F",
+				"I_HMG_01_support_F",
+				"O_HMG_01_support_high_F",
+				"I_HMG_01_support_high_F",
+				"O_HMG_01_weapon_F",
+				"I_HMG_01_weapon_F",
+				"B_HMG_01_A_weapon_F",
+				"O_HMG_01_A_weapon_F",
+				"I_HMG_01_A_weapon_F",
+				"B_GMG_01_A_weapon_F",
+				"O_GMG_01_A_weapon_F",
+				"I_GMG_01_A_weapon_F",
+				"O_GMG_01_weapon_F",
+				"I_GMG_01_weapon_F",
+				"O_HMG_01_high_weapon_F",
+				"I_HMG_01_high_weapon_F",
+				"B_HMG_01_A_high_weapon_F",
+				"O_HMG_01_A_high_weapon_F",
+				"I_HMG_01_A_high_weapon_F",
+				"O_GMG_01_high_weapon_F",
+				"I_GMG_01_high_weapon_F",
+				"B_GMG_01_A_high_weapon_F",
+				"O_GMG_01_A_high_weapon_F",
+				"I_GMG_01_A_high_weapon_F",
+				"O_Mortar_01_support_F",
+				"I_Mortar_01_support_F",
+				"O_Mortar_01_weapon_F",
+				"I_Mortar_01_weapon_F",
+				"O_AA_01_weapon_F",
+				"I_AA_01_weapon_F",
+				"O_AT_01_weapon_F",
+				"I_AT_01_weapon_F"
+			];
 		_backpacks = [];
 		{
 			_className = _x;
-			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
+			if (not (_className in _backpackBlacklist)) then
 			{
 				_config = configFile >> "CfgVehicles" >> _className;
 				_displayName = getText(_config >> "displayName");
@@ -140,16 +182,16 @@ Ares_Create_Arsenal_Ammo_Box =
 				diag_log format["Blacklisted: %1", _className];
 			};
 		} forEach _allVehicleClasses;
-		[_ammoBox, _backpacks select 0, true] call BIS_fnc_addVirtualBackpackCargo;
+		[_ammoBox, _backpacks, true] call BIS_fnc_addVirtualBackpackCargo;
 		
-		// TODO CfgGlasses
+		// Add all the glasses
 		_allGlassesClasses = (configFile >> "CfgGlasses") call BIS_fnc_getCfgSubClasses;
 		_glasses = [];
 		{
 			_className = _x;
 			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
 			{
-				_config = configFile >> "CfgVehicles" >> _className;
+				_config = configFile >> "CfgGlasses" >> _className;
 				_displayName = getText(_config >> "displayName");
 				_picture = getText(_config >> "picture");
 				_scope = getNumber(_config >> "scope");
@@ -171,14 +213,14 @@ Ares_Create_Arsenal_Ammo_Box =
 		} forEach _allGlassesClasses;
 		[_ammoBox, _glasses, true] call BIS_fnc_addVirtualItemCargo;
 		
-		// TODO CfgUnitInsignia
+		// Add all the unit insignia
 		_allInsigniaClasses = (configFile >> "CfgUnitInsignia") call BIS_fnc_getCfgSubClasses;
 		_insignia = [];
 		{
 			_className = _x;
 			if (not (_className in Ares_Arsenal_Ammo_Box_BlackList)) then
 			{
-				_config = configFile >> "CfgVehicles" >> _className;
+				_config = configFile >> "CfgUnitInsignia" >> _className;
 				_displayName = getText(_config >> "displayName");
 				_picture = getText(_config >> "picture");
 				_scope = getNumber(_config >> "scope");
