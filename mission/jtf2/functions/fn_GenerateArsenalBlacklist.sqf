@@ -123,7 +123,7 @@ _blacklist = _blacklist +
 		["I_HMG_01_A_weapon_F", "I_GMG_01_A_weapon_F", "I_HMG_01_A_high_weapon_F", "I_GMG_01_A_high_weapon_F"]
 	] call _applyFilter;
 
-if (_blacklistRespawnBackpacks) then
+if (not _allowRespawnTents) then
 {
 	_blacklist = _blacklist +
 		[

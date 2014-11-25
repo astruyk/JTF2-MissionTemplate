@@ -1,10 +1,3 @@
-#define CFG_TYPE_WEAPON 1
-#define CFG_TYPE_HANDGUN 2
-#define CFG_TYPE_LAUNCHER 4
-#define CFG_TYPE_BINOC 4096
-#define CFG_TYPE_ITEM 131072
-#define CFG_TYPE_SCOPED 0
-
 // Assumes this will be called on all machines so this variable will be defined.
 Ares_Create_Arsenal_Ammo_Box =
 	{

@@ -14,6 +14,13 @@
 			]
 */
 
+#define CFG_TYPE_WEAPON 1
+#define CFG_TYPE_HANDGUN 2
+#define CFG_TYPE_LAUNCHER 4
+#define CFG_TYPE_BINOC 4096
+#define CFG_TYPE_ITEM 131072
+#define CFG_TYPE_SCOPED 0
+
 _blacklist = [_this, 0, []] call BIS_fnc_Param;
 
 // Go through and gather all the items declared in 'CfgWeapons'. This includes most items, vests

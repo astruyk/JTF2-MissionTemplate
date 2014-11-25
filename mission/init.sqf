@@ -38,15 +38,16 @@ if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
 	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 };
 
-JTF2_Blacklist = [
-	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow GPS
-	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 1),	// Allow Thermals
-	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow NVG
-	'None',	// Allowed Static Weapons
-	'None', // Allowed UAVs + terminals
-	'None',	// Allowed Automated Static Weapons
-	False // Allow respawn bags
-] call JTF2_GenerateArsenalBlacklist;
+JTF2_Blacklist =
+	[
+		("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow GPS
+		("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 1),	// Allow Thermals
+		("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow NVG
+		'None',	// Allowed Static Weapons
+		'None', // Allowed UAVs + terminals
+		'None',	// Allowed Automated Static Weapons
+		False // Allow respawn bags
+	] call JTF2_fnc_GenerateArsenalBlacklist;
 
 ASORGS_Blacklist = ASORGS_Blacklist + JTF2_Blacklist;
 vas_r_items = vas_r_items + JTF2_Blacklist;
