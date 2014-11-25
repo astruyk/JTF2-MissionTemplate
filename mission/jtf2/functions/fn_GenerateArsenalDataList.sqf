@@ -40,7 +40,7 @@ _namesOfAddedWeapons = [];
 	{
 		if (_weaponClassName in _blacklist) then
 		{
-			diag_log format["Blacklisted: %1", _weaponClassName];
+			// diag_log format["Blacklisted: %1", _weaponClassName];
 		}
 		else
 		{
@@ -54,31 +54,31 @@ _namesOfAddedWeapons = [];
 					{
 						if (not isClass (_weaponConfig >> "LinkedItems")) then
 						{
-							diag_log format ["Adding Weapon: %1", _x];
+							// diag_log format ["Adding Weapon: %1", _x];
 							_weapons pushBack _weaponClassName;
 							_namesOfAddedWeapons pushBack _weaponDisplayName;
 						}
 						else
 						{
-							diag_log format ["Item '%1' had linked items. Skipped", _weaponClassName];
+							// diag_log format ["Item '%1' had linked items. Skipped", _weaponClassName];
 						};
 					};
 					case CFG_TYPE_BINOC;
 					case CFG_TYPE_ITEM:
 					{
-						diag_log format ["Adding Item: %1", _x];
+						// diag_log format ["Adding Item: %1", _x];
 						_items pushBack _weaponClassName;
 						_namesOfAddedWeapons pushBack _weaponDisplayName;
 					};
 					default
 					{
-						diag_log format ["Unsupported weapon type %1 (%2)", _weaponClassName, _weaponType];
+						// diag_log format ["Unsupported weapon type %1 (%2)", _weaponClassName, _weaponType];
 					};
 				};
 			}
 			else
 			{
-				diag_log format ["Duplicate display name for %1 (%2)", _weaponClassName, _weaponDisplayName];
+				// diag_log format ["Duplicate display name for %1 (%2)", _weaponClassName, _weaponDisplayName];
 			};
 		};
 	};
@@ -99,17 +99,17 @@ _magazines = [];
 		
 		if (_scope >= 2 && _displayName != "" && _picture != "") then
 		{
-			diag_log format ["Adding magazine: %1", _className];
+			// diag_log format ["Adding magazine: %1", _className];
 			_magazines pushBack _className;
 		}
 		else
 		{
-			diag_log format ["Skipped magazine: %1", _className];
+			// diag_log format ["Skipped magazine: %1", _className];
 		};
 	}
 	else
 	{
-		diag_log format["Blacklisted: %1", _className];
+		// diag_log format["Blacklisted: %1", _className];
 	};
 } forEach _allMagazineClasses;
 
@@ -128,17 +128,17 @@ _backpacks = [];
 		
 		if (_scope >= 2 && _isBackpack == 1 && _displayName != "" && _picture != "") then
 		{
-			diag_log format ["Adding backpack: %1", _className];
+			// diag_log format ["Adding backpack: %1", _className];
 			_backpacks pushBack _className;
 		}
 		else
 		{
-			diag_log format ["Skipped backpack: %1", _className];
+			// diag_log format ["Skipped backpack: %1", _className];
 		};
 	}
 	else
 	{
-		diag_log format["Blacklisted: %1", _className];
+		// diag_log format["Blacklisted: %1", _className];
 	};
 } forEach _allVehicleClasses;
 
@@ -156,17 +156,17 @@ _glasses = [];
 		
 		if (_scope >= 2 && _displayName != "" && _picture != "") then
 		{
-			diag_log format ["Adding glasses: %1", _className];
+			// diag_log format ["Adding glasses: %1", _className];
 			_glasses pushBack _className;
 		}
 		else
 		{
-			diag_log format ["Skipped glasses: %1", _className];
+			// diag_log format ["Skipped glasses: %1", _className];
 		};
 	}
 	else
 	{
-		diag_log format["Blacklisted: %1", _className];
+		// diag_log format["Blacklisted: %1", _className];
 	};
 } forEach _allGlassesClasses;
 
@@ -184,17 +184,17 @@ _insignia = [];
 		
 		if (_scope >= 2 && _displayName != "" && _picture != "") then
 		{
-			diag_log format ["Adding insignia: %1", _className];
+			// diag_log format ["Adding insignia: %1", _className];
 			_insignia pushBack _className;
 		}
 		else
 		{
-			diag_log format ["Skipped insignia: %1", _className];
+			// diag_log format ["Skipped insignia: %1", _className];
 		};
 	}
 	else
 	{
-		diag_log format["Blacklisted: %1", _className];
+		// diag_log format["Blacklisted: %1", _className];
 	};
 } forEach _allInsigniaClasses;
 
