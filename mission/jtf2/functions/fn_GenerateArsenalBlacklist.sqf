@@ -35,6 +35,8 @@ _allowedUav =                    [_this, 4, SIDE_FILTER_NONE] call BIS_fnc_Param
 _allowedAutomatedStaticWeapons = [_this, 5, SIDE_FILTER_NONE] call BIS_fnc_Param;
 _allowRespawnTents =             [_this, 6, False] call BIS_fnc_Param;
 
+diag_log format["Generating blacklist: %1, %2, %3, %4, %5, %6", _allowGPS, _allowThermals, _allowNvg, _allowedStaticWeapons, _allowedUav, _allowedAutomatedStaticWeapons];
+
 // Generates a list of the blacklisted items based on a filter.
 private ["_applyFilter"];
 _applyFilter =
@@ -71,6 +73,7 @@ _blacklist = [];
 if (not _allowGPS) then
 {
 	_blacklist pushback "ItemGPS";
+	diag_log format["Blacklist after GPS: %1", _blacklist];
 };
 
 if (not _allowThermals) then
@@ -81,6 +84,7 @@ if (not _allowThermals) then
 			"optic_tws",
 			"optic_tws_mg"
 		];
+	diag_log format["Blacklist after thermals: %1", _blacklist];
 };
 
 if (not _allowNvg) then
@@ -92,36 +96,38 @@ if (not _allowNvg) then
 			"NVGoggles_INDEP",
 			"optic_NVS"
 		];
+	diag_log format["Blacklist after NVG: %1", _blacklist];
 };
 
 // Filter the 'normal' static weapons
 _blacklist = _blacklist +
-	[
+	([
 		_allowedStaticWeapons,
 		["B_HMG_01_support_F", "B_HMG_01_support_high_F", "B_HMG_01_weapon_F", "B_GMG_01_weapon_F", "B_HMG_01_high_weapon_F", "B_GMG_01_high_weapon_F", "B_Mortar_01_support_F", "B_Mortar_01_weapon_F", "B_AA_01_weapon_F", "B_AT_01_weapon_F"],
 		["O_HMG_01_support_F", "O_HMG_01_support_high_F", "O_HMG_01_weapon_F", "O_GMG_01_weapon_F", "O_HMG_01_high_weapon_F", "O_GMG_01_high_weapon_F", "O_Mortar_01_support_F", "O_Mortar_01_weapon_F", "O_AA_01_weapon_F", "O_AT_01_weapon_F"],
 		["I_HMG_01_support_F", "I_HMG_01_support_high_F", "I_HMG_01_weapon_F", "I_GMG_01_weapon_F", "I_HMG_01_high_weapon_F", "I_GMG_01_high_weapon_F", "I_Mortar_01_support_F", "I_Mortar_01_weapon_F", "I_AA_01_weapon_F", "I_AT_01_weapon_F"]
-	] call _applyFilter;
-
+	] call _applyFilter);
+diag_log format["Blacklist after Statics: %1", _blacklist];
 
 // Filter the UAV's
 _blacklist = _blacklist +
-	[
+	([
 		_allowedUav,
 		["B_UavTerminal", "B_UAV_01_backpack_F"],
 		["O_UavTerminal", "O_UAV_01_backpack_F"],
 		["I_UavTerminal", "I_UAV_01_backpack_F"]
-	] call _applyFilter;
-
+	] call _applyFilter);
+diag_log format["Blacklist after UAV: %1", _blacklist];
 
 // Filter the automated static weapons
 _blacklist = _blacklist +
-	[
+	([
 		_allowedAutomatedStaticWeapons,
 		["B_HMG_01_A_weapon_F", "B_GMG_01_A_weapon_F", "B_HMG_01_A_high_weapon_F", "B_GMG_01_A_high_weapon_F"],
 		["O_HMG_01_A_weapon_F", "O_GMG_01_A_weapon_F", "O_HMG_01_A_high_weapon_F", "O_GMG_01_A_high_weapon_F"],
 		["I_HMG_01_A_weapon_F", "I_GMG_01_A_weapon_F", "I_HMG_01_A_high_weapon_F", "I_GMG_01_A_high_weapon_F"]
-	] call _applyFilter;
+	] call _applyFilter);
+diag_log format["Blacklist after AutoStatics: %1", _blacklist];
 
 if (not _allowRespawnTents) then
 {
@@ -133,6 +139,7 @@ if (not _allowRespawnTents) then
 			"B_Respawn_Sleeping_bag_blue_F",
 			"B_Respawn_Sleeping_bag_brown_F"
 		];
+	diag_log format["Blacklist after tents: %1", _blacklist];
 };
 
 _blacklist;
