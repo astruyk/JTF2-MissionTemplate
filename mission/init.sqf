@@ -1,4 +1,5 @@
 // Setup the Ares functionality to allow the spawning of the ammo boxes
+[] execVm "Ares_AddArsenalCustomMissionObject.sqf";
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
@@ -37,6 +38,21 @@ if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
 	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 };
 
+JTF2_Blacklist = [
+	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow GPS
+	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 1),	// Allow Thermals
+	("jtf2_param_item_blacklists" call BIS_fnc_getParamValue < 2),	// Allow NVG
+	'None',	// Allowed Static Weapons
+	'None', // Allowed UAVs + terminals
+	'None',	// Allowed Automated Static Weapons
+	False // Allow respawn bags
+] call JTF2_GenerateArsenalBlacklist;
+
+ASORGS_Blacklist = ASORGS_Blacklist + JTF2_Blacklist;
+vas_r_items = vas_r_items + JTF2_Blacklist;
+vas_r_weapons = vas_r_weapons + JTF2_Blacklist;
+vas_r_magazines = vas_r_magazines + JTF2_Blacklist;
+
 if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
@@ -51,7 +67,7 @@ if (isServer) then
 		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
 		{
 			// Create ASORG box
-			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Asorgs_Ammo_Box;
+			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Arsenal_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];
@@ -125,42 +141,6 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 		}];
 	};
 };
-
-if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 1) then
-{
-	ASORGS_Blacklist = ASORGS_Blacklist + [
-			"Laserdesignator",
-			"optic_Nightstalker",
-			"optic_tws",
-			"optic_tws_mg"
-		];
-};
-if ("jtf2_param_item_blacklists" call BIS_fnc_getParamValue >= 2) then
-{
-	ASORGS_Blacklist = ASORGS_Blacklist + [
-		"Rangefinder",
-		"B_UavTerminal",
-		"O_UavTerminal",
-		"I_UavTerminal",
-		"ItemGPS",
-		"MineDetector",
-		"NVGoggles",
-		"NVGoggles_OPFOR",
-		"NVGoggles_INDEP",
-		"optic_Arco",
-		"optic_Hamr",
-		"optic_SOS",
-		"optic_MRCO",
-		"acc_pointer_IR",
-		"optic_DMS",
-		"optic_LRPS",
-		"optic_NVS"
-	];
-};
-vas_r_items = vas_r_items + ASORGS_Blacklist;
-vas_r_weapons = vas_r_weapons + ASORGS_Blacklist;
-vas_r_magazines = vas_r_magazines + ASORGS_Blacklist;
-// [] call ASORGS_fnc_buildDatabase.sqf;
 
  west setFriend [resistance, 0];
  resistance setFriend [west, 0];
