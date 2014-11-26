@@ -3,6 +3,7 @@
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
+[] execVM "Ares_AddCfbReinforcementPools.sqf";
 
 enableSaving [false, false]; //Don't allow saving
 enableSentences false; // Keep the commander units from saying things automatically
