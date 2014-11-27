@@ -5,11 +5,11 @@ if (isNil "Ares_Reinforcement_Mission_Unit_Pools") then
 
 Ares_Reinforcement_Mission_Unit_Pools pushBack
 	[
-		"Canadian Armed Forces", // Name of the faction
+		"CAF Forces (TW)", // Name of the faction
 		west, // The side of the faction
 		"CFB_Skins", // The name of the root class for the addon that defines these units (must exist or the side will not show up). Use "" to always show.
-		["B_MRAP_01_F", "B_G_Offroad_01_F", "B_Quadbike_01_F"], // Scouts and unarmed light vehicles
-		["B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"], // Armed light vehicles
+		["B_MRAP_01_F", "CFB_LSSV_Olive", "B_Quadbike_01_F"], // Scouts and unarmed light vehicles
+		["B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F","CFB_LSSV_Olive_Armed"], // Armed light vehicles
 		["B_Truck_01_transport_F", "B_Truck_01_covered_F"], // Dedicated troop trucks
 		["B_APC_Tracked_01_rcws_F", "B_APC_Wheeled_01_cannon_F"], // Armed + Armored Troop Transports
 		["CFB_Helo_Griffon_Unarmed", "CFB_Helo_Cyclone"], // Unarmed helicopters
