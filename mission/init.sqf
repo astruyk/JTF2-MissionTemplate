@@ -3,6 +3,9 @@
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
+[] execVM "Ares_AddCustomSigns.sqf";
+
+// Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
 
 enableSaving [false, false]; //Don't allow saving

@@ -8,7 +8,7 @@ if (count _this > 2) then
 
 _leftTextureObject = "UserTexture1m_F" createVehicle (position _signPost);
 _leftTextureObject setdir getdir(_signPost);
-_leftTextureObject setObjectTexture [0, _leftTexturePath];
+_leftTextureObject setObjectTextureGlobal [0, _leftTexturePath];
 
 if (_rightTexturePath != "") then
 {
@@ -16,7 +16,7 @@ if (_rightTexturePath != "") then
 	
 	_rightTextureObject = "UserTexture1m_F" createVehicle (position _signPost);
 	_rightTextureObject setdir getdir(_signPost);
-	_rightTextureObject SetObjectTexture [0, _rightTexturePath];
+	_rightTextureObject setObjectTextureGlobal [0, _rightTexturePath];
 	_rightTextureObject attachTo [_signPost,[0.5, -0.05, 0.6]];
 }
 else
