@@ -92,7 +92,7 @@ _magazines = [];
 	
 	if (not (_className in _blacklist)) then
 	{
-		_config = configFile >> "CfgVehicles" >> _className;
+		_config = configFile >> "CfgMagazines" >> _className;
 		_displayName = getText(_config >> "displayName");
 		_picture = getText(_config >> "picture");
 		_scope = getNumber(_config >> "scope");
@@ -104,7 +104,7 @@ _magazines = [];
 		}
 		else
 		{
-			// diag_log format ["Skipped magazine: %1", _className];
+			// diag_log format ["Skipped magazine: %1 ('%2', '%3', '%4')", _className, _scope, _displayName, _picture];
 		};
 	}
 	else
