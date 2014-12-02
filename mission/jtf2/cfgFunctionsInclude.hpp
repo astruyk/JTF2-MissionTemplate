@@ -10,5 +10,6 @@ class JTF2
 		class initVehicleForLaserGuide;
 		class SetupSign;
 		class GenerateArsenalBlacklist;
+		class SetupAgm { preInit = 1; }
 	};
 };

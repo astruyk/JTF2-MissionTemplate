@@ -4,9 +4,6 @@
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
 [] execVM "Ares_AddCustomSigns.sqf";
 
-// Setup AGM settings (if module present)
-[] execVM "jtf2\scripts\Init_AGM.sqf";
-
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
 
