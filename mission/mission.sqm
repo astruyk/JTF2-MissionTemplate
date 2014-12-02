@@ -1442,7 +1442,7 @@ class Mission
 						};
 						class Item2
 						{
-							value="2";
+							value="3";
 							parentCls="ModuleCurator_F";
 							typeName="Addons";
 						};
