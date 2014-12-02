@@ -15,7 +15,10 @@ _objectsToAdd = [];
 		_objectsToAdd pushBack _x;
 	};
 } forEach vehicles + (allMissionObjects "Man") + (allMissionObjects "Air")  + (allMissionObjects "Ammo");
-(_curators select 0) addCuratorEditableObjects [_objectsToAdd, true];
+{
+	_x addCuratorEditableObjects [_objectsToAdd, true];
+} forEach _curators;
+
 
 //makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
 while {true} do {
@@ -36,16 +39,8 @@ while {true} do {
 	} forEach vehicles;
 
 	{
-		if (_forEachIndex == 0) then
-		{
-			// Add the newly detected objects to the first curator...
-			_x addCuratorEditableObjects [_objectsToAdd, true];
-		}
-		else
-		{
-			// Add everything that the first curator can edit to the second and third curator.
-			_x addCuratorEditableObject [(_curators select 0) curatorEditableObjects, true];
-		};
+		// Add the newly detected objects to the curators
+		_x addCuratorEditableObjects [_objectsToAdd, true];
 	} forEach _curators;
 	sleep 30;
 };
