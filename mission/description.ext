@@ -14,17 +14,6 @@ onLoadMission = "Mission template for running JTF2 ops with a GM";
 author = "Anton Struyk";
 loadScreen = "logo.paa";
 
-// JTF 2 Stuff to make Zeus place the initial respawn positions
-// Adapted from: http://forums.bistudio.com/showthread.php?173735-Custom-Zeus-MP-Gamemode-Spawn-Menu
-// Works in conjunction with some respawn settings specified below
-class CfgRespawnInventory
-{
-	class WEST1
-	{
-		vehicle = "B_soldier_SL_F" ///Squad Leader
-	};
-};
-
 respawn = "BASE";
 respawndelay = 1;
 respawnDialog = 1;
