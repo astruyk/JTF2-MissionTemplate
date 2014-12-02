@@ -17,6 +17,8 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
 	["AGM_Medical_SingleBandage", false] call AGM_Core_fnc_setParameter;                // Use one bandage to heal the entire body? Default: No
 	["AGM_Medical_AllowChatWhileUnconscious", false] call AGM_Core_fnc_setParameter;    // Allow all players to use chat while unconcious? Admin can always use the chat regardless. Default: No
 	["AGM_Medical_EnableOverdosing", true] call AGM_Core_fnc_setParameter;              // Enable morphine overdoses? Default: Yes
+	
+	diag_log "Applied AGM Medical options";
 }
 else
 {

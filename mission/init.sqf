@@ -16,9 +16,7 @@ enableSentences false; // Keep the commander units from saying things automatica
 if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) == 1) then
 {
 	// Give zeus control of preplaced and automatically spawned units
-	// TODO - this can probably be a single loop. Oh well. This is easy.
-	[zeusModule1,true] execVM "ADV_zeus.sqf";
-	[zeusModule2,true] execVM "ADV_zeus.sqf";
+	[[zeusModule1, zeusModule2, zeusAdmin], true] execVM "ADV_zeus.sqf";
 };
 
 if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getParamValue) == 1) then

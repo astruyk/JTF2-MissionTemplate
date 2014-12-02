@@ -5,10 +5,8 @@ Call from init.sqf via:
 if (isServer) then {[CURATORMODULENAME,true] execVM "ADV_zeus.sqf";};
 */
 
-_curator = _this select 0;
+_curators = _this select 0;
 _addCivilians = _this select 1;
-
-//adds objects placed in editor:
 
 _objectsToAdd = [];
 {
@@ -17,7 +15,7 @@ _objectsToAdd = [];
 		_objectsToAdd pushBack _x;
 	};
 } forEach vehicles + (allMissionObjects "Man") + (allMissionObjects "Air")  + (allMissionObjects "Ammo");
-_curator addCuratorEditableObjects [_objectsToAdd, true];
+(_curators select 0) addCuratorEditableObjects [_objectsToAdd, true];
 
 //makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
 while {true} do {
@@ -36,9 +34,20 @@ while {true} do {
 			_objectsToAdd pushBack _x;
 		};
 	} forEach vehicles;
-	
-	_curator addCuratorEditableObjects [_objectsToAdd, true];
-	sleep 20;
+
+	{
+		if (_forEachIndex == 0) then
+		{
+			// Add the newly detected objects to the first curator...
+			_x addCuratorEditableObjects [_objectsToAdd, true];
+		}
+		else
+		{
+			// Add everything that the first curator can edit to the second and third curator.
+			_x addCuratorEditableObject [(_curators select 0) curatorEditableObjects, true];
+		};
+	} forEach _curators;
+	sleep 30;
 };
 
 if (true) exitWith {};
