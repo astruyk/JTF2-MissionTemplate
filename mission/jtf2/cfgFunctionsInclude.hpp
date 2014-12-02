@@ -9,7 +9,6 @@ class JTF2
 		class enableLaserGuide;
 		class initVehicleForLaserGuide;
 		class SetupSign;
-		class GenerateArsenalDataList;
 		class GenerateArsenalBlacklist;
 	};
 };
