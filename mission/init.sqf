@@ -1,9 +1,11 @@
 // Setup the Ares functionality to allow the spawning of the ammo boxes
-[] execVm "Ares_AddArsenalCustomMissionObject.sqf";
 [] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
 [] execVm "Ares_AddVasCustomMissionObject.sqf";
 [] execVM "Ares_AddXmedCustomMissionObject.sqf";
 [] execVM "Ares_AddCustomSigns.sqf";
+
+// Setup AGM settings (if module present)
+[] execVM "jtf2\scripts\Init_AGM.sqf";
 
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
@@ -62,6 +64,24 @@ if (isServer) then
 {
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
 	[civilian, zeusRespawn] call JTF2_fnc_PositionBase;
+	
+	if (("jtf2_param_create_nato_spawn" call BIS_fnc_getParamValue) == 1) then
+	{
+		[west, nato_respawn] call JTF2_fnc_PositionBase;
+	}
+	else
+	{
+		deleteVehicle nato_respawn;
+	};
+	
+	if (("jtf2_param_create_aaf_spawn" call BIS_fnc_getParamValue) == 1) then
+	{
+		[resistance, aaf_respawn] call JTF2_fnc_PositionBase;
+	}
+	else
+	{
+		deleteVehicle aaf_respawn;
+	};
 
 	[] spawn
 	{
@@ -72,7 +92,7 @@ if (isServer) then
 		if (_ammoBoxParam == 1 || _ammoBoxParam == 3) then
 		{
 			// Create ASORG box
-			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Arsenal_Ammo_Box;
+			_ammoCrate = [JTF2_BasePosition_Civ] call Ares_Create_Asorgs_Ammo_Box;
 			_ammoCrate setVehiclePosition [JTF2_BasePosition_Civ, [], 10];
 			zeusModule1 addCuratorEditableObjects [[_ammoCrate], true];
 			zeusModule2 addCuratorEditableObjects [[_ammoCrate], true];

@@ -102,6 +102,22 @@ class Params
 		texts[] = { "No", "Yes - But don't let them turn it off completely", "Yes - allow everything" };
 		default = 0;
 	};
+	
+	class jtf2_param_create_nato_spawn
+	{
+		title = "Create NATO spawn point automatically";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 0;
+	};
+	
+	class jtf2_param_create_aaf_spawn
+	{
+		title = "Create AAF spawn point automatically";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 0;
+	};
 };
 
 #include "ASORGS\menu.hpp"
