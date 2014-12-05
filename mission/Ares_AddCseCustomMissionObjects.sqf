@@ -15,15 +15,16 @@ if (isClass (configFile >> "CfgPatches" >> "cse_main")) then
 			_backpack addMagazineCargoGlobal ["cse_nasopharyngeal_tube", 4];
 			_backpack addMagazineCargoGlobal ["cse_chestseal", 6];
 			_backpack addMagazineCargoGlobal ["cse_bandageElastic", 12];
-			_backpack addMagazineCargoGlobal ["cse_bandage_basic", 8];
-			_backpack addMagazineCargoGlobal ["cse_packing_bandage", 6];
+			_backpack addMagazineCargoGlobal ["cse_bandage_basic", 12];
+			_backpack addMagazineCargoGlobal ["cse_packing_bandage", 8];
 			_backpack addMagazineCargoGlobal ["cse_quikclot", 14];
-			_backpack addMagazineCargoGlobal ["cse_splint", 2];
-			_backpack addMagazineCargoGlobal ["cse_saline_iv_500", 12];
+			// _backpack addMagazineCargoGlobal ["cse_splint", 2]; // Broken bones not implemented yet
+			_backpack addMagazineCargoGlobal ["cse_saline_iv_500", 15];
 			_backpack addMagazineCargoGlobal ["cse_morphine", 10];
 			_backpack addMagazineCargoGlobal ["cse_epinephrine", 12];
-			_backpack addMagazineCargoGlobal ["cse_liquidSkin", 2];
+			// _backpack addMagazineCargoGlobal ["cse_liquidSkin", 2]; // Burns not implemented yet
 			_backpack addMagazineCargoGlobal ["cse_personal_aid_kit", 1];
 		};
 	["CSE Medical Backpack", { [[_this select 0], "Ares_CSE_Create_Medic_Backpack", false] call BIS_fnc_MP; []; }] execVm "Ares_CreateCustomMissionObject.sqf";
+
 };
