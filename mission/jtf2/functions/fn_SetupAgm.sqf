@@ -35,4 +35,14 @@ else
 	diag_log "Not setting up medical options for AGM since PBO is not present.";
 };
 
-// TODO do we need to create the blueforce tracking module?
+if (isClass (configFile >> "CfgPatches" >> "AGM_Map")) then
+{
+	AGM_Map_BFT_Enabled = true;
+	["AGM_Map_BFT_Interval", 1] call AGM_Core_fnc_setParameter;  // How often the markers should be refreshed (in seconds) Default: 1
+	["AGM_Map_BFT_HideAiGroups", 1] call AGM_Core_fnc_setParameter;  // Hide markers for 'AI only' groups? Default: true
+	diag_log "Applied AGM Map options.";
+}
+else
+{
+	diag_log "Not setting up map options for AGM since PBO is not present.";
+};
