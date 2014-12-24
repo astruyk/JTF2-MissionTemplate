@@ -52,9 +52,9 @@ JTF2_Blacklist =
 	] call JTF2_fnc_GenerateArsenalBlacklist;
 
 ASORGS_Blacklist = ASORGS_Blacklist + JTF2_Blacklist;
-vas_r_items = vas_r_items + JTF2_Blacklist;
-vas_r_weapons = vas_r_weapons + JTF2_Blacklist;
-vas_r_magazines = vas_r_magazines + JTF2_Blacklist;
+vas_r_items = JTF2_Blacklist;
+vas_r_weapons = JTF2_Blacklist;
+vas_r_magazines = JTF2_Blacklist;
 
 if (isServer) then
 {
