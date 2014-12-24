@@ -17,7 +17,7 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical") && isServer) then
 	["AGM_Medical_CoefNonMedic", 3] call AGM_Core_fnc_setParameter;                 // Multiplier for the treatment time of an untrained person compared to that of a trained medic. Default: 2
 	["AGM_Medical_MaxUnconsciousnessTime", 500] call AGM_Core_fnc_setParameter;     // Maximum time (in seconds) for a unit to be unconscious before dying. -1 disables this.
 	["AGM_Medical_AllowNonMedics", 0] call AGM_Core_fnc_setParameter;               // Allow non-medics to use epipens and bloodbags? Default: No
-	["AGM_Medical_RequireDiagnosis", 1] call AGM_Core_fnc_setParameter;             // Require an unconscious patient to be diagnosed before allowing treatment? Default: No
+	["AGM_Medical_RequireDiagnosis", 0] call AGM_Core_fnc_setParameter;             // Require an unconscious patient to be diagnosed before allowing treatment? Default: No
 	["AGM_Medical_PreventInstaDeath", 1] call AGM_Core_fnc_setParameter;            // Prevent instant death and always put players in unconscious state instead? Default: No
 	["AGM_Medical_PreventDeathWhileUnconscious", 1] call AGM_Core_fnc_setParameter; // Make unconscious units invulnerable? Default: No
 	["AGM_Medical_SingleBandage", 0] call AGM_Core_fnc_setParameter;                // Use one bandage to heal the entire body? Default: No
