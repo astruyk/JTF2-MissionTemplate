@@ -40,8 +40,7 @@ class Mission
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Characters_F_INDEP",
-		"A3_Characters_F_Civil",
-		"map_vr"
+		"A3_Characters_F_Civil"
 	};
 	addOnsAuto[]=
 	{
@@ -51,12 +50,12 @@ class Mission
 		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_Civil",
-		"map_vr"
+		"a3_map_altis"
 	};
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Dynamic Missions (v.1.4.0)";
+		briefingName="JTF2 Dynamic Missions (v.1.3.0)";
 		overviewText="A blank mission template for zeus/MCC missions.";
 		resistanceWest=0;
 		startWeather=0;
