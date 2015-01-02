@@ -23,7 +23,7 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical") && isServer) then
 	["AGM_Medical_SingleBandage", 0] call AGM_Core_fnc_setParameter;                // Use one bandage to heal the entire body? Default: No
 	["AGM_Medical_AllowChatWhileUnconscious", 0] call AGM_Core_fnc_setParameter;    // Allow all players to use chat while unconcious? Admin can always use the chat regardless. Default: No
 	["AGM_Medical_EnableOverdosing", 1] call AGM_Core_fnc_setParameter;             // Enable morphine overdoses? Default: Yes
-	["AGM_Medical_RequireMEDEVAC", 1] call AGM_Core_fnc_setParameter;               // Only allow Epipens within synchronized triggers? Default: No
+	["AGM_Medical_RequireMEDEVAC", 0] call AGM_Core_fnc_setParameter;               // Only allow Epipens within synchronized triggers? Default: No
 	["AGM_Medical_AutomaticWakeup", 1] call AGM_Core_fnc_setParameter;              // Allow units to wake up by themselves? Default: Yes
 	["AGM_Medical_DisableScreams", 0] call AGM_Core_fnc_setParameter;               // "Disable screaming on hit? Default: No
 	
