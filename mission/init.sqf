@@ -109,19 +109,19 @@ if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) 
 		waitUntil { alive player };
 
 		// Strip all the equipment except for some basic items
-		removeAllWeapons _unit;
-		removeBackpack _unit;
-		removeAllItems _unit;
-		removeVest _unit;
-		removeHeadgear _unit;
-		_unit unlinkItem "NVGoggles";
-		_unit unlinkItem "NVGoggles_OPFOR";
-		_unit unlinkItem "NVGoggles_INDEP";
-		_unit unlinkItem "ItemGPS";
-		_unit linkItem "ItemMap";
-		_unit linkItem "ItemCompass";
-		_unit linkItem "ItemRadio";
-		_unit linkItem "ItemWatch";
+		removeAllWeapons player;
+		removeBackpack player;
+		removeAllItems player;
+		removeVest player;
+		removeHeadgear player;
+		player unlinkItem "NVGoggles";
+		player unlinkItem "NVGoggles_OPFOR";
+		player unlinkItem "NVGoggles_INDEP";
+		player unlinkItem "ItemGPS";
+		player linkItem "ItemMap";
+		player linkItem "ItemCompass";
+		player linkItem "ItemRadio";
+		player linkItem "ItemWatch";
 
 		player addMpEventHandler [ "MPRespawn",
 		{
