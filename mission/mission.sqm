@@ -107,7 +107,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Command""];";
+					init="this setGroupId [""Command""];";
 					description="Platoon Medic";
 				};
 				class Item2
@@ -239,7 +239,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Panther""];";
+					init="this setGroupId [""Panther""];";
 					description="Panther Medic";
 				};
 				class Item7
@@ -338,7 +338,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Badger""];";
+					init="this setGroupId [""Badger""];";
 					description="Badger Medic";
 				};
 				class Item7
@@ -437,7 +437,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Mongoose""];";
+					init="this setGroupId [""Mongoose""];";
 					description="Mongoose Medic";
 				};
 				class Item7
@@ -464,7 +464,7 @@ class Mission
 					position[]={37.054047,-0.0054588085,47.980835};
 					id=29;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -477,7 +477,7 @@ class Mission
 					position[]={37.077484,0.0057006124,46.565796};
 					id=30;
 					side="WEST";
-					vehicle="B_Soldier_A_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -488,7 +488,7 @@ class Mission
 					position[]={38.607773,-0.0090109687,46.604004};
 					id=31;
 					side="WEST";
-					vehicle="B_Soldier_A_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -507,7 +507,7 @@ class Mission
 					position[]={40.567127,-0.03389091,48.091187};
 					id=32;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -517,10 +517,10 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={40.619862,-0.02740038,46.802124};
+					position[]={40.619862,5,46.802124};
 					id=33;
 					side="WEST";
-					vehicle="B_Soldier_A_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
@@ -531,7 +531,7 @@ class Mission
 					position[]={42.029037,-0.036674492,46.752319};
 					id=34;
 					side="WEST";
-					vehicle="B_Soldier_A_F";
+					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
@@ -1144,7 +1144,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Command""];";
+					init="this setGroupId [""Command""];";
 					description="Platoon Medic";
 				};
 				class Item2
@@ -1276,7 +1276,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Panther""];";
+					init="this setGroupId [""Panther""];";
 					description="Panther Medic";
 				};
 				class Item7
@@ -1375,7 +1375,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Badger""];";
+					init="this setGroupId [""Badger""];";
 					description="Badger Medic";
 				};
 				class Item7
@@ -1474,7 +1474,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Mongoose""];";
+					init="this setGroupId [""Mongoose""];";
 					description="Mongoose Medic";
 				};
 				class Item7
@@ -1501,7 +1501,7 @@ class Mission
 					position[]={37.134438,5,31.532104};
 					id=85;
 					side="EAST";
-					vehicle="O_Soldier_SL_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -1514,7 +1514,7 @@ class Mission
 					position[]={37.157875,5,30.117065};
 					id=86;
 					side="EAST";
-					vehicle="O_Soldier_A_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -1525,7 +1525,7 @@ class Mission
 					position[]={38.688164,5,30.155273};
 					id=87;
 					side="EAST";
-					vehicle="O_Soldier_A_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -1544,7 +1544,7 @@ class Mission
 					position[]={40.647514,5,31.642456};
 					id=88;
 					side="EAST";
-					vehicle="O_Soldier_SL_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -1557,7 +1557,7 @@ class Mission
 					position[]={40.700249,5,30.353394};
 					id=89;
 					side="EAST";
-					vehicle="O_Soldier_A_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
@@ -1568,7 +1568,7 @@ class Mission
 					position[]={42.109428,5,30.303589};
 					id=90;
 					side="EAST";
-					vehicle="O_Soldier_A_F";
+					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
@@ -1809,7 +1809,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Command""];";
+					init="this setGroupId [""Command""];";
 					description="Platoon Medic";
 				};
 				class Item2
@@ -1941,7 +1941,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Panther""];";
+					init="this setGroupId [""Panther""];";
 					description="Panther Medic";
 				};
 				class Item7
@@ -2040,7 +2040,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Badger""];";
+					init="this setGroupId [""Badger""];";
 					description="Badger Medic";
 				};
 				class Item7
@@ -2139,7 +2139,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setvariable [""cse_medicClass"",1]; this setGroupId [""Mongoose""];";
+					init="this setGroupId [""Mongoose""];";
 					description="Mongoose Medic";
 				};
 				class Item7
@@ -2166,7 +2166,7 @@ class Mission
 					position[]={38.69001,5,16.228882};
 					id=132;
 					side="GUER";
-					vehicle="I_Soldier_SL_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -2179,7 +2179,7 @@ class Mission
 					position[]={38.713448,5,14.813843};
 					id=133;
 					side="GUER";
-					vehicle="I_Soldier_A_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -2190,7 +2190,7 @@ class Mission
 					position[]={40.243736,5,14.852051};
 					id=134;
 					side="GUER";
-					vehicle="I_Soldier_A_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Hammer""];";
@@ -2209,7 +2209,7 @@ class Mission
 					position[]={42.203083,5,16.339233};
 					id=135;
 					side="GUER";
-					vehicle="I_Soldier_SL_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -2222,7 +2222,7 @@ class Mission
 					position[]={42.255817,5,15.050171};
 					id=136;
 					side="GUER";
-					vehicle="I_Soldier_A_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
@@ -2233,7 +2233,7 @@ class Mission
 					position[]={43.665005,5,15.000366};
 					id=137;
 					side="GUER";
-					vehicle="I_Soldier_A_F";
+					vehicle="I_Soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Anvil""];";
