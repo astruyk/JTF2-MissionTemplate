@@ -10,6 +10,7 @@ call .\Generate_PBO.bat Zargabad
 call .\Generate_PBO.bat Bystrica
 call .\Generate_PBO.bat Sara
 call .\Generate_PBO.bat Porto
+call .\Generate_PBO.bat Bystrica
 
 REM Wake Island
 call .\Generate_PBO.bat Wake
@@ -19,3 +20,6 @@ call .\Generate_PBO.bat IslaDuala3
 
 REM Panthera
 call .\Generate_PBO.bat Panthera3
+
+REM N'Ziwasogo
+call .\Generate_PBO.bat pja305
