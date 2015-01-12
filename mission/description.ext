@@ -47,9 +47,9 @@ class Params
 	class jtf2_param_starting_loadouts
 	{
 		title = "Starting loadouts";
-		values[] = { 0, 1, 2, 3, 4 };
-		texts[] = { "Default", "Basics", "Basics (CADPAT TW)", "Basics (CADPAT AR)", "Basics (JTF2)" };
-		default = 1;
+		values[] = { 0, 1 };
+		texts[] = { "Role Specific Loadouts", "Basics" };
+		default = 0;
 	};
 	
 	class jtf2_param_enable_xmed
@@ -57,7 +57,7 @@ class Params
 		title = "Enable XMed (ignored if mod not present)";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
-		default = 1;
+		default = 0;
 	};
 
 	class jtf2_param_enable_igiLoad
@@ -65,7 +65,7 @@ class Params
 		title = "Enable IgiLoad Logistics";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
-		default = 1;
+		default = 0;
 	};
 	
 	class jtf2_param_item_blacklists
@@ -81,7 +81,7 @@ class Params
 		title = "Ammoboxes at spawn";
 		values[] = { 0, 1, 2, 3};
 		texts[] = { "None", "ASORG Only", "VAS Only", "Both ASORG and VAS" };
-		default = 1;
+		default = 0;
 	};
 	
 	class jtf2_param_allow_grass_changes
@@ -97,7 +97,7 @@ class Params
 		title = "Create NATO spawn point automatically";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
-		default = 0;
+		default = 1;
 	};
 	
 	class jtf2_param_create_aaf_spawn

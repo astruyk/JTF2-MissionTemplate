@@ -1,0 +1,1 @@
+(_this select 0) setVariable ["JTF2_UnitType", (_this select 1)];

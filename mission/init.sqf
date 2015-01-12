@@ -103,80 +103,14 @@ if (isServer) then
 	};
 };
 
-if (!isDedicated && ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) > 0) then
+if (!isDedicated) then
 {
-	[] spawn {
-		waitUntil { alive player };
-
-		// Strip all the equipment except for some basic items
-		removeAllWeapons player;
-		removeBackpack player;
-		removeAllItems player;
-		removeVest player;
-		removeHeadgear player;
-		player unlinkItem "NVGoggles";
-		player unlinkItem "NVGoggles_OPFOR";
-		player unlinkItem "NVGoggles_INDEP";
-		player unlinkItem "ItemGPS";
-		player linkItem "ItemMap";
-		player linkItem "ItemCompass";
-		player linkItem "ItemRadio";
-		player linkItem "ItemWatch";
-
-		player addMpEventHandler [ "MPRespawn",
+	player addMpEventHandler [ "MPRespawn", { waitUntil { alive player }; [_this select 0] call JTF2_fnc_AssignGear; }];
+	[] spawn
 		{
-			_unit = _this select 0;
-			
-			// Strip all the equipment except for some basic items
-			removeAllWeapons _unit;
-			removeBackpack _unit;
-			removeAllItems _unit;
-			removeVest _unit;
-			removeHeadgear _unit;
-			_unit unlinkItem "NVGoggles";
-			_unit unlinkItem "NVGoggles_OPFOR";
-			_unit unlinkItem "NVGoggles_INDEP";
-			_unit unlinkItem "ItemGPS";
-			_unit linkItem "ItemMap";
-			_unit linkItem "ItemCompass";
-			_unit linkItem "ItemRadio";
-			_unit linkItem "ItemWatch";
-			
-			if (isClass (configFile >> "CfgPatches" >> "CFB_Skins") && "jtf2_param_starting_loadouts" call BIS_fnc_getParamValue >= 2) then
-			{
-				_uniformReplacements = [];
-				switch ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) do
-				{
-					case 2: // CADPAT TW
-					{
-						_uniformReplacements = ["CFB_TW_Uniform", "CFB_TW_Rolled_Uniform", "CFB_TW_Tshirt_Uniform"];
-					};
-					case 3: // CADPAT AR
-					{
-						_uniformReplacements = ["CFB_AR_Uniform", "CFB_AR_Rolled_Uniform", "CFB_AR_Tshirt_Uniform"];
-					};
-					case 4: // JTF2
-					{
-						_uniformReplacements = ["CFB_JTF2_Uniform", "CFB_JTF2_Rolled_Uniform", "CFB_JTF2_Tshirt_Uniform"];
-					};
-				};
-				
-				if ((uniform _unit) in ["U_B_HeliPilotCoveralls", "U_I_HeliPilotCoveralls"]) then
-				{
-					_uniformReplacements = ["CFB_RCAF_Helo_Pilot"];
-				};
-				
-				if (count _uniformReplacements > 0) then
-				{
-					_unit forceAddUniform (_uniformReplacements call BIS_fnc_SelectRandom);
-				};
-			}
-			else
-			{
-				diag_log "Unable to use CFB_skins uniforms since mod isn't loaded.";
-			};
-		}];
-	};
+			waitUntil { alive player };
+			[player] call JTF2_fnc_AssignGear;
+		};
 };
 
  west setFriend [resistance, 0];
