@@ -23,9 +23,9 @@ for "_i" from 1 to 2 do {_unit addItemToVest "AGM_Epipen";};
 _unit addItemToVest "AGM_Bloodbag";
 _unit addItemToVest "AGM_EarBuds";
 _unit addBackpack "CFB_TW_Backpack_Kitbag";
-_unit addItemToBackpack "AGM_SpareBarrel";
 for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_100Rnd_556x45_soft_pouch";};
-for "_i" from 1 to 14 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 12 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_mag_M433_HEDP";};
 _unit addHeadgear "CFB_TW_Helmet";
 
 comment "Add weapons";
