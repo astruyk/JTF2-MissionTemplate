@@ -12,24 +12,24 @@ removeGoggles _unit;
 
 comment "Add containers";
 _unit forceAddUniform "CFB_RCAF_Coveralls_Sage";
-for "_i" from 1 to 4 do {_unit addItemToUniform "30Rnd_9x21_Mag";};
-_unit addVest "CFB_TW_Vest_Tactical";
+for "_i" from 1 to 3 do {_unit addItemToUniform "30Rnd_9x21_Mag";};
+_unit addVest "V_TacVest_oli";
 _unit addItemToVest "AGM_EarBuds";
 _unit addItemToVest "AGM_MapTools";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellGreen";};
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellBlue";};
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellGreen";};
+for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
-_unit addItemToVest "HandGrenade";
-_unit addBackpack "tf_rt1523g_bwmod";
-for "_i" from 1 to 5 do {_unit addItemToBackpack "AGM_Morphine";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "AGM_Epipen";};
-_unit addItemToBackpack "AGM_Bloodbag";
-for "_i" from 1 to 7 do {_unit addItemToBackpack "AGM_Bandage";};
-_unit addHeadgear "H_PilotHelmetHeli_B";
+for "_i" from 1 to 5 do {_unit addItemToVest "AGM_Morphine";};
+for "_i" from 1 to 2 do {_unit addItemToVest "AGM_Epipen";};
+for "_i" from 1 to 7 do {_unit addItemToVest "AGM_Bandage";};
+_unit addBackpack "tf_rt1523g_black";
+_unit addItemToBackpack "ToolKit";
+_unit addHeadgear "H_HelmetCrew_B";
 
 comment "Add weapons";
 _unit addWeapon "SMG_02_F";
+_unit addWeapon "AGM_Vector";
 
 comment "Add items";
 _unit linkItem "ItemMap";
