@@ -18,18 +18,17 @@ for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellGreen";};
 for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_100Rnd_556x45_soft_pouch";};
 _unit addBackpack "CFB_TW_Backpack_Kitbag";
-for "_i" from 1 to 10 do {_unit addItemToBackpack "AGM_Bandage";};
-for "_i" from 1 to 3 do {_unit addItemToBackpack "AGM_Morphine";};
+for "_i" from 1 to 12 do {_unit addItemToBackpack "AGM_Bandage";};
+for "_i" from 1 to 5 do {_unit addItemToBackpack "AGM_Morphine";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "AGM_Epipen";};
-_unit addItemToBackpack "AGM_EarBuds";
 _unit addItemToBackpack "AGM_Bloodbag";
+_unit addItemToBackpack "AGM_EarBuds";
 _unit addItemToBackpack "AGM_SpareBarrel";
-for "_i" from 1 to 4 do {_unit addItemToBackpack "rhsusf_100Rnd_556x45_soft_pouch";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_100Rnd_556x45_soft_pouch";};
 _unit addHeadgear "CFB_TW_Helmet";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m249_pip";
-_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN";
 
 comment "Add items";
 _unit linkItem "ItemMap";
