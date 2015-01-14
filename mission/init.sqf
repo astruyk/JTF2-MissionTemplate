@@ -17,18 +17,6 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 	[[zeusModule1, zeusModule2, zeusAdmin], true] execVM "ADV_zeus.sqf";
 };
 
-if (("jtf2_param_enable_xmed" call BIS_fnc_getParamValue) == 1) then
-{
-	if (isClass (configFile >> "CfgPatches" >> "X39_MedSys_Scripting")) then
-	{
-		[] call X39_MedSys_fnc_initMod;
-	}
-	else
-	{
-		diag_log "Unable to start xmedSys because the scripting module was not found.";
-	};
-};
-
 if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
 {
 	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";

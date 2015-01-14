@@ -43,14 +43,6 @@ class Params
 		texts[] = { "Role Specific Loadouts", "Basics" };
 		default = 0;
 	};
-	
-	class jtf2_param_enable_xmed
-	{
-		title = "Enable XMed (ignored if mod not present)";
-		values[] = { 0, 1 };
-		texts[] = { "No", "Yes" };
-		default = 0;
-	};
 
 	class jtf2_param_enable_igiLoad
 	{
