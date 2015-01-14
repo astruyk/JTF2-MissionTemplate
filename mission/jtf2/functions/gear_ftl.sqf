@@ -12,11 +12,11 @@ removeGoggles _unit;
 
 comment "Add containers";
 _unit forceAddUniform "CFB_TW_Rolled_Uniform";
-for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
 _unit addVest "CFB_TW_Vest_PlateCarrier1";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellGreen";};
-for "_i" from 1 to 8 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 8 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
 for "_i" from 1 to 8 do {_unit addItemToVest "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_M433_HEDP";};
 _unit addBackpack "tf_rt1523g_big_bwmod";
