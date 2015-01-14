@@ -28,6 +28,7 @@ _unit addHeadgear "CFB_TW_Helmet";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m16a4_carryhandle";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 
 comment "Add items";
 _unit linkItem "ItemMap";

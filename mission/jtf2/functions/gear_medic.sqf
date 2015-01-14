@@ -29,6 +29,7 @@ _unit addHeadgear "CFB_TW_Boonie";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 
 comment "Add items";
 _unit linkItem "ItemMap";

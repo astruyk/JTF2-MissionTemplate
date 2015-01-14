@@ -33,7 +33,8 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokePurple_Grenade_shell
 _unit addHeadgear "CFB_TW_Patrol";
 
 comment "Add weapons";
-_unit addWeapon "rhs_m4_m320";
+_unit addWeapon "rhs_weap_m16a4_carryhandle";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 _unit addWeapon "AGM_Vector";
 
 comment "Add items";

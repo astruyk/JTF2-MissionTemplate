@@ -27,6 +27,7 @@ _unit addGoggles "G_Goggles_VR";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m4";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 _unit addWeapon "AGM_Vector";
 
 comment "Add items";

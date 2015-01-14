@@ -29,7 +29,8 @@ for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_mag_M433_HEDP";};
 _unit addHeadgear "CFB_TW_Helmet_ECH";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4";
+_unit addWeapon "rhs_weap_m16a4_carryhandle";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 
 comment "Add items";
 _unit linkItem "ItemMap";

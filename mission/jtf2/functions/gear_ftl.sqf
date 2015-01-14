@@ -33,6 +33,7 @@ _unit addHeadgear "CFB_TW_Patrol";
 
 comment "Add weapons";
 _unit addWeapon "rhs_m4_m320";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 _unit addWeapon "AGM_Vector";
 
 comment "Add items";
