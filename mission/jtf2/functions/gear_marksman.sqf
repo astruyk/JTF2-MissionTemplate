@@ -25,11 +25,12 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "AGM_Morphine";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "AGM_Epipen";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "AGM_Bloodbag";};
 for "_i" from 1 to 8 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
+_unit addItemToBackpack "rhsusf_acc_compm4";
 _unit addHeadgear "CFB_TW_Boonie";
 
 comment "Add weapons";
 _unit addWeapon "rhs_weap_m14ebrri";
-_unit addPrimaryWeaponItem "rhsusf_acc_LEUPOLDMK4";
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG2";
 
 comment "Add items";
 _unit linkItem "ItemMap";
