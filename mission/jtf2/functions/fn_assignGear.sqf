@@ -62,6 +62,10 @@ switch ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) do
 				{
 					#include "gear_lat.sqf";
 				};
+				case "marksman":
+				{
+					#include "gear_marksman.sqf";
+				};
 				case "medic":
 				{
 					#include "gear_medic.sqf";

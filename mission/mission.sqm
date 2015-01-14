@@ -223,8 +223,8 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""gl""] call JTF2_fnc_SetGear;";
-					description="Panther Grenadier";
+					init="this setGroupId [""Panther""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					description="Panther Marksman";
 				};
 				class Item6
 				{
@@ -322,8 +322,8 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""gl""] call JTF2_fnc_SetGear;";
-					description="Badger Grenadier";
+					init="this setGroupId [""Badger""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					description="Badger Marksman";
 				};
 				class Item6
 				{
@@ -421,8 +421,8 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""gl""] call JTF2_fnc_SetGear;";
-					description="Mongoose Grenadier";
+					init="this setGroupId [""Mongoose""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					description="Mongoose Marksman";
 				};
 				class Item6
 				{
