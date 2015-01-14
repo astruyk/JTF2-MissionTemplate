@@ -74,11 +74,10 @@ if (isServer) then
 
 if (!isDedicated) then
 {
-	player addMpEventHandler [ "MPRespawn", { waitUntil { alive player }; [_this select 0] call JTF2_fnc_AssignGear; }];
 	[] spawn
 		{
-			waitUntil { alive player };
-			[player] call JTF2_fnc_AssignGear;
+			waitUntil { sleep 0.1; !isNull player; };
+			player addMpEventHandler [ "MPRespawn", { waitUntil { sleep 0.1; !isNull player; }; [_this select 0] call JTF2_fnc_AssignGear; }];
 		};
 };
 
