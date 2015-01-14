@@ -16,6 +16,7 @@ _unit addItemToUniform "rhsusf_5Rnd_300winmag_xm2010";
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellGreen";};
 _unit addItemToUniform "AGM_EarBuds";
 _unit addVest "CFB_TW_Vest_PlateCarrier1";
+_unit addItemToVest "AGM_ItemKestrel";
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 4 do {_unit addItemToVest "SmokeShellGreen";};
 for "_i" from 1 to 8 do {_unit addItemToVest "rhsusf_5Rnd_300winmag_xm2010";};
