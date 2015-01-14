@@ -47,15 +47,6 @@ if (isServer) then
 	{
 		deleteVehicle nato_respawn;
 	};
-	
-	if (("jtf2_param_create_aaf_spawn" call BIS_fnc_getParamValue) == 1) then
-	{
-		[resistance, aaf_respawn] call JTF2_fnc_PositionBase;
-	}
-	else
-	{
-		deleteVehicle aaf_respawn;
-	};
 
 	[] spawn
 	{
