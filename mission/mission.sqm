@@ -209,7 +209,7 @@ class Mission
 					position[]={28.784477,0.011844673,46.523193};
 					id=9;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Panther""]; [this, ""aar""] call JTF2_fnc_SetGear;";
@@ -220,7 +220,7 @@ class Mission
 					position[]={30.534,0.010770389,46.482666};
 					id=10;
 					side="WEST";
-					vehicle="B_Soldier_GL_F";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Panther""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
@@ -308,7 +308,7 @@ class Mission
 					position[]={28.87656,0.0094295163,42.051392};
 					id=17;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Badger""]; [this, ""aar""] call JTF2_fnc_SetGear;";
@@ -319,7 +319,7 @@ class Mission
 					position[]={30.476673,0.010429225,42.038208};
 					id=18;
 					side="WEST";
-					vehicle="B_Soldier_GL_F";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Badger""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
@@ -407,7 +407,7 @@ class Mission
 					position[]={28.911985,0.0022770697,37.437988};
 					id=25;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Mongoose""]; [this, ""aar""] call JTF2_fnc_SetGear;";
@@ -418,7 +418,7 @@ class Mission
 					position[]={30.546137,0.0045185955,37.382202};
 					id=26;
 					side="WEST";
-					vehicle="B_Soldier_GL_F";
+					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Mongoose""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
