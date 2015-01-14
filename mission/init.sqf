@@ -17,12 +17,6 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 	[[zeusModule1, zeusModule2, zeusAdmin], true] execVM "ADV_zeus.sqf";
 };
 
-if (!isDedicated && ("jtf2_param_enable_laser_for_helicopters" call BIS_fnc_getParamValue) == 1) then
-{
-	// Run script to perform custom init functions on vehicles that are spawned dynamically.
-	[] execVM "jtf2\scripts\InitDynamicVehicles.sqf"
-};
-
 if (("jtf2_param_enable_xmed" call BIS_fnc_getParamValue) == 1) then
 {
 	if (isClass (configFile >> "CfgPatches" >> "X39_MedSys_Scripting")) then

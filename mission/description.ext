@@ -35,15 +35,7 @@ class Params
 		texts[] = { "No", "Yes" };
 		default = 1;
 	};
-	
-	class jtf2_param_enable_laser_for_helicopters
-	{
-		title = "Make laser designator visible to helicopter pilots.";
-		values[] = { 0, 1 };
-		texts[] = { "No", "Yes" };
-		default = 1;
-	};
-	
+
 	class jtf2_param_starting_loadouts
 	{
 		title = "Starting loadouts";
