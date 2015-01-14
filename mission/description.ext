@@ -44,14 +44,6 @@ class Params
 		default = 0;
 	};
 
-	class jtf2_param_enable_igiLoad
-	{
-		title = "Enable IgiLoad Logistics";
-		values[] = { 0, 1 };
-		texts[] = { "No", "Yes" };
-		default = 0;
-	};
-	
 	class jtf2_param_item_blacklists
 	{
 		title = "ASOR/VAS Item Restrictions";

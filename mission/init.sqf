@@ -17,10 +17,6 @@ if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) ==
 	[[zeusModule1, zeusModule2, zeusAdmin], true] execVM "ADV_zeus.sqf";
 };
 
-if (("jtf2_param_enable_igiLoad" call BIS_fnc_getParamValue) == 1) then
-{
-	_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
-};
 
 JTF2_Blacklist =
 	[
