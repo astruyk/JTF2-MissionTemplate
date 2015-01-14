@@ -33,9 +33,11 @@ _unit addHeadgear "CFB_TW_Patrol";
 
 comment "Add weapons";
 _unit addWeapon "rhs_m4_m320";
+_unit addWeapon "AGM_Vector";
 
 comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "tf_anprc152_1";
+_unit linkItem "itemGps";

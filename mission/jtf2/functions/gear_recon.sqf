@@ -38,3 +38,4 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "tf_anprc152_1";
+_unit linkItem "itemGps";
