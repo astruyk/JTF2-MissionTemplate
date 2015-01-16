@@ -70,6 +70,63 @@ class Params
 		texts[] = { "No", "Yes" };
 		default = 0;
 	};
+	
+	class jtf2_param_agm_map_spacer
+	{
+		title = "--------------------- AGM MAP OPTIONS ----------------------------";
+		values[] = { 0, 1 };
+		texts[] = { " ", " " };
+		default = 0;
+	};
+	
+	class jtf2_param_agm_show_squad_map_markers
+	{
+		title = "Show friendly squad markers on map?";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+	};
+	
+	class jtf2_param_agm_medical_spacer
+	{
+		title = "--------------------- AGM MEDICAL OPTIONS ----------------------------";
+		values[] = { 0, 1 };
+		texts[] = { " ", " " };
+		default = 0;
+	};
+	
+	class jtf2_param_agm_invincible_when_dead
+	{
+		title = "Make unconscious units invulnerable?";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+	};
+	
+	class jtf2_param_agm_prevent_instant_death
+	{
+		title = "Prevent instant death and always put players in unconscious state instead?";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+	};
+	
+	class jtf2_param_agm_death_timer
+	{
+		title = "Maximum time (in seconds) for a unit to be unconscious before dying.";
+		values[] = { -1, 60, 120, 180, 340, 400, 460 };
+		texts[] = { "Disabled", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes", "6 minutes" };
+		default = 460;
+	};
+	
+	
+	class jtf2_param_agm_automatic_wakeup
+	{
+		title = "Allow units to wake up by themselves?";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+	};
 };
 
 #include "ASORGS\menu.hpp"
