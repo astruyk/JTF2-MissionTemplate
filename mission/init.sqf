@@ -76,8 +76,8 @@ if (!isDedicated) then
 {
 	[] spawn
 		{
-			waitUntil { !isNull player; };
-			player addMpEventHandler [ "MPRespawn", { waitUntil { sleep 0.1; !isNull player; }; [_this select 0] call JTF2_fnc_AssignGear; }];
+			sleep 1;  waitUntil { sleep 0.1; !isNull player; }; 
+			player addMpEventHandler [ "MPRespawn",  { [_this select 0] spawn { waitUntil {  sleep 0.1; !isNull player; }; [_this select 0] call JTF2_fnc_AssignGear; }; } ];
 		};
 };
 
