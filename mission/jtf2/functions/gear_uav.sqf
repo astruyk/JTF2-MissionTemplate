@@ -12,11 +12,11 @@ removeGoggles _unit;
 
 comment "Add containers";
 _unit forceAddUniform "CFB_TW_Tshirt_Uniform";
-for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 _unit addItemToUniform "AGM_EarBuds";
 _unit addVest "CFB_TW_Vest_Tactical";
 _unit addItemToVest "AGM_MapTools";
-for "_i" from 1 to 5 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag";};
+for "_i" from 1 to 5 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
 for "_i" from 1 to 5 do {_unit addItemToVest "AGM_Bandage";};
 for "_i" from 1 to 2 do {_unit addItemToVest "AGM_Morphine";};
 for "_i" from 1 to 1 do {_unit addItemToVest "AGM_Epipen";};
