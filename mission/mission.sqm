@@ -126,7 +126,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Command""]; [this, ""jtac""] call JTF2_fnc_SetGear;";
-					description="Platoon JTAC / FAR";
+					description="Platoon JTAC / FAO";
 				};
 			};
 		};
