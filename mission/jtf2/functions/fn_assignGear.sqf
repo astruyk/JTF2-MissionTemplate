@@ -60,6 +60,10 @@ if (local _unit) then
 					{
 						#include "gear_gl.sqf";
 					};
+					case "jtac":
+					{
+						#include "gear_jtac.sqf";
+					};
 					case "lat":
 					{
 						#include "gear_lat.sqf";

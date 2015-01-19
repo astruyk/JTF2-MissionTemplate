@@ -80,11 +80,11 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					position[]={22.874346,0.011043485,47.842163};
-					id=1;
+					id=0;
 					side="WEST";
 					vehicle="B_officer_F";
 					player="PLAYER COMMANDER";
@@ -97,7 +97,7 @@ class Mission
 				class Item1
 				{
 					position[]={22.887041,0.0089461505,46.255371};
-					id=2;
+					id=1;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -108,14 +108,25 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={24.293791,0.010374876,46.223145};
-					id=3;
+					position[]={24.16494,5,46.336426};
+					id=2;
 					side="WEST";
 					vehicle="B_soldier_UAV_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Command""]; [this, ""uav""] call JTF2_fnc_SetGear;";
 					description="Platoon UAV Operator";
+				};
+				class Item3
+				{
+					position[]={25.179647,5,46.207031};
+					id=3;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Command""]; [this, ""jtac""] call JTF2_fnc_SetGear;";
+					description="Platoon JTAC / FAR";
 				};
 			};
 		};
@@ -835,14 +846,6 @@ class Mission
 				class Item0
 				{
 					position[]={25.128647,0.010408929,53.358887};
-					id=54;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="zeusModule1";
-					syncId=0;
 					class args
 					{
 						items=4;
@@ -860,17 +863,24 @@ class Mission
 						};
 						class Item2
 						{
-							value=3;
+							value="3";
 							parentCls="ModuleCurator_F";
 							typeName="Addons";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleCurator_F";
 							typeName="Forced";
 						};
 					};
+					id=54;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusModule1";
 				};
 			};
 		};
@@ -883,14 +893,6 @@ class Mission
 				class Item0
 				{
 					position[]={25.138412,0.0090332255,54.658691};
-					id=55;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="zeusModule2";
-					syncId=1;
 					class args
 					{
 						items=4;
@@ -908,17 +910,24 @@ class Mission
 						};
 						class Item2
 						{
-							value=3;
+							value="3";
 							parentCls="ModuleCurator_F";
 							typeName="Addons";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleCurator_F";
 							typeName="Forced";
 						};
 					};
+					id=55;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusModule2";
 				};
 			};
 		};
@@ -931,14 +940,6 @@ class Mission
 				class Item0
 				{
 					position[]={27.25853,0.0067492845,53.966309};
-					id=56;
-					side="LOGIC";
-					vehicle="ModuleCuratorAddEditableObjects";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={1,0,6};
 					class args
 					{
 						items=2;
@@ -950,11 +951,17 @@ class Mission
 						};
 						class Item1
 						{
-							value=1;
+							value="1";
 							parentCls="ModuleCuratorAddEditableObjects";
 							typeName="AddCrew";
 						};
 					};
+					id=56;
+					side="LOGIC";
+					vehicle="ModuleCuratorAddEditableObjects";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
@@ -967,14 +974,6 @@ class Mission
 				class Item0
 				{
 					position[]={29.192966,0.0023938792,54.888672};
-					id=57;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="zeusRespawn";
-					syncId=3;
 					class args
 					{
 						items=4;
@@ -986,23 +985,30 @@ class Mission
 						};
 						class Item1
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Type";
 						};
 						class Item2
 						{
-							value=3;
+							value="3";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Side";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Marker";
 						};
 					};
+					id=57;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusRespawn";
 				};
 			};
 		};
@@ -1057,14 +1063,6 @@ class Mission
 				class Item0
 				{
 					position[]={29.231186,0.0067657921,51.931641};
-					id=60;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="aaf_respawn";
-					syncId=4;
 					class args
 					{
 						items=4;
@@ -1076,23 +1074,30 @@ class Mission
 						};
 						class Item1
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Type";
 						};
 						class Item2
 						{
-							value=2;
+							value="2";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Side";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Marker";
 						};
 					};
+					id=60;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="aaf_respawn";
 				};
 			};
 		};
@@ -1105,14 +1110,6 @@ class Mission
 				class Item0
 				{
 					position[]={29.211102,0.0044585373,53.517822};
-					id=61;
-					side="LOGIC";
-					vehicle="ModuleRespawnPosition_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="nato_respawn";
-					syncId=5;
 					class args
 					{
 						items=4;
@@ -1124,23 +1121,30 @@ class Mission
 						};
 						class Item1
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Type";
 						};
 						class Item2
 						{
-							value=1;
+							value="1";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Side";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Marker";
 						};
 					};
+					id=61;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="nato_respawn";
 				};
 			};
 		};
@@ -1153,14 +1157,6 @@ class Mission
 				class Item0
 				{
 					position[]={25.103256,0.011452403,52.04834};
-					id=62;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="zeusAdmin";
-					syncId=6;
 					class args
 					{
 						items=4;
@@ -1178,17 +1174,24 @@ class Mission
 						};
 						class Item2
 						{
-							value=3;
+							value="3";
 							parentCls="ModuleCurator_F";
 							typeName="Addons";
 						};
 						class Item3
 						{
-							value=0;
+							value="0";
 							parentCls="ModuleCurator_F";
 							typeName="Forced";
 						};
 					};
+					id=62;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusAdmin";
 				};
 			};
 		};
