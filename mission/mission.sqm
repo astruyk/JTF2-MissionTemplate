@@ -562,7 +562,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Wolf""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Wolf Weapon Team Lead";
 				};
 				class Item1
@@ -605,7 +605,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Jackal""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Jackal Weapon Team Lead";
 				};
 				class Item1
@@ -648,7 +648,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Fox""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Fox Team Lead (EOD)";
 				};
 				class Item1
