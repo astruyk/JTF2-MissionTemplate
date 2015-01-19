@@ -146,8 +146,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Ghost""]; [this, ""recon""] call JTF2_fnc_SetGear;";
-					description="Ghost (Recon/JTAC)";
+					init="this setGroupId [""Ghost""]; [this, ""reconSniper""] call JTF2_fnc_SetGear;";
+					description="Ghost Sniper";
 				};
 				class Item1
 				{
@@ -158,8 +158,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Ghost""]; [this, ""recon""] call JTF2_fnc_SetGear;";
-					description="Ghost (Recon/Explosives)";
+					init="this setGroupId [""Ghost""]; [this, ""reconSpotter""] call JTF2_fnc_SetGear;";
+					description="Ghost Spotter";
 				};
 			};
 		};

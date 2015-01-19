@@ -84,9 +84,13 @@ if (local _unit) then
 					{
 						#include "gear_pilot.sqf";
 					};
-					case "recon":
+					case "reconSniper":
 					{
-						#include "gear_recon.sqf";
+						#include "gear_recon_sniper.sqf";
+					};
+					case "reconSpotter":
+					{
+						#include "gear_recon_spotter.sqf";
 					};
 					case "uav":
 					{
