@@ -100,6 +100,82 @@ if (local _unit) then
 					{
 						#include "gear_rifleman.sqf";
 					};
+					case "o_aar":
+					{
+						#include "o_gear_aar.sqf";
+					};
+					case "o_airMedic":
+					{
+						#include "o_gear_medic.sqf";
+					};
+					case "o_ammg":
+					{
+						#include "o_gear_ammg.sqf";
+					};
+					case "ar":
+					{
+						#include "o_gear_ar.sqf";
+					};
+					case "o_command":
+					{
+						#include "o_gear_command.sqf";
+					};
+					case "o_crew":
+					{
+						#include "o_gear_crew.sqf";
+					};
+					case "o_eod":
+					{
+						#include "o_gear_eod.sqf";
+					};
+					case "o_flightCommand":
+					{
+						#include "o_gear_command.sqf";
+					};
+					case "o_ftl":
+					{
+						#include "o_gear_ftl.sqf";
+					};
+					case "o_gl":
+					{
+						#include "o_gear_gl.sqf";
+					};
+					case "o_jtac":
+					{
+						#include "o_gear_jtac.sqf";
+					};
+					case "o_lat":
+					{
+						#include "gear_lat.sqf";
+					};
+					case "o_marksman":
+					{
+						#include "o_gear_marksman.sqf";
+					};
+					case "o_medic":
+					{
+						#include "o_gear_medic.sqf";
+					};
+					case "o_mmg":
+					{
+						#include "o_gear_mmg.sqf";
+					};
+					case "o_pilot":
+					{
+						#include "o_gear_pilot.sqf";
+					};
+					case "o_reconSniper":
+					{
+						#include "o_gear_recon_sniper.sqf";
+					};
+					case "o_reconSpotter":
+					{
+						#include "o_gear_recon_spotter.sqf";
+					};
+					case "o_uav":
+					{
+						#include "o_gear_uav.sqf";
+					};
 				};
 			};
 		};

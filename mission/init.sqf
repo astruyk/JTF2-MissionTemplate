@@ -47,7 +47,14 @@ if (isServer) then
 	{
 		deleteVehicle nato_respawn;
 	};
-
+	if (("jtf2_param_create_opfor_spawn" call BIS_fnc_getParamValue) == 1) then
+	{
+		[west, opfor_respawn] call JTF2_fnc_PositionBase;
+	}
+	else
+	{
+		deleteVehicle opfor_respawn;
+	};
 	[] spawn
 	{
 		waitUntil { !isNil "Ares_Create_Asorgs_Ammo_Box" && !isNil "Ares_Create_Vas_Ammo_Box"};

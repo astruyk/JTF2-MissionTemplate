@@ -70,6 +70,14 @@ class Params
 		texts[] = { "No", "Yes" };
 		default = 0;
 	};
+
+	class jtf2_param_create_opfor_spawn
+	{
+		title = "Create OPFOR spawn point automatically";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 0;
+	};
 	
 	class jtf2_param_agm_map_spacer
 	{

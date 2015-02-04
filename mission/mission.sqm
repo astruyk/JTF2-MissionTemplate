@@ -39,7 +39,8 @@ class Mission
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Characters_F_Civil",
-		"map_vr"
+		"map_vr",
+		"A3_Characters_F_OPFOR"
 	};
 	addOnsAuto[]=
 	{
@@ -49,7 +50,8 @@ class Mission
 		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_Civil",
-		"map_vr"
+		"A3_Characters_F_OPFOR",
+		"a3_map_altis"
 	};
 	randomSeed=11823142;
 	class Intel
@@ -74,7 +76,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=25;
+		items=42;
 		class Item0
 		{
 			side="WEST";
@@ -239,7 +241,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={32.184761,0.0089868028,46.529785};
+					position[]={32.184761,0.14330265,46.529785};
 					id=12;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -1062,7 +1064,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={29.231186,0.0067657921,51.931641};
+					position[]={29.385942,0,50.644409};
 					class args
 					{
 						items=4;
@@ -1086,7 +1088,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="0";
+							value="1";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Marker";
 						};
@@ -1133,7 +1135,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="0";
+							value="1";
 							parentCls="ModuleRespawnPosition_F";
 							typeName="Marker";
 						};
@@ -1195,6 +1197,834 @@ class Mission
 				};
 			};
 		};
+		class Item25
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={55.892124,-185.97,49.440308};
+					id=63;
+					side="EAST";
+					vehicle="O_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="MAJOR";
+					skill=0.60000002;
+					init="this setGroupId [""Command""]; [this, ""o_command""] call JTF2_fnc_SetGear;";
+					description="Command (Platoon Lead)";
+				};
+				class Item1
+				{
+					position[]={55.892136,0.044472776,47.889404};
+					id=64;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Command""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Platoon Medic";
+				};
+				class Item2
+				{
+					position[]={57.366066,0.070382759,47.770386};
+					id=65;
+					side="EAST";
+					vehicle="O_soldier_UAV_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Command""]; [this, ""o_uav""] call JTF2_fnc_SetGear;";
+					description="Platoon UAV Operator";
+				};
+				class Item3
+				{
+					position[]={58.684853,-185.97,47.731934};
+					id=66;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Command""]; [this, ""o_jtac""] call JTF2_fnc_SetGear;";
+					description="Platoon JTAC / FAO";
+				};
+			};
+		};
+		class Item26
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={55.892139,-0.057782754,44.280396};
+					id=67;
+					side="EAST";
+					vehicle="O_recon_M_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Ghost""]; [this, ""o_reconSniper""] call JTF2_fnc_SetGear";
+					description="Ghost Sniper";
+				};
+				class Item1
+				{
+					position[]={57.560036,-0.021918416,44.161377};
+					id=68;
+					side="EAST";
+					vehicle="O_recon_exp_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Ghost""]; [this, ""o_reconSpotter""] call JTF2_fnc_SetGear;";
+					description="Ghost Spotter";
+				};
+			};
+		};
+		class Item27
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={63.998859,-185.97,49.473267};
+					id=69;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
+					description="Panther Section Leader";
+				};
+				class Item1
+				{
+					position[]={63.921265,0.10362475,47.915039};
+					id=70;
+					side="EAST";
+					vehicle="O_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
+					description="Panther Ammo Bearer";
+				};
+				class Item2
+				{
+					position[]={65.744308,0.079583108,47.845459};
+					id=71;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
+					description="Panther Marksman";
+				};
+				class Item3
+				{
+					position[]={67.489754,0.043926463,47.876587};
+					id=72;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Panther Medic";
+				};
+				class Item4
+				{
+					position[]={69.04129,0.0063375011,47.839966};
+					id=73;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+				class Item5
+				{
+					position[]={65.86068,-185.97,49.471436};
+					id=74;
+					side="EAST";
+					vehicle="O_Soldier_GL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
+					description="Panther Grenadier";
+				};
+				class Item6
+				{
+					position[]={67.412186,0.013819221,49.432983};
+					id=75;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
+					description="Panther Rifleman (AT)";
+				};
+				class Item7
+				{
+					position[]={69.041267,-0.029809494,49.387207};
+					id=76;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+			};
+		};
+		class Item28
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={63.882492,0.097685456,44.853516};
+					id=77;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
+					description="Panther Section Leader";
+				};
+				class Item1
+				{
+					position[]={63.804897,0.076977313,43.295288};
+					id=78;
+					side="EAST";
+					vehicle="O_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
+					description="Panther Ammo Bearer";
+				};
+				class Item2
+				{
+					position[]={65.627945,0.090511441,43.225708};
+					id=79;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
+					description="Panther Marksman";
+				};
+				class Item3
+				{
+					position[]={67.373383,0.09099029,43.256836};
+					id=80;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Panther Medic";
+				};
+				class Item4
+				{
+					position[]={68.924927,0.079776481,43.220215};
+					id=81;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+				class Item5
+				{
+					position[]={65.744308,0.098301701,44.851685};
+					id=82;
+					side="EAST";
+					vehicle="O_Soldier_GL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
+					description="Panther Grenadier";
+				};
+				class Item6
+				{
+					position[]={67.295822,0.087004259,44.813232};
+					id=83;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
+					description="Panther Rifleman (AT)";
+				};
+				class Item7
+				{
+					position[]={68.924896,0.064704075,44.767456};
+					id=84;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+			};
+		};
+		class Item29
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={63.688553,-0.025657509,38.997803};
+					id=85;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
+					description="Panther Section Leader";
+				};
+				class Item1
+				{
+					position[]={63.610958,-0.072062798,37.439575};
+					id=86;
+					side="EAST";
+					vehicle="O_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
+					description="Panther Ammo Bearer";
+				};
+				class Item2
+				{
+					position[]={65.434006,-0.030813549,37.369995};
+					id=87;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
+					description="Panther Marksman";
+				};
+				class Item3
+				{
+					position[]={67.179443,0.0080800056,37.401123};
+					id=88;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Panther Medic";
+				};
+				class Item4
+				{
+					position[]={68.730988,0.035196155,37.364502};
+					id=89;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+				class Item5
+				{
+					position[]={65.550369,0.014940243,38.995972};
+					id=90;
+					side="EAST";
+					vehicle="O_Soldier_GL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
+					description="Panther Grenadier";
+				};
+				class Item6
+				{
+					position[]={67.101883,0.04206989,38.95752};
+					id=91;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
+					description="Panther Rifleman (AT)";
+				};
+				class Item7
+				{
+					position[]={68.730957,0.062211841,38.911743};
+					id=92;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Panther Autorifleman";
+				};
+			};
+		};
+		class Item30
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={72.976639,-0.13744496,49.42749};
+					id=93;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Hammer""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Hammer Lead (Commander)";
+				};
+				class Item1
+				{
+					position[]={73.054214,-0.10145496,47.682495};
+					id=94;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Hammer""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Hammer Gunner";
+				};
+				class Item2
+				{
+					position[]={74.644524,-0.14097178,47.605591};
+					id=95;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Hammer""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Hammer Driver";
+				};
+			};
+		};
+		class Item31
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={79.221497,-0.21725112,49.273682};
+					id=96;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Anvil""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Anvil Lead (Commander)";
+				};
+				class Item1
+				{
+					position[]={79.299072,-0.21831067,47.528687};
+					id=97;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Anvil""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Anvil Gunner";
+				};
+				class Item2
+				{
+					position[]={80.889381,-0.22494534,47.451782};
+					id=98;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Anvil""]; [this, ""o_crew""] call JTF2_fnc_SetGear;";
+					description="Anvil Driver";
+				};
+			};
+		};
+		class Item32
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={72.899086,-0.024567336,44.661255};
+					id=99;
+					side="EAST";
+					vehicle="O_soldier_exp_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Fox""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					description="Fox Team Lead (EOD)";
+				};
+				class Item1
+				{
+					position[]={72.821503,0.019092545,42.723999};
+					id=100;
+					side="EAST";
+					vehicle="O_soldier_exp_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Fox""]; [this, ""o_eod""] call JTF2_fnc_SetGear;";
+					description="Fox EOD Specialist";
+				};
+				class Item2
+				{
+					position[]={74.838486,-0.030902721,42.683716};
+					id=101;
+					side="EAST";
+					vehicle="O_soldier_exp_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Fox""]; [this, ""o_eod""] call JTF2_fnc_SetGear;";
+					description="Fox EOD Specialist";
+				};
+			};
+		};
+		class Item33
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={77.708786,-0.15834802,44.813232};
+					id=102;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Wolf""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					description="Wolf Weapon Team Lead";
+				};
+				class Item1
+				{
+					position[]={77.708786,-0.11184652,42.720337};
+					id=103;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Wolf""]; [this, ""o_mmg""] call JTF2_fnc_SetGear;";
+					description="Wolf Weapon Specialist";
+				};
+				class Item2
+				{
+					position[]={79.609413,-0.16057014,42.683716};
+					id=104;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Wolf""]; [this, ""o_ammg""] call JTF2_fnc_SetGear;";
+					description="Wolf Weapon Specialist";
+				};
+			};
+		};
+		class Item34
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={82.945152,-0.23437524,44.619141};
+					id=105;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Jackal""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					description="Jackal Weapon Team Lead";
+				};
+				class Item1
+				{
+					position[]={82.945152,-0.2230536,42.526245};
+					id=106;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this setGroupId [""Jackal""]; [this, ""o_mmg""] call JTF2_fnc_SetGear;";
+					description="Jackal Weapon Specialist";
+				};
+				class Item2
+				{
+					position[]={84.845779,-0.24123676,42.489624};
+					id=107;
+					side="EAST";
+					vehicle="O_soldier_repair_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this setGroupId [""Jackal""]; [this, ""o_ammg""] call JTF2_fnc_SetGear;";
+					description="Jackal Weapon Specialist";
+				};
+			};
+		};
+		class Item35
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={74.411819,0.052286558,38.415527};
+					id=108;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Albatross-1""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Albatross-1 (Transport Pilot)";
+				};
+			};
+		};
+		class Item36
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={76.118484,0.024455614,38.415527};
+					id=109;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Albatross-2""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Albatross-2 (Transport Pilot)";
+				};
+			};
+		};
+		class Item37
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={79.182724,-0.048080999,38.415527};
+					id=110;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Angel""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Angel Lead (Pilot)";
+				};
+				class Item1
+				{
+					position[]={81.160896,-0.10455276,38.492432};
+					id=111;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupId [""Angel""]; [this, ""o_airMedic""] call JTF2_fnc_SetGear;";
+					description="Angel Medic";
+				};
+			};
+		};
+		class Item38
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={81.238487,-0.021883912,34.883423};
+					id=112;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Raptor-2""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Raptor-2 (Co-Pilot)";
+				};
+				class Item1
+				{
+					position[]={79.182724,0.019660652,34.963989};
+					id=113;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Raptor-2""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Raptor-2 (Pilot)";
+				};
+			};
+		};
+		class Item39
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={81.238487,-0.060152002,36.589966};
+					id=114;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Raptor-1""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Raptor-1 (Co-Pilot)";
+				};
+				class Item1
+				{
+					position[]={79.182724,-0.0098118857,36.670532};
+					id=115;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupId [""Raptor-1""]; [this, ""o_pilot""] call JTF2_fnc_SetGear;";
+					description="Raptor-1 (Pilot)";
+				};
+			};
+		};
+		class Item40
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={72.899086,-185.97,38.494263};
+					id=116;
+					side="EAST";
+					vehicle="O_helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					init="this setGroupId [""Flight Lead""]; [this, ""o_flightCommand""] call JTF2_fnc_SetGear;";
+					description="Flight Lead";
+				};
+			};
+		};
+		class Item41
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={29.334356,0,52.036011};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Name";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Type";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Side";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="ModuleRespawnPosition_F";
+							typeName="Marker";
+						};
+					};
+					id=117;
+					side="LOGIC";
+					vehicle="ModuleRespawnPosition_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="opfor_respawn";
+				};
+			};
+		};
 	};
 };
 class Intro
@@ -1206,7 +2036,7 @@ class Intro
 	};
 	addOnsAuto[]=
 	{
-		"map_vr"
+		"a3_map_altis"
 	};
 	randomSeed=8428644;
 	class Intel
@@ -1237,7 +2067,7 @@ class OutroWin
 	};
 	addOnsAuto[]=
 	{
-		"map_vr"
+		"a3_map_altis"
 	};
 	randomSeed=4674277;
 	class Intel
@@ -1268,7 +2098,7 @@ class OutroLoose
 	};
 	addOnsAuto[]=
 	{
-		"map_vr"
+		"a3_map_altis"
 	};
 	randomSeed=6586695;
 	class Intel
