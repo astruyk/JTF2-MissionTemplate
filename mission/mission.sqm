@@ -1406,8 +1406,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
-					description="Panther Section Leader";
+					init="this setGroupId [""Badger""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
+					description="Badger Section Leader";
 				};
 				class Item1
 				{
@@ -1417,8 +1417,8 @@ class Mission
 					vehicle="O_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
-					description="Panther Ammo Bearer";
+					init="this setGroupId [""Badger""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
+					description="Badger Ammo Bearer";
 				};
 				class Item2
 				{
@@ -1429,8 +1429,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
-					description="Panther Marksman";
+					init="this setGroupId [""Badger""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
+					description="Badger Marksman";
 				};
 				class Item3
 				{
@@ -1440,8 +1440,8 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
-					description="Panther Medic";
+					init="this setGroupId [""Badger""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Badger Medic";
 				};
 				class Item4
 				{
@@ -1452,8 +1452,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
-					description="Panther Autorifleman";
+					init="this setGroupId [""Badger""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Badger Autorifleman";
 				};
 				class Item5
 				{
@@ -1464,8 +1464,8 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
-					description="Panther Grenadier";
+					init="this setGroupId [""Badger""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
+					description="Badger Grenadier";
 				};
 				class Item6
 				{
@@ -1476,8 +1476,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
-					description="Panther Rifleman (AT)";
+					init="this setGroupId [""Badger""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
+					description="Badger Rifleman (AT)";
 				};
 				class Item7
 				{
@@ -1488,8 +1488,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
-					description="Panther Autorifleman";
+					init="this setGroupId [""Badger""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Badger Autorifleman";
 				};
 			};
 		};
@@ -1509,8 +1509,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
-					description="Panther Section Leader";
+					init="this setGroupId [""Mongoose""]; [this, ""o_ftl""] call JTF2_fnc_SetGear;";
+					description="Mongoose Section Leader";
 				};
 				class Item1
 				{
@@ -1520,8 +1520,8 @@ class Mission
 					vehicle="O_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
-					description="Panther Ammo Bearer";
+					init="this setGroupId [""Mongoose""]; [this, ""o_aar""] call JTF2_fnc_SetGear;";
+					description="Mongoose Ammo Bearer";
 				};
 				class Item2
 				{
@@ -1532,8 +1532,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
-					description="Panther Marksman";
+					init="this setGroupId [""Mongoose""]; [this, ""o_marksman""] call JTF2_fnc_SetGear;";
+					description="Mongoose Marksman";
 				};
 				class Item3
 				{
@@ -1543,8 +1543,8 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
-					description="Panther Medic";
+					init="this setGroupId [""Mongoose""]; [this, ""o_medic""] call JTF2_fnc_SetGear;";
+					description="Mongoose Medic";
 				};
 				class Item4
 				{
@@ -1555,8 +1555,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
-					description="Panther Autorifleman";
+					init="this setGroupId [""Mongoose""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Mongoose Autorifleman";
 				};
 				class Item5
 				{
@@ -1567,8 +1567,8 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
-					description="Panther Grenadier";
+					init="this setGroupId [""Mongoose""]; [this, ""o_gl""] call JTF2_fnc_SetGear;";
+					description="Mongoose Grenadier";
 				};
 				class Item6
 				{
@@ -1579,8 +1579,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
-					description="Panther Rifleman (AT)";
+					init="this setGroupId [""Mongoose""]; [this, ""o_lat""] call JTF2_fnc_SetGear;";
+					description="Mongoose Rifleman (AT)";
 				};
 				class Item7
 				{
@@ -1591,8 +1591,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
-					description="Panther Autorifleman";
+					init="this setGroupId [""Mongoose""]; [this, ""o_ar""] call JTF2_fnc_SetGear;";
+					description="Mongoose Autorifleman";
 				};
 			};
 		};
