@@ -112,7 +112,7 @@ if (local _unit) then
 					{
 						#include "o_gear_ammg.sqf";
 					};
-					case "ar":
+					case "o_ar":
 					{
 						#include "o_gear_ar.sqf";
 					};
