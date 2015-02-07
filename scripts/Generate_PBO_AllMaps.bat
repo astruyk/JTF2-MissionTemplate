@@ -14,7 +14,6 @@ call .\Generate_PBO.bat Bystrica
 REM Sometimes (apparently) Bystrica is known by this name.
 call .\Generate_PBO.bat Woodland_ACR
 
-
 REM Wake Island
 call .\Generate_PBO.bat Wake
 
@@ -26,3 +25,6 @@ call .\Generate_PBO.bat Panthera3
 
 REM N'Ziwasogo
 call .\Generate_PBO.bat pja305
+
+REM Fata_A3
+call .\Generate_PBO.bat fata
