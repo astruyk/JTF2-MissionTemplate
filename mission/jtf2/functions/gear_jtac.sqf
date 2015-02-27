@@ -12,13 +12,13 @@ removeGoggles _unit;
 
 comment "Add containers";
 _unit forceAddUniform "CFB_TW_Tshirt_Uniform";
-for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_M441_HE";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
 _unit addItemToUniform "AGM_EarBuds";
 _unit addVest "CFB_TW_Vest_Tactical";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShellGreen";};
-for "_i" from 1 to 8 do {_unit addItemToVest "9Rnd_45ACP_Mag";};
-for "_i" from 1 to 7 do {_unit addItemToVest "1Rnd_SmokeBlue_Grenade_shell";};
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green";};
+for "_i" from 1 to 10 do {_unit addItemToVest "1Rnd_SmokeBlue_Grenade_shell";};
 _unit addBackpack "tf_rt1523g_big_bwmod";
 for "_i" from 1 to 12 do {_unit addItemToBackpack "AGM_Bandage";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "AGM_Morphine";};
@@ -30,8 +30,8 @@ for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_mag_M441_HE";};
 _unit addHeadgear "CFB_TW_Patrol";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_M320";
-_unit addWeapon "hgun_ACPC2_F";
+_unit addWeapon "rhs_m4_m320";
+_unit addPrimaryWeaponItem "rhsusf_acc_compm4";
 _unit addWeapon "AGM_Vector";
 
 comment "Add items";
