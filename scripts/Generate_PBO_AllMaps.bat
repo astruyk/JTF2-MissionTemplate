@@ -28,3 +28,9 @@ call .\Generate_PBO.bat pja305
 
 REM Fata_A3
 call .\Generate_PBO.bat fata
+
+REM SMD Sahrani
+call .\Generate_PBO.bat smd_sahrani_a3
+
+REM Bornholm
+call .\Generate_PBO.bat Bornholm
