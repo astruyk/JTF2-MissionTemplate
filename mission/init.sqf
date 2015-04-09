@@ -1,10 +1,3 @@
-// Setup the Ares functionality to allow the spawning of the ammo boxes
-[] execVm "Ares_AddAsorgsCustomMissionObject.sqf";
-[] execVm "Ares_AddVasCustomMissionObject.sqf";
-[] execVM "Ares_AddXmedCustomMissionObject.sqf";
-//[] execVM "Ares_AddCustomSigns.sqf";
-[] execVM "Ares_AddCseCustomMissionObjects.sqf";
-
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
 
