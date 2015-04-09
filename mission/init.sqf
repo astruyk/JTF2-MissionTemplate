@@ -7,7 +7,7 @@ enableSentences false; // Keep the commander units from saying things automatica
 if (isServer && ("jtf2_param_add_objects_to_zeus" call BIS_fnc_getParamValue) == 1) then
 {
 	// Give zeus control of preplaced and automatically spawned units
-	[[zeusModule1, zeusModule2, zeusAdmin], true] execVM "ADV_zeus.sqf";
+	[[zeusModule1, zeusModule2, zeusModule3, zeusModule4, zeusModule5, zeusAdmin], true] execVM "ADV_zeus.sqf";
 };
 
 if (isServer) then

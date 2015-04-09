@@ -56,7 +56,7 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Dynamic Missions (v.1.10.1)";
+		briefingName="JTF2 Dynamic Missions (v.1.11.0)";
 		overviewText="A blank mission template for zeus/MCC missions.";
 		resistanceWest=0;
 		startWeather=0;
@@ -76,7 +76,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=42;
+		items=48;
 		class Item0
 		{
 			side="WEST";
@@ -117,11 +117,11 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setGroupId [""Command""]; [this, ""uav""] call JTF2_fnc_SetGear;";
-					description="Platoon UAV Operator";
+					description="'Pathfinder' UAV Operator";
 				};
 				class Item3
 				{
-					position[]={25.179647,5,46.207031};
+					position[]={25.354191,0.060393751,46.23999};
 					id=3;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -847,7 +847,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25.128647,0.010408929,53.358887};
+					position[]={25.303194,0.025862325,57.79187};
 					class args
 					{
 						items=4;
@@ -883,6 +883,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule1";
+					syncId=0;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -894,7 +896,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25.138412,0.0090332255,54.658691};
+					position[]={25.31296,0.038509138,56.229736};
 					class args
 					{
 						items=4;
@@ -930,6 +932,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusModule2";
+					syncId=1;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -964,6 +968,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=2;
+					synchronizations[]={1,0,6,3,5,7,4,8,9,10};
 				};
 			};
 		};
@@ -1011,6 +1017,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusRespawn";
+					syncId=3;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -1022,7 +1030,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={22.825912,0.011741709,54.692871};
+					position[]={23.349548,0.044207212,57.767212};
 					id=58;
 					side="CIV";
 					vehicle="C_man_hunter_1_F";
@@ -1030,7 +1038,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus1";
-					init="this allowDamage false;";
+					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -1043,7 +1051,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={22.776108,0.012508933,53.36084};
+					position[]={23.334654,0.055635624,56.187988};
 					id=59;
 					side="CIV";
 					vehicle="C_man_hunter_1_F";
@@ -1051,7 +1059,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus2";
-					init="this allowDamage false;";
+					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -1100,6 +1108,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="aaf_respawn";
+					syncId=4;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -1147,6 +1157,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="nato_respawn";
+					syncId=5;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -1158,7 +1170,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25.103256,0.011452403,52.04834};
+					position[]={25.382528,0.068862289,49.922485};
 					class args
 					{
 						items=4;
@@ -1194,6 +1206,8 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="zeusAdmin";
+					syncId=6;
+					synchronizations[]={2};
 				};
 			};
 		};
@@ -2022,6 +2036,218 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="opfor_respawn";
+					syncId=7;
+					synchronizations[]={2};
+				};
+			};
+		};
+		class Item42
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25.312962,0.048657898,54.871094};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="zeus3";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=118;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusModule3";
+					syncId=8;
+					synchronizations[]={2};
+				};
+			};
+		};
+		class Item43
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23.404474,0.063353926,54.759766};
+					id=119;
+					side="CIV";
+					vehicle="C_man_hunter_1_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="zeus3";
+					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					description="Zeus";
+				};
+			};
+		};
+		class Item44
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25.417686,0.055588886,53.682739};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="zeus4";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=120;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusModule4";
+					syncId=9;
+					synchronizations[]={2};
+				};
+			};
+		};
+		class Item45
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23.474283,0.06829536,53.467041};
+					id=121;
+					side="CIV";
+					vehicle="C_man_hunter_1_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="zeus4";
+					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					description="Zeus";
+				};
+			};
+		};
+		class Item46
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={25.452593,0.061486259,52.532837};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="zeus5";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=122;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					text="zeusModule5";
+					syncId=10;
+					synchronizations[]={2};
+				};
+			};
+		};
+		class Item47
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={23.474285,0.071358599,52.106567};
+					id=123;
+					side="CIV";
+					vehicle="C_man_hunter_1_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="zeus5";
+					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					description="Zeus";
 				};
 			};
 		};
