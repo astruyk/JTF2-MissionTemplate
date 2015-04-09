@@ -39,22 +39,6 @@ class Params
 		default = 0;
 	};
 
-	class jtf2_param_item_blacklists
-	{
-		title = "ASOR/VAS Item Restrictions";
-		values[] = { 0, 1, 2 };
-		texts[] = { "All Items Available", "Remove Thermal Optics", "Remove Thermal + Zoomed Optics" };
-		default = 1;
-	};
-	
-	class jtf2_param_start_with_ammoboxes
-	{
-		title = "Ammoboxes at spawn";
-		values[] = { 0, 1, 2, 3};
-		texts[] = { "None", "ASORG Only", "VAS Only", "Both ASORG and VAS" };
-		default = 0;
-	};
-	
 	class jtf2_param_allow_grass_changes
 	{
 		title = "Allow players to change grass view settings";
