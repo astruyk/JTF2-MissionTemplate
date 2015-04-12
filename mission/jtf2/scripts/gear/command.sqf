@@ -33,7 +33,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "1Rnd_SmokePurple_Grenade_shel
 player addHeadgear "CFB_TW_Patrol";
 
 comment "Add weapons";
-player addWeapon "rhs_weap_m16a4_carryhandle";
+player addWeapon "rhs_weap_m4_m320";
 player addPrimaryWeaponItem "rhsusf_acc_compm4";
 player addWeapon "AGM_Vector";
 
