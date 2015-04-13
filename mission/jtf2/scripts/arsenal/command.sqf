@@ -1,8 +1,11 @@
 _items =
 	[
+		"AGM_MapTools",
+		"AGM_Vector"
 	];
 _backpacks =
 	[
+		"tf_rt1523g_green"
 	];
 _weapons =
 	[
