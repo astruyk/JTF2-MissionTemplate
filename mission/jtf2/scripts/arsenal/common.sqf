@@ -89,6 +89,27 @@ _items =
 		"bipod_03_F_blk",
 		"bipod_03_F_oli",
 		
+		// Glasses
+		"G_Diving",			//Diving Goggles
+		"G_Shades_Black",		//Shades (Black)
+		"G_Shades_Blue",		//Shades (Blue)
+		"G_Sport_Blackred",	//Sport Shades (Vulcan)
+		"G_Tactical_Clear",	//Tactical Glasses
+		"G_Spectacles",		//Spectacle Glasses
+		"G_Spectacles_Tinted",	//Tinted Spectacles
+		"G_Combat",			//Combat Goggles
+		"G_Lowprofile",		//Low Profile Goggles
+		"G_Shades_Green",		//Shades (Green)
+		"G_Shades_Red",		//Shades (Red)
+		"G_Squares",			//Square Spectacles
+		"G_Squares_Tinted",	//Square Shades
+		"G_Sport_BlackWhite",	//Sport Shades (Shadow)
+		"G_Sport_Blackyellow",	//Sport Shades (Poison)
+		"G_Sport_Greenblack",	//Sport Shades (Yetti)
+		"G_Sport_Checkered",	//Sport Shades (Style)
+		"G_Sport_Red",		//Sport Shades (Fire)
+		"G_Tactical_Black",	//Tactical Shades
+		
 		// Misc. Items
 		"ItemWatch",
 		"ItemCompass",
