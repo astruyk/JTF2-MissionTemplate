@@ -1,5 +1,6 @@
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
+[] execVM "Ares_addClassRestrictedArsenalModule.sqf";
 
 enableSaving [false, false]; //Don't allow saving
 enableSentences false; // Keep the commander units from saying things automatically
