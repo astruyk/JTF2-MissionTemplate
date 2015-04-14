@@ -10,7 +10,6 @@ _items =
 		"AGM_Epipen",
 		"AGM_EarBuds",
 		"AGM_Bloodbag",
-		//"AGM_SpareBarrel",
 		"AGM_IR_Strobe_Item",
 		"AGM_CableTie",
 		
@@ -122,9 +121,7 @@ _items =
 _backpacks =
 	[
 		"CFB_TW_Backpack_Assault",
-		"CFB_TW_Backpack_Kitbag",
-		"CFB_AR_Backpack_Assault",
-		"CFB_AR_Backpack_Kitbag"
+		"CFB_AR_Backpack_Assault"
 	];
 _weapons =
 	[
@@ -171,12 +168,6 @@ _magazines =
 		"Chemlight_yellow",
 		"Chemlight_blue",
 		"B_IR_Grenade",
-		
-		// RHS Smoke Grenades
-		//"rhs_mag_m18_green",
-		//"rhs_mag_m18_red",
-		//"rhs_mag_m18_yellow",
-		//"rhs_mag_m18_purple",
 		
 		// AGM handflares
 		"AGM_HandFlare_White",
