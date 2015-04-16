@@ -15,17 +15,18 @@ author = "Anton Struyk";
 loadScreen = "logo.paa";
 
 respawn = "BASE";
-respawndelay = 1;
-respawnDialog = 1;
+respawndelay = 5;
+respawnDialog = 0;
 respawnOnStart = 1;
 joinUnassigned = 1;
-respawnTemplates[] = { "MenuPosition" };
+respawnTemplates[] = { "MenuPosition", "Tickets" };
+respawnTemplatesCiv[] = { "Spectator" };
 
 class Params
 {
 	class jtf2_param_add_objects_to_zeus
 	{
-		title = "Add objects to Zeus automatically";
+		title = "Add objects to Zeus automatically?";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
 		default = 1;
@@ -33,9 +34,9 @@ class Params
 
 	class jtf2_param_starting_loadouts
 	{
-		title = "Starting loadouts";
+		title = "Starting equipment";
 		values[] = { 0, 1 };
-		texts[] = { "Role Specific Loadouts", "Basics" };
+		texts[] = { "JTF2 Custom Loadouts", "Default ARMA Loadouts" };
 		default = 0;
 	};
 
@@ -47,19 +48,19 @@ class Params
 		default = 0;
 	};
 	
-	class jtf2_param_create_nato_spawn
+	class jtf2_param_create_spawn
 	{
-		title = "Create NATO spawn point automatically";
+		title = "Create spawn points automatically?";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
 		default = 0;
 	};
 
-	class jtf2_param_create_opfor_spawn
+	class jtf2_param_respawn_tickets
 	{
-		title = "Create OPFOR spawn point automatically";
-		values[] = { 0, 1 };
-		texts[] = { "No", "Yes" };
+		title = "Re-Spawn Tickets";
+		values[] = { 0, 1, 5, 10, 20, 30, 40, 50, 75, 100 };
+		texts[] = { "Unlimited", "1 Ticket", "5 Tickets", "10 Tickets", "20 Tickets", "30 Tickets", "40 Tickets", "50 Tickets", "75 Tickets", "100 Tickets" };
 		default = 0;
 	};
 	
@@ -92,7 +93,7 @@ class Params
 		title = "Make unconscious units invulnerable?";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
-		default = 1;
+		default = 0;
 	};
 	
 	class jtf2_param_agm_prevent_instant_death
@@ -100,18 +101,17 @@ class Params
 		title = "Prevent instant death and always put players in unconscious state instead?";
 		values[] = { 0, 1 };
 		texts[] = { "No", "Yes" };
-		default = 1;
+		default = 0;
 	};
-	
+
 	class jtf2_param_agm_death_timer
 	{
 		title = "Maximum time (in seconds) for a unit to be unconscious before dying.";
 		values[] = { -1, 60, 120, 180, 340, 400, 460 };
 		texts[] = { "Disabled", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes", "6 minutes" };
-		default = 460;
+		default = 400;
 	};
-	
-	
+
 	class jtf2_param_agm_automatic_wakeup
 	{
 		title = "Allow units to wake up by themselves?";
