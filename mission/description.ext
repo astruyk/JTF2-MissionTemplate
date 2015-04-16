@@ -19,7 +19,7 @@ respawndelay = 5;
 respawnDialog = 0;
 respawnOnStart = 1;
 joinUnassigned = 1;
-respawnTemplates[] = { "MenuPosition", "Tickets" };
+respawnTemplates[] = { "MenuPosition" };
 respawnTemplatesCiv[] = { "Spectator" };
 
 class Params
@@ -122,6 +122,7 @@ class Params
 };
 
 #include "taw_vd\dialog.hpp"
+#include "spectator\spectating.hpp"
 
 class CfgFunctions
 {

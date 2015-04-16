@@ -1,5 +1,6 @@
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
+MCC_path = ""; // Keeps specatator script from freaking out.
 
 enableSaving [false, false]; //Don't allow saving
 enableSentences false; // Keep the commander units from saying things automatically
@@ -15,7 +16,7 @@ if (isServer) then
 	// Generate a random respawn point for the Zeus players. This will put them someplace on the map.
 	[civilian, zeusRespawn] call JTF2_fnc_PositionBase;
 	
-	if (("jtf2_param_create_spawn" call BIS_fnc_getParamValue) == 1) then
+	if (("jtf2_param_create_spawn" call BIS_fnc_getParamValue) == 1 || !isDedicated) then
 	{
 		[west, nato_respawn] call JTF2_fnc_PositionBase;
 		[west, opfor_respawn] call JTF2_fnc_PositionBase;
@@ -28,29 +29,9 @@ if (isServer) then
 
 	if (("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue) > 0) then
 	{
-		[west, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
-		[east, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
+		//[west, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
+		//[east, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
 	};
-};
-
-if (!isDedicated) then
-{
-	// Crazy stupid script necessary to reassign gear on startup.
-	[] spawn
-		{
-			sleep 1;  waitUntil { sleep 0.1; !isNull player; }; 
-			player addMpEventHandler
-				[
-					"MPRespawn",
-					{
-						[_this select 0] spawn
-							{
-								waitUntil { sleep 0.1; !isNull player; };
-								[_this select 0] call JTF2_fnc_AssignGear;
-							};
-					}
-				];
-		};
 };
 
 // Everyone is enemies with everyone else.
