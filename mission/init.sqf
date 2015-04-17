@@ -26,12 +26,6 @@ if (isServer) then
 		deleteVehicle nato_respawn;
 		deleteVehicle opfor_respawn;
 	};
-
-	if (("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue) > 0) then
-	{
-		//[west, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
-		//[east, ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue)] call BIS_fnc_respawnTickets;
-	};
 };
 
 // Everyone is enemies with everyone else.

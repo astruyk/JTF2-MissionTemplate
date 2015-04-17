@@ -58,9 +58,9 @@ class Params
 
 	class jtf2_param_respawn_tickets
 	{
-		title = "Re-Spawn Tickets";
-		values[] = { 0, 1, 5, 10, 20, 30, 40, 50, 75, 100 };
-		texts[] = { "Unlimited", "1 Ticket", "5 Tickets", "10 Tickets", "20 Tickets", "30 Tickets", "40 Tickets", "50 Tickets", "75 Tickets", "100 Tickets" };
+		title = "Number of Respawns";
+		values[] = { -1, 0, 1, 5, 10, 20, 50 };
+		texts[] = { "Unlimited", "No Respawns", "1 Respawn", "5 Respawns", "10 Respawns", "20 Respawns", "50 Respawns" };
 		default = 0;
 	};
 	
