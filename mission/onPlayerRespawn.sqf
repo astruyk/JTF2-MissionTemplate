@@ -24,18 +24,7 @@ _respawnDelay = _this select 3;
 			_isOutOfRespawnTickets = _ticketsRemaining < 0;
 			if (_isOutOfRespawnTickets) then
 			{
-				hint "Out of respawn tickets!";
-			}
-			else
-			{
-				hint format ["Respawn Tickets Remaining: %1", _ticketsRemaining];
-			};
-			
-			sleep 5;
-			hint "";
-			
-			if (_isOutOfRespawnTickets) then
-			{
+				hint format ["Out of respawn tickets! %1", _ticketsRemaining];
 				_spectatorCamActionId = player addAction ["Specatator Camera", {[player] execVM "spectator\specta.sqf"}];
 				player setVariable ["JTF2_UnitType_Original", player getVariable ["JTF2_UnitType", "rifleman"]];
 				player setVariable ["JTF2_UnitType", "spectator"];
@@ -56,17 +45,27 @@ _respawnDelay = _this select 3;
 							sleep 1;
 							
 							// Once this condition is true we will exit the loop.
-							missionNamespace getVariable ["JTF2_Mission_Respawns_Remaining_" + (getPlayerUID player), _defaultTickets] < 0;
+							missionNamespace getVariable ["JTF2_Mission_Respawns_Remaining_" + (getPlayerUID player), _defaultTickets] >= 0;
 						};
 						
 						// Restore the player to active duty.
-						player removeAction _spectatorCamActionId;
-						player setVariable ["JTF2_UnitType", _originalUnitType];
-						player setVariable ["JTF2_UnitType_Original", ""];
-						[player] call JTF2_fnc_AssignGear;
+						//player removeAction _spectatorCamActionId;
+						//player setVariable ["JTF2_UnitType", _originalUnitType];
+						//player setVariable ["JTF2_UnitType_Original", ""];
+						//[player] call JTF2_fnc_AssignGear;
 					};
+			}
+			else
+			{
+				hint format ["Respawn Tickets Remaining: %1", _ticketsRemaining];
 			};
+			
+			[player] call JTF2_fnc_AssignGear;
+			sleep 5;
+			hint "";
+		}
+		else
+		{
+			[player] call JTF2_fnc_AssignGear;
 		};
-
-		[player] call JTF2_fnc_AssignGear;
 	};
