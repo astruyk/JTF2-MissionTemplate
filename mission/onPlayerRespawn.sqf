@@ -41,6 +41,7 @@ _respawnDelay = _this select 3;
 							removeBackpack player;
 							removeVest player;
 							// TODO remove TFR radios.
+							// TODO kick player out of vehicles.
 							
 							sleep 1;
 							
