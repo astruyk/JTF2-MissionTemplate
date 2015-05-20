@@ -9,6 +9,7 @@ class JTF2
 		class SetupSign;
 		class GenerateArsenalBlacklist;
 		class SetupAgm { postInit = 1; }
+		class SetupAce3 { postInit = 1; }
 		class AssignGear;
 		class SetGear;
 	};

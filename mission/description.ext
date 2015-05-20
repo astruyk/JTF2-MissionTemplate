@@ -63,6 +63,30 @@ class Params
 		default = 0;
 	};
 	
+	class jtf2_param_ace_map_spacer
+	{
+		title = "--------------------- ACE MAP OPTIONS ----------------------------";
+		values[] = { 0, 1 };
+		texts[] = { " ", " " };
+		default = 0;
+	};
+	
+	class jtf2_param_ace_show_squad_map_markers
+	{
+		title = "Show friendly squad markers on map?";
+		values[] = { 0, 1 };
+		texts[] = { "No", "Yes" };
+		default = 1;
+	};
+	
+	class jtf2_param_ace_medical_spacer
+	{
+		title = "--------------------- AGM MEDICAL OPTIONS ----------------------------";
+		values[] = { 0, 1 };
+		texts[] = { " ", " " };
+		default = 0;
+	};
+	
 	class jtf2_param_agm_map_spacer
 	{
 		title = "--------------------- AGM MAP OPTIONS ----------------------------";
