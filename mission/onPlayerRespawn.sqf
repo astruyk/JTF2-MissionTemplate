@@ -35,6 +35,7 @@ _respawnDelay = _this select 3;
 						_spectatorCamActionId = _this select 0;
 						_originalUnitType = _this select 1;
 						_defaultTickets = ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue);
+						player setCaptive true;
 						waitUntil
 						{
 							removeAllWeapons player;
@@ -50,10 +51,11 @@ _respawnDelay = _this select 3;
 						};
 						
 						// Restore the player to active duty.
-						//player removeAction _spectatorCamActionId;
-						//player setVariable ["JTF2_UnitType", _originalUnitType];
-						//player setVariable ["JTF2_UnitType_Original", ""];
-						//[player] call JTF2_fnc_AssignGear;
+						player setCaptive false;
+						player removeAction _spectatorCamActionId;
+						player setVariable ["JTF2_UnitType", _originalUnitType];
+						player setVariable ["JTF2_UnitType_Original", ""];
+						[player] call JTF2_fnc_AssignGear;
 					};
 			}
 			else
