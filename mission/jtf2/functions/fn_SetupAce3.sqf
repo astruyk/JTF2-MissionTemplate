@@ -4,6 +4,7 @@
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 {
+	_medicalLevel = 1;
 	if (("jtf2_param_ace_medical_level" call BIS_fnc_getParamValue) == 1) then
 	{
 		diag_log "Applying ACE simple medical options.";
