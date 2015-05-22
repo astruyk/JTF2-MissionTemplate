@@ -1,9 +1,9 @@
 if (isClass (configFile >> "CfgPatches" >> "Ares")) then
 {
-	diag_log "ADDING ARSENAL OPTION";
+	diag_log "Adding class-based arsenal ticket module to Ares";
 	[
 		"Mission Template",
-		"Add Arsenal",
+		"Add class-based Arsenal",
 		{
 			_ammoBox = _this select 1;
 			if (isNull _ammoBox) then
@@ -18,5 +18,5 @@ if (isClass (configFile >> "CfgPatches" >> "Ares")) then
 }
 else
 {
-	diag_log "Ares not loaded. Skipping arsenal option.";
+	diag_log "Ares not loaded. Skipping adding class-based arsenal module.";
 };
