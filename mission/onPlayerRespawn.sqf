@@ -26,15 +26,26 @@ _respawnDelay = _this select 3;
 						_defaultTickets = ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue);
 						player setCaptive true;
 						[player, "spectator"] call JTF2_fnc_AssignGear;
+						_allowedItems = ["ItemMap", "ItemCompass", "ItemWatch"];
 
 						waitUntil
 						{
 							removeAllWeapons player;
 							removeBackpack player;
 							removeVest player;
-							// TODO remove TFR radios.
-							// TODO kick player out of vehicles.
+							{
+								if (not (_x in _allowedItems)) then
+								{
+									player unassignItem _x;
+									player removeItem _x;
+								};
+							} forEach assignedItems player;
 							
+							if (vehicle player != player) then
+							{
+								player action ["getOut", vehicle player];
+							};
+
 							sleep 5;
 							
 							// Once this condition is true we will exit the loop.
