@@ -12,39 +12,38 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
 	{
 		diag_log "Applying ACE advanced medical options.";
 	};
-	/*
-	AGM_Medical_Module = true;
-	publicVariable "AGM_Medical_Module";
-	AGM_Medical_MEDEVACTriggers = [];
-	publicVariable "AGM_Medical_MEDEVACTriggers";
-	AGM_Medical_MEDEVACVehicles = [];
-	publicVariable "AGM_Medical_MEDEVACVehicles";
 	
-	// Read some values from the mission parameters.
-	_missionParamInvincibleWhileDead = "jtf2_param_agm_invincible_when_dead" call BIS_fnc_getParamValue;
-	_missionParamPreventInstantDeath = "jtf2_param_agm_prevent_instant_death" call BIS_fnc_getParamValue;
-	_missionParamDeathTimer = "jtf2_param_agm_death_timer" call BIS_fnc_getParamValue;
-	_missionParameterAllowAutomaticWakeup = "jtf2_param_agm_automatic_wakeup" call BIS_fnc_getParamValue;
+	// Look up defaults and types from https://github.com/acemod/ACE3/blob/master/addons/medical/ACE_Settings.hpp
+	// From 'Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleMedicalSettings.sqf)
+	["ace_medical_level", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
+	["ace_medical_medicSetting", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
+	["ace_medical_allowLitterCreation", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled
+	["ace_medical_litterCleanUpDelay", 120] call ace_common_fnc_setParameter; // Time in seconds. 0 = Never cleanup. Default=120
+	["ace_medical_enableScreams", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled
+	["ace_medical_playerDamageThreshold", 1] call ace_common_fnc_setParameter; // Scalar. Default = 1
+	["ace_medical_AIDamageThreshold", 1] call ace_common_fnc_setParameter; // Scalar. Default = 1
+	["ace_medical_enableUnconsciousnessAI", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = 50/50, 2 = Enabled
+	["ace_medical_preventInstaDeath", 0] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled
+	["ace_medical_bleedingCoefficient", 1] call ace_common_fnc_setParameter; // Scalar. Default = 1
+	["ace_medical_painCoefficient", 1] call ace_common_fnc_setParameter; // Scalar, Default = 1
+	["ace_medical_keepLocalSettingsSynced", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled
 	
-	["AGM_Medical_CoefDamage", 1] call AGM_Core_fnc_setParameter;                   // Multiplier for the amount of damage received. Default: 1 (obviously)
-	["AGM_Medical_CoefBleeding", 1] call AGM_Core_fnc_setParameter;                 // Multiplier for the rate of bleeding. Default: 1 (obviously)
-	["AGM_Medical_CoefPain", 1] call AGM_Core_fnc_setParameter;                     // Multiplier for the intensity of the pain PP effect. Default: 1 (obviously)
-	["AGM_Medical_CoefNonMedic", 3] call AGM_Core_fnc_setParameter;                 // Multiplier for the treatment time of an untrained person compared to that of a trained medic. Default: 2
-	["AGM_Medical_MaxUnconsciousnessTime", _missionParamDeathTimer] call AGM_Core_fnc_setParameter;     // Maximum time (in seconds) for a unit to be unconscious before dying. -1 disables this.
-	["AGM_Medical_AllowNonMedics", 0] call AGM_Core_fnc_setParameter;               // Allow non-medics to use epipens and bloodbags? Default: No
-	["AGM_Medical_RequireDiagnosis", 0] call AGM_Core_fnc_setParameter;             // Require an unconscious patient to be diagnosed before allowing treatment? Default: No
-	["AGM_Medical_PreventInstaDeath", _missionParamPreventInstantDeath] call AGM_Core_fnc_setParameter;            // Prevent instant death and always put players in unconscious state instead? Default: No
-	["AGM_Medical_PreventDeathWhileUnconscious", _missionParamInvincibleWhileDead] call AGM_Core_fnc_setParameter; // Make unconscious units invulnerable? Default: No
-	["AGM_Medical_SingleBandage", 0] call AGM_Core_fnc_setParameter;                // Use one bandage to heal the entire body? Default: No
-	["AGM_Medical_AllowChatWhileUnconscious", 0] call AGM_Core_fnc_setParameter;    // Allow all players to use chat while unconcious? Admin can always use the chat regardless. Default: No
-	["AGM_Medical_EnableOverdosing", 1] call AGM_Core_fnc_setParameter;             // Enable morphine overdoses? Default: Yes
-	["AGM_Medical_RequireMEDEVAC", 0] call AGM_Core_fnc_setParameter;               // Only allow Epipens within synchronized triggers? Default: No
-	["AGM_Medical_AutomaticWakeup", _missionParameterAllowAutomaticWakeup] call AGM_Core_fnc_setParameter;              // Allow units to wake up by themselves? Default: Yes
-	["AGM_Medical_DisableScreams", 0] call AGM_Core_fnc_setParameter;               // "Disable screaming on hit? Default: No
+	// From 'Revive Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleReviveSettings.sqf)
+	["ace_medical_enableRevive", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Players Only, 2 = Players and AI
+	["ace_medical_maxReviveTime", 300] call ace_common_fnc_setParameter; // Scalar. Default = 120
+	["ace_medical_amountOfReviveLives", -1] call ace_common_fnc_setParameter; // Scalar. -1 = Disabled. Default = -1
 	
-	diag_log format["Applied ACE Medical options. (%1, %2, %3, %4)", _missionParamInvincibleWhileDead, _missionParamPreventInstantDeath, _missionParamDeathTimer, _missionParameterAllowAutomaticWakeup];
-	*/
-}
+	// From 'Advanced Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleAdvancedMedicalSettings.sqf)
+	["ace_medical_enableFor", 0] call ace_common_fnc_setParameter; // 0 = Players Only, 1 = Players and AI
+	["ace_medical_enableAdvancedWounds", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled
+	//["ace_medical_enableAirway", X] call ace_common_fnc_setParameter;
+	//["ace_medical_enableFractures", X] call ace_common_fnc_setParameter;
+	["ace_medical_medicSetting_PAK", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
+	["ace_medical_medicSetting_SurgicalKit", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
+	["ace_medical_consumeItem_PAK", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
+	["ace_medical_consumeItem_SurgicalKit", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
+	["ace_medical_useLocation_PAK", 3] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2 = Medical Facility, 3* = Vehicle & Facility, 4 = Disabled
+	["ace_medical_useLocation_SurgicalKit", 2] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2* = Medical Facility, 3 = Vehicle & Facility, 4 = Disabled
 else
 {
 	diag_log "Not setting up medical options for ACE since PBO is not present.";
