@@ -4,6 +4,14 @@
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
 {
+	if (("jtf2_param_ace_medical_level" call BIS_fnc_getParamValue) == 0) then
+	{
+		diag_log "Applying ACE simple medical options.";
+	}
+	else
+	{
+		diag_log "Applying ACE advanced medical options.";
+	};
 	/*
 	AGM_Medical_Module = true;
 	publicVariable "AGM_Medical_Module";
@@ -46,9 +54,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_map")) then
 {
 	if (("jtf2_param_ace_show_squad_map_markers" call BIS_fnc_getParamValue) == 1) then
 	{
-		AGM_Map_BFT_Enabled = true;
+		ace_map_BFT_Enabled = true;
 		["ace_map_BFT_Interval", 1] call ace_common_fnc_setSetting;  // How often the markers should be refreshed (in seconds) Default: 1
 		["ace_map_BFT_HideAiGroups", 1] call ace_common_fnc_setParameter;  // Hide markers for 'AI only' groups? Default: true
+		ace_map_BFT_markers = [];
+		[ace_map_fnc_blueForceTrackingUpdate, ace_map_BFT_Interval, []] call CBA_fnc_addPerFrameHandler;
 		diag_log "Applied ACE Map options.";
 	}
 	else

@@ -81,12 +81,20 @@ class Params
 	
 	class jtf2_param_ace_medical_spacer
 	{
-		title = "--------------------- AGM MEDICAL OPTIONS ----------------------------";
+		title = "--------------------- ACE MEDICAL OPTIONS ----------------------------";
 		values[] = { 0, 1 };
 		texts[] = { " ", " " };
 		default = 0;
 	};
-	
+
+	class jtf2_param_ace_medical_level
+	{
+		title = "Simulation Level";
+		values[] = { 0, 1 };
+		texts[] = { "Simple", "Advanced" };
+		default = 1;
+	};
+
 	class jtf2_param_agm_map_spacer
 	{
 		title = "--------------------- AGM MAP OPTIONS ----------------------------";
