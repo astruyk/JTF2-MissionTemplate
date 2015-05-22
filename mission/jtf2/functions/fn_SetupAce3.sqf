@@ -4,9 +4,10 @@
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 {
-	if (("jtf2_param_ace_medical_level" call BIS_fnc_getParamValue) == 0) then
+	if (("jtf2_param_ace_medical_level" call BIS_fnc_getParamValue) == 1) then
 	{
 		diag_log "Applying ACE simple medical options.";
+		_medicalLevel = 2;
 	}
 	else
 	{
@@ -15,8 +16,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 	
 	// Look up defaults and types from https://github.com/acemod/ACE3/blob/master/addons/medical/ACE_Settings.hpp
 	// From 'Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleMedicalSettings.sqf)
-	//ace_medical_level = 2;
-	["ace_medical_level", 2] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
+	["ace_medical_level", _medicalLevel] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
 	["ace_medical_medicSetting", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
 	["ace_medical_allowLitterCreation", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled
 	["ace_medical_litterCleanUpDelay", 120] call ace_common_fnc_setParameter; // Time in seconds. 0 = Never cleanup. Default=120
@@ -35,8 +35,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 	["ace_medical_amountOfReviveLives", -1] call ace_common_fnc_setParameter; // Scalar. -1 = Disabled. Default = -1
 	
 	// From 'Advanced Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleAdvancedMedicalSettings.sqf)
-	["ace_medical_enableFor", 1] call ace_common_fnc_setParameter; // 0 = Players Only, 1 = Players and AI
-	["ace_medical_enableAdvancedWounds", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled
+	["ace_medical_enableFor", 0] call ace_common_fnc_setParameter; // 0* = Players Only, 1 = Players and AI
+	["ace_medical_enableAdvancedWounds", 0] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled - Re-opening of wounds
 	//["ace_medical_enableAirway", X] call ace_common_fnc_setParameter;
 	//["ace_medical_enableFractures", X] call ace_common_fnc_setParameter;
 	["ace_medical_medicSetting_PAK", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
