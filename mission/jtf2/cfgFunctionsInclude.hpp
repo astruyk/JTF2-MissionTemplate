@@ -8,8 +8,8 @@ class JTF2
 		class PositionBase;
 		class SetupSign;
 		class GenerateArsenalBlacklist;
-		class SetupAgm { postInit = 1; }
-		class SetupAce3 { postInit = 1; }
+		class SetupAgm { postInit = 1; };
+		class SetupAce3 { postInit = 1; };
 		class AssignGear;
 		class SetGear;
 	};

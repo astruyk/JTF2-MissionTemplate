@@ -2,7 +2,7 @@
 	Initializes a bunch of AGM variabes (if the mod is loaded) to match our playstyle.
 */
 
-if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
+if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 {
 	if (("jtf2_param_ace_medical_level" call BIS_fnc_getParamValue) == 0) then
 	{
@@ -15,7 +15,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
 	
 	// Look up defaults and types from https://github.com/acemod/ACE3/blob/master/addons/medical/ACE_Settings.hpp
 	// From 'Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleMedicalSettings.sqf)
-	["ace_medical_level", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
+	//ace_medical_level = 2;
+	["ace_medical_level", 2] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
 	["ace_medical_medicSetting", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Basic, 2 = Advanced
 	["ace_medical_allowLitterCreation", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled
 	["ace_medical_litterCleanUpDelay", 120] call ace_common_fnc_setParameter; // Time in seconds. 0 = Never cleanup. Default=120
@@ -34,7 +35,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
 	["ace_medical_amountOfReviveLives", -1] call ace_common_fnc_setParameter; // Scalar. -1 = Disabled. Default = -1
 	
 	// From 'Advanced Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleAdvancedMedicalSettings.sqf)
-	["ace_medical_enableFor", 0] call ace_common_fnc_setParameter; // 0 = Players Only, 1 = Players and AI
+	["ace_medical_enableFor", 1] call ace_common_fnc_setParameter; // 0 = Players Only, 1 = Players and AI
 	["ace_medical_enableAdvancedWounds", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled
 	//["ace_medical_enableAirway", X] call ace_common_fnc_setParameter;
 	//["ace_medical_enableFractures", X] call ace_common_fnc_setParameter;
@@ -42,8 +43,9 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical") && isServer) then
 	["ace_medical_medicSetting_SurgicalKit", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
 	["ace_medical_consumeItem_PAK", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
 	["ace_medical_consumeItem_SurgicalKit", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
-	["ace_medical_useLocation_PAK", 3] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2 = Medical Facility, 3* = Vehicle & Facility, 4 = Disabled
-	["ace_medical_useLocation_SurgicalKit", 2] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2* = Medical Facility, 3 = Vehicle & Facility, 4 = Disabled
+	["ace_medical_useLocation_PAK", 0] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2 = Medical Facility, 3* = Vehicle & Facility, 4 = Disabled
+	["ace_medical_useLocation_SurgicalKit", 0] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2* = Medical Facility, 3 = Vehicle & Facility, 4 = Disabled
+}
 else
 {
 	diag_log "Not setting up medical options for ACE since PBO is not present.";
