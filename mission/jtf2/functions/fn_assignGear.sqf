@@ -1,5 +1,12 @@
 _unit = _this select 0;
 
+// Get the unit type, overriding if the caller passed in a specific value
+_unitType = _unit getVariable ["JTF2_UnitType", "rifleman"];
+if (count _this) > 1 then
+{
+	_unitType = _this select 1;
+};
+
 if (local _unit) then
 {
 	switch ("jtf2_param_starting_loadouts" call BIS_fnc_getParamValue) do
@@ -14,7 +21,6 @@ if (local _unit) then
 				&& isClass (configFile >> "CfgPatches" >> "AGM_Medical")
 				&& isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
 			{
-				_unitType = _unit getVariable ["JTF2_UnitType", "rifleman"];
 				[] execVM "jtf2\scripts\gear\" + _unitType + ".sqf";
 			};
 		};
