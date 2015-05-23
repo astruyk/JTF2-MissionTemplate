@@ -1,6 +1,6 @@
 _items =
 	[
-		"AGM_SpareBarrel"
+		"ACE_SpareBarrel"
 	];
 _backpacks =
 	[

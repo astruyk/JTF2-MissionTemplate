@@ -1,7 +1,7 @@
 _items =
 	[
-		"AGM_MapTools",
-		"AGM_Vector"
+		"ACE_MapTools",
+		"ACE_Vector"
 	];
 _backpacks =
 	[
