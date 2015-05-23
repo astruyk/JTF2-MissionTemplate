@@ -36,7 +36,7 @@ player addHeadgear "CFB_TW_Patrol";
 comment "Add weapons";
 player addWeapon "rhs_weap_m4_m320";
 player addPrimaryWeaponItem "rhsusf_acc_compm4";
-player addWeapon "AGM_Vector";
+player addWeapon "ACE_Vector";
 
 comment "Add items";
 player linkItem "ItemMap";

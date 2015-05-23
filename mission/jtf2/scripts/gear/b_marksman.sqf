@@ -13,7 +13,7 @@ removeGoggles player;
 comment "Add containers";
 player forceAddUniform "CFB_TW_Rolled_Uniform";
 for "_i" from 1 to 2 do {player addItemToUniform "rhsusf_20Rnd_762x51_m993_Mag";};
-player addItemToUniform "AGM_EarBuds";
+player addItemToUniform "ACE_EarPlugs";
 player addVest "CFB_TW_Vest_Tactical";
 player addItemToVest "ACE_Kestrel4500";
 for "_i" from 1 to 3 do {player addItemToVest "SmokeShell";};

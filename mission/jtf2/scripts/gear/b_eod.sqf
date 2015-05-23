@@ -35,7 +35,7 @@ player addHeadgear "CFB_TW_Helmet_ECH";
 comment "Add weapons";
 player addWeapon "rhs_weap_m4_carryhandle";
 player addPrimaryWeaponItem "rhsusf_acc_compm4";
-player addWeapon "AGM_Vector";
+player addWeapon "ACE_Vector";
 
 comment "Add items";
 player linkItem "ItemMap";
