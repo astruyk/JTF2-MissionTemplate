@@ -1,5 +1,5 @@
 /*
-	Initializes a bunch of AGM variabes (if the mod is loaded) to match our playstyle.
+	Initializes a bunch of ACE variabes (if the mod is loaded) to match our playstyle.
 */
 
 if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then

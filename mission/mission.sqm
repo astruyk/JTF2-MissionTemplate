@@ -56,7 +56,7 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Dynamic Missions (v.1.11.0)";
+		briefingName="JTF2 Dynamic Missions (v.2.0.0)";
 		overviewText="A blank mission template for zeus/MCC missions.";
 		resistanceWest=0;
 		startWeather=0;
@@ -564,7 +564,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Wolf""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Wolf Weapon Team Lead";
 				};
 				class Item1
@@ -607,7 +607,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Jackal""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Jackal Weapon Team Lead";
 				};
 				class Item1
@@ -650,7 +650,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Fox""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Fox Team Lead (EOD)";
 				};
 				class Item1
@@ -1714,7 +1714,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Fox""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Fox Team Lead (EOD)";
 				};
 				class Item1
@@ -1758,7 +1758,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Wolf""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Wolf Weapon Team Lead";
 				};
 				class Item1
@@ -1802,7 +1802,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Jackal""]; [this, ""o_ftl""] call JTF2_fnc_SetGear; this setVariable [""ace_medical_medicClass"", 1];";
 					description="Jackal Weapon Team Lead";
 				};
 				class Item1

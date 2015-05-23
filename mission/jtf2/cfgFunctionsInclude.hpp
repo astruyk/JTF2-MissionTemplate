@@ -7,7 +7,6 @@ class JTF2
 		class GetMarkerNameForSide;
 		class PositionBase;
 		class SetupSign;
-		class SetupAgm { postInit = 1; };
 		class SetupAce3 { postInit = 1; };
 		class AssignGear;
 		class SetGear;

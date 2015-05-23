@@ -19,7 +19,7 @@ if (local _unit) then
 	{
 		case 0: // Role-specific equipment
 		{
-			// RHS, AGM and CFB_Skins are required for these loadouts. Otherwise
+			// RHS, ACE and CFB_Skins are required for these loadouts. Otherwise
 			// we'll just leave things at the default NATO loadouts.
 			if (_unitType == "spectator" || (
 					isClass (configFile >> "CfgPatches" >> "CFB_Skins")
