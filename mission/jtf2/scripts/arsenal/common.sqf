@@ -91,7 +91,6 @@ _items =
 		"CFB_AR_Helmet_ECH",
 		"CFB_AR_Boonie",
 		"CFB_AR_Patrol",
-		"CFB_JTF2_Helmet",
 		
 		// Bipods
 		"bipod_01_F_blk",
@@ -213,7 +212,7 @@ _magazines =
 		"ibr_7Rnd_45acp_1911",
 		"ibr_7Rnd_45acp_1911SD",
 		"rhs_mag_9x19_17",
-		"rhs_mag_9x18_12_57N181S"
+		"rhs_mag_9x18_12_57N181S",
 		
 		// ACE Mags
 		"ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
