@@ -12,15 +12,16 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "U_B_GhillieSuit";
-player addItemToUniform "AGM_EarBuds";
-player addItemToUniform "AGM_ItemKestrel";
-for "_i" from 1 to 4 do {player addItemToUniform "AGM_Bandage";};
+player addItemToUniform "ACE_EarPlugs";
+player addItemToUniform "ACE_Kestrel4500";
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 2 do {player addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 2 do {player addItemToUniform "SmokeShellGreen";};
 for "_i" from 1 to 2 do {player addItemToUniform "9Rnd_45ACP_Mag";};
 player addItemToUniform "7Rnd_408_Mag";
 player addVest "CFB_TW_Vest_Tactical";
-for "_i" from 1 to 3 do {player addItemToVest "AGM_Morphine";};
-player addItemToVest "AGM_Epipen";
+for "_i" from 1 to 2 do {player addItemToVest "ACE_morphine";};
+for "_i" from 1 to 2 do {player addItemToVest "ACE_epinephrine";};
 for "_i" from 1 to 6 do {player addItemToVest "7Rnd_408_Mag";};
 for "_i" from 1 to 2 do {player addItemToVest "9Rnd_45ACP_Mag";};
 
@@ -29,7 +30,7 @@ player addWeapon "srifle_LRR_camo_F";
 player addPrimaryWeaponItem "optic_SOS";
 player addWeapon "hgun_ACPC2_F";
 player addHandgunItem "muzzle_snds_acp";
-player addWeapon "AGM_Vector";
+player addWeapon "ACE_Vector";
 
 comment "Add items";
 player linkItem "ItemMap";

@@ -32,7 +32,7 @@ player addHeadgear "H_HelmetCrew_B";
 
 comment "Add weapons";
 player addWeapon "SMG_02_F";
-player addWeapon "AGM_Vector";
+player addWeapon "ACE_Vector";
 
 comment "Add items";
 player linkItem "ItemMap";
