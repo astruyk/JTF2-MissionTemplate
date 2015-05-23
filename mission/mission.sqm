@@ -93,7 +93,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.60000002;
-					init="this setGroupId [""Command""]; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Command""]; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Command (Platoon Lead)";
 				};
 				class Item1
@@ -105,7 +105,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Command""]; [this, ""medic""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Command""]; [this, ""b_medic""] call JTF2_fnc_SetGear;";
 					description="Platoon Medic";
 				};
 				class Item2
@@ -116,7 +116,7 @@ class Mission
 					vehicle="B_soldier_UAV_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Command""]; [this, ""uav""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Command""]; [this, ""b_uav""] call JTF2_fnc_SetGear;";
 					description="'Pathfinder' UAV Operator";
 				};
 				class Item3
@@ -127,7 +127,7 @@ class Mission
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Command""]; [this, ""jtac""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Command""]; [this, ""b_jtac""] call JTF2_fnc_SetGear;";
 					description="Platoon JTAC / FAO";
 				};
 			};
@@ -148,7 +148,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Ghost""]; [this, ""reconSniper""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Ghost""]; [this, ""b_reconSniper""] call JTF2_fnc_SetGear;";
 					description="Ghost Sniper";
 				};
 				class Item1
@@ -160,7 +160,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Ghost""]; [this, ""reconSpotter""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Ghost""]; [this, ""b_reconSpotter""] call JTF2_fnc_SetGear;";
 					description="Ghost Spotter";
 				};
 			};
@@ -181,7 +181,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_ftl""] call JTF2_fnc_SetGear;";
 					description="Panther Section Leader";
 				};
 				class Item1
@@ -192,7 +192,7 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""gl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_gl""] call JTF2_fnc_SetGear;";
 					description="Panther Grenadier";
 				};
 				class Item2
@@ -203,7 +203,7 @@ class Mission
 					vehicle="B_soldier_LAT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""lat""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
 					description="Panther Rifleman (AT)";
 				};
 				class Item3
@@ -214,7 +214,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
 					description="Panther Autorifleman";
 				};
 				class Item4
@@ -225,7 +225,7 @@ class Mission
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""aar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_aar""] call JTF2_fnc_SetGear;";
 					description="Panther Ammo Bearer";
 				};
 				class Item5
@@ -236,7 +236,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_marksman""] call JTF2_fnc_SetGear;";
 					description="Panther Marksman";
 				};
 				class Item6
@@ -248,7 +248,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""medic""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_medic""] call JTF2_fnc_SetGear;";
 					description="Panther Medic";
 				};
 				class Item7
@@ -259,7 +259,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
 					description="Panther Autorifleman";
 				};
 			};
@@ -280,7 +280,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_ftl""] call JTF2_fnc_SetGear;";
 					description="Badger Section Leader";
 				};
 				class Item1
@@ -291,7 +291,7 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""gl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_gl""] call JTF2_fnc_SetGear;";
 					description="Badger Grenadier";
 				};
 				class Item2
@@ -302,7 +302,7 @@ class Mission
 					vehicle="B_soldier_LAT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""lat""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
 					description="Badger Rifleman (AT)";
 				};
 				class Item3
@@ -313,7 +313,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_ar""] call JTF2_fnc_SetGear;";
 					description="Badger Autorifleman";
 				};
 				class Item4
@@ -324,7 +324,7 @@ class Mission
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""aar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_aar""] call JTF2_fnc_SetGear;";
 					description="Badger Ammo Bearer";
 				};
 				class Item5
@@ -335,7 +335,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_marksman""] call JTF2_fnc_SetGear;";
 					description="Badger Marksman";
 				};
 				class Item6
@@ -347,7 +347,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""medic""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_medic""] call JTF2_fnc_SetGear;";
 					description="Badger Medic";
 				};
 				class Item7
@@ -358,7 +358,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Badger""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Badger""]; [this, ""b_ar""] call JTF2_fnc_SetGear;";
 					description="Badger Autorifleman";
 				};
 			};
@@ -379,7 +379,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""ftl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_ftl""] call JTF2_fnc_SetGear;";
 					description="Mongoose Section Leader";
 				};
 				class Item1
@@ -390,7 +390,7 @@ class Mission
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""gl""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_gl""] call JTF2_fnc_SetGear;";
 					description="Mongoose Grenadier";
 				};
 				class Item2
@@ -401,7 +401,7 @@ class Mission
 					vehicle="B_soldier_LAT_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""lat""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
 					description="Mongoose Rifleman (AT)";
 				};
 				class Item3
@@ -412,7 +412,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_ar""] call JTF2_fnc_SetGear;";
 					description="Mongoose Autorifleman";
 				};
 				class Item4
@@ -423,7 +423,7 @@ class Mission
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""aar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_aar""] call JTF2_fnc_SetGear;";
 					description="Mongoose Ammo Bearer";
 				};
 				class Item5
@@ -434,7 +434,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""marksman""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_marksman""] call JTF2_fnc_SetGear;";
 					description="Mongoose Marksman";
 				};
 				class Item6
@@ -446,7 +446,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""medic""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_medic""] call JTF2_fnc_SetGear;";
 					description="Mongoose Medic";
 				};
 				class Item7
@@ -457,7 +457,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Mongoose""]; [this, ""ar""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Mongoose""]; [this, ""b_ar""] call JTF2_fnc_SetGear;";
 					description="Mongoose Autorifleman";
 				};
 			};
@@ -478,7 +478,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Hammer""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Hammer""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Hammer Lead (Commander)";
 				};
 				class Item1
@@ -489,7 +489,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Hammer""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Hammer""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Hammer Gunner";
 				};
 				class Item2
@@ -500,7 +500,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Hammer""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Hammer""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Hammer Driver";
 				};
 			};
@@ -521,7 +521,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Anvil""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Anvil""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Anvil Lead (Commander)";
 				};
 				class Item1
@@ -532,7 +532,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Anvil""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Anvil""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Hammer Gunner";
 				};
 				class Item2
@@ -543,7 +543,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Anvil""]; [this, ""crew""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Anvil""]; [this, ""b_crew""] call JTF2_fnc_SetGear;";
 					description="Hammer Driver";
 				};
 			};
@@ -564,7 +564,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Wolf""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Wolf Weapon Team Lead";
 				};
 				class Item1
@@ -575,7 +575,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""mmg""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Wolf""]; [this, ""b_mmg""] call JTF2_fnc_SetGear;";
 					description="Wolf Weapon Specialist";
 				};
 				class Item2
@@ -586,7 +586,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Wolf""]; [this, ""ammg""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Wolf""]; [this, ""b_ammg""] call JTF2_fnc_SetGear;";
 					description="Wolf Asst. Weapon Specialist";
 				};
 			};
@@ -607,7 +607,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Jackal""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Jackal Weapon Team Lead";
 				};
 				class Item1
@@ -618,7 +618,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""mmg""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Jackal""]; [this, ""b_mmg""] call JTF2_fnc_SetGear;";
 					description="Jackal Weapon Specialist";
 				};
 				class Item2
@@ -629,7 +629,7 @@ class Mission
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Jackal""]; [this, ""ammg""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Jackal""]; [this, ""b_ammg""] call JTF2_fnc_SetGear;";
 					description="Jackal Asst. Weapon Specialist";
 				};
 			};
@@ -650,7 +650,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
+					init="this setGroupId [""Fox""]; [this, ""b_ftl""] call JTF2_fnc_SetGear; this setVariable [""AGM_IsMedic"", true];";
 					description="Fox Team Lead (EOD)";
 				};
 				class Item1
@@ -661,7 +661,7 @@ class Mission
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""eod""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Fox""]; [this, ""b_eod""] call JTF2_fnc_SetGear;";
 					description="Fox EOD Specialist";
 				};
 				class Item2
@@ -672,7 +672,7 @@ class Mission
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Fox""]; [this, ""eod""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Fox""]; [this, ""b_eod""] call JTF2_fnc_SetGear;";
 					description="Fox EOD Specialist";
 				};
 			};
@@ -693,7 +693,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.60000002;
-					init="this setGroupId [""Flight Lead""]; [this, ""flightCommand""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Flight Lead""]; [this, ""b_flightCommand""] call JTF2_fnc_SetGear;";
 					description="Flight Lead";
 				};
 			};
@@ -714,7 +714,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Albatross-1""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Albatross-1""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Albatross-1 (Transport Pilot)";
 				};
 			};
@@ -735,7 +735,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Albatross-2""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Albatross-2""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Albatross-2 (Transport Pilot)";
 				};
 			};
@@ -756,7 +756,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Angel""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Angel""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Angel Lead (Pilot)";
 				};
 				class Item1
@@ -768,7 +768,7 @@ class Mission
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Angel""]; [this, ""airMedic""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Angel""]; [this, ""b_airMedic""] call JTF2_fnc_SetGear;";
 					description="Angel Medic";
 				};
 			};
@@ -789,7 +789,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Raptor-1""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Raptor-1""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Raptor-1 (Pilot)";
 				};
 				class Item1
@@ -801,7 +801,7 @@ class Mission
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Raptor-1""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Raptor-1""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Raptor-1 (Co-Pilor)";
 				};
 			};
@@ -822,7 +822,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Raptor-2""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Raptor-2""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Raptor-2 (Pilot)";
 				};
 				class Item1
@@ -834,7 +834,7 @@ class Mission
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init="this setGroupId [""Raptor-2""]; [this, ""pilot""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Raptor-2""]; [this, ""b_pilot""] call JTF2_fnc_SetGear;";
 					description="Raptor-2 (Co-Pilot)";
 				};
 			};
