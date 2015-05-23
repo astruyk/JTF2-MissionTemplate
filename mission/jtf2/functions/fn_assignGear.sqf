@@ -24,7 +24,7 @@ if (local _unit) then
 			if (_unitType == "spectator" || (
 					isClass (configFile >> "CfgPatches" >> "CFB_Skins")
 					&& isClass (configFile >> "CfgPatches" >> "rhs_weapons")
-					&& isClass (configFile >> "CfgPatches" >> "AGM_Medical")
+					&& isClass (configFile >> "CfgPatches" >> "ACE_Medical")
 					&& isClass (configFile >> "CfgPatches" >> "task_force_radio"))) then
 			{
 				[] execVM "jtf2\scripts\gear\" + _unitType + ".sqf";

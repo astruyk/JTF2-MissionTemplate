@@ -12,7 +12,7 @@ removeGoggles player;
 
 comment "Add containers";
 player forceAddUniform "CFB_TW_Uniform";
-player addItemToUniform "AGM_MapTools";
+player addItemToUniform "ACE_MapTools";
 for "_i" from 1 to 3 do {player addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
 player addVest "CFB_TW_Vest_Tactical";
 for "_i" from 1 to 3 do {player addItemToVest "SmokeShell";};
@@ -20,12 +20,13 @@ for "_i" from 1 to 3 do {player addItemToVest "SmokeShellGreen";};
 for "_i" from 1 to 8 do {player addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
 for "_i" from 1 to 3 do {player addItemToVest "1Rnd_SmokeGreen_Grenade_shell";};
 player addBackpack "tf_rt1523g_green";
-for "_i" from 1 to 10 do {player addItemToBackpack "AGM_Bandage";};
-for "_i" from 1 to 4 do {player addItemToBackpack "AGM_Morphine";};
-for "_i" from 1 to 2 do {player addItemToBackpack "AGM_Epipen";};
-player addItemToBackpack "AGM_EarBuds";
-player addItemToBackpack "AGM_Bloodbag";
-
+for "_i" from 1 to 4 do {player addItemToBackpack "ACE_fieldDressing";};
+for "_i" from 1 to 3 do {player addItemToBackpack "ACE_elasticBandage";};
+for "_i" from 1 to 3 do {player addItemToBackpack "ACE_quikclot";};
+for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
+for "_i" from 1 to 2 do {player addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 1 do {player addItemToBackpack "ACE_tourniquet";};
+player addItemToBackpack "ACE_EarPlugs";
 for "_i" from 1 to 3 do {player addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 3 do {player addItemToBackpack "1Rnd_SmokeBlue_Grenade_shell";};
 for "_i" from 1 to 3 do {player addItemToBackpack "1Rnd_SmokeOrange_Grenade_shell";};
