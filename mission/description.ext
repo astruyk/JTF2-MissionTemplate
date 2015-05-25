@@ -59,9 +59,9 @@ class Params
 	class jtf2_param_respawn_tickets
 	{
 		title = "Number of Respawns";
-		values[] = { -1, 0, 1, 5, 10, 20, 50 };
-		texts[] = { "Unlimited", "No Respawns", "1 Respawn", "5 Respawns", "10 Respawns", "20 Respawns", "50 Respawns" };
-		default = 0;
+		values[] = { -1, 0, 1, 5, 10, 15, 20 };
+		texts[] = { "Unlimited", "No Respawns", "1 Respawn", "5 Respawns", "10 Respawns", "15 Respawns", "20 Respawns" };
+		default = -1;
 	};
 	
 	class jtf2_param_ace_map_spacer
