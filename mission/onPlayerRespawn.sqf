@@ -16,7 +16,7 @@ _respawnDelay = _this select 3;
 			_isOutOfRespawnTickets = _ticketsRemaining < 0;
 			if (_isOutOfRespawnTickets) then
 			{
-				hint format ["Out of respawn tickets! %1", _ticketsRemaining];
+				hint format ["Out of respawn tickets!", _ticketsRemaining];
 				_spectatorCamActionId = player addAction ["Specatator Camera", {[player] execVM "spectator\specta.sqf"}];
 
 				// Start the script to keep the player from using weapons, radios, or vehicles (keep them at base).
