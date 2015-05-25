@@ -42,8 +42,8 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 	//["ace_medical_enableFractures", X] call ace_common_fnc_setParameter;
 	["ace_medical_medicSetting_PAK", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
 	["ace_medical_medicSetting_SurgicalKit", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
-	["ace_medical_consumeItem_PAK", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
-	["ace_medical_consumeItem_SurgicalKit", 0] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
+	["ace_medical_consumeItem_PAK", 1] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
+	["ace_medical_consumeItem_SurgicalKit", 1] call ace_common_fnc_setParameter; // 0* = No, 1 = Yes
 	["ace_medical_useLocation_PAK", 0] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2 = Medical Facility, 3* = Vehicle & Facility, 4 = Disabled
 	["ace_medical_useLocation_SurgicalKit", 0] call ace_common_fnc_setParameter; // 0 = Anywhere, 1 = Medical Vehicles, 2* = Medical Facility, 3 = Vehicle & Facility, 4 = Disabled
 }
