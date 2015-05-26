@@ -1,7 +1,8 @@
 // Setup the pools for reinforcements if CFB_Skins is running.
 [] execVM "Ares_AddCfbReinforcementPools.sqf";
 MCC_path = ""; // Keeps specatator script from freaking out.
-[] execVM "Ares_addClassRestrictedArsenalModule.sqf";
+// TODO enable when this is complete.
+// [] execVM "Ares_addClassRestrictedArsenalModule.sqf";
 [] execVM "Ares_addRespawnTicketModules.sqf";
 
 enableSaving [false, false]; //Don't allow saving
