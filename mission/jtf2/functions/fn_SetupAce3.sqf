@@ -37,7 +37,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_medical")) then
 	
 	// From 'Advanced Medical Settings' module (https://github.com/acemod/ACE3/blob/master/addons/medical/functions/fnc_moduleAdvancedMedicalSettings.sqf)
 	["ace_medical_enableFor", 0] call ace_common_fnc_setParameter; // 0* = Players Only, 1 = Players and AI
-	["ace_medical_enableAdvancedWounds", 0] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled - Re-opening of wounds
+	["ace_medical_enableAdvancedWounds", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled - Re-opening of wounds
 	//["ace_medical_enableAirway", X] call ace_common_fnc_setParameter;
 	//["ace_medical_enableFractures", X] call ace_common_fnc_setParameter;
 	["ace_medical_medicSetting_PAK", 1] call ace_common_fnc_setParameter; // 0 = Anyone, 1* = Medics Only, 2 = Doctors Only
