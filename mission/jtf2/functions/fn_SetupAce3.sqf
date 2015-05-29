@@ -72,3 +72,14 @@ else
 {
 	diag_log "Not setting up map options for ACE since PBO is not present.";
 };
+
+if (isClass (configFile >> "CfgPatches" >> "ace_mk6mortar")) then
+{
+	["ace_mk6mortar_airResistanceEnabled", 1] call ace_common_fnc_setParameter; // 0* = Disabled, 1 = Enabled. For Player Shots, Model Air Resistance and Wind Effects.
+	["ace_mk6mortar_allowComputerRangefinder", 0] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled. Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance).
+	["ace_mk6mortar_allowCompass", 1] call ace_common_fnc_setParameter; // 0 = Disabled, 1* = Enabled. Show the MK6 Digital Compass.
+}
+else
+{
+	diag_log "Not setting up map options for ACE since PBO is not present.";
+};
