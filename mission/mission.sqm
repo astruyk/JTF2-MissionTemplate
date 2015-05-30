@@ -1035,7 +1035,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus1";
-					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this allowDamage false; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -1056,7 +1056,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus2";
-					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this allowDamage false; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -2098,7 +2098,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus3";
-					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this allowDamage false; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -2167,7 +2167,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus4";
-					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this allowDamage false; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
@@ -2236,7 +2236,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="zeus5";
-					init="this allowDamage false; [this, ""command""] call JTF2_fnc_SetGear;";
+					init="this allowDamage false; [this, ""b_command""] call JTF2_fnc_SetGear;";
 					description="Zeus";
 				};
 			};
