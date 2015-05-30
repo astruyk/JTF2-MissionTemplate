@@ -34,3 +34,6 @@ call .\Generate_PBO.bat smd_sahrani_a3
 
 REM Bornholm
 call .\Generate_PBO.bat Bornholm
+
+REM Kunduz
+call .\Generate_PBO.bat Kunduz
