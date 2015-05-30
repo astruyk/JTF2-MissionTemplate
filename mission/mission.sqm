@@ -56,7 +56,7 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="JTF2 Dynamic Missions (v.2.0.2)";
+		briefingName="JTF2 Dynamic Missions (v.2.0.3)";
 		overviewText="A blank mission template for zeus/MCC missions.";
 		resistanceWest=0;
 		startWeather=0;
@@ -181,7 +181,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="this setGroupId [""Panther""]; [this, ""b_lat""] call JTF2_fnc_SetGear;";
+					init="this setGroupId [""Panther""]; [this, ""b_ar""] call JTF2_fnc_SetGear;";
 					description="Panther Autorifleman";
 				};
 				class Item4
