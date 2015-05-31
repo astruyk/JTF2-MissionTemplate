@@ -11,5 +11,7 @@ class JTF2
 		class AssignGear;
 		class SetGear;
 		class AddClassRestrictedArsenal;
+		class handleKilled;
+		class handleRespawn;
 	};
 };

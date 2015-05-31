@@ -42,3 +42,34 @@ if (isServer) then
 	case 0: { tawvd_disableGrassChanges = true; };
 	case 1: { tawvd_disablenone = true; };
  };
+ 
+if (!isDedicated) then
+{
+	// Register the MP event handlers.
+	[] spawn
+		{
+			sleep 1;  waitUntil { sleep 0.1; !isNull player; }; 
+			player addMpEventHandler
+				[
+					"MPRespawn",
+					{
+						[_this select 0] spawn
+							{
+								waitUntil { sleep 0.1; !isNull player; };
+								[_this select 0] call JTF2_fnc_handleRespawn;
+							};
+					}
+				];
+			player addMpEventHandler
+				[
+					"MPKilled",
+					{
+						[_this select 0] spawn
+							{
+								waitUntil { sleep 0.1; !isNull player; };
+								[_this select 0] call JTF2_fnc_handleKilled;
+							};
+					}
+				];
+		};
+};
