@@ -3,6 +3,8 @@ _oldUnit = _this select 1;
 _respawn = _this select 2;
 _respawnDelay = _this select 3;
 
+if (not local _newUnit) exitWith {};
+
 [] spawn
 	{
 		// Wait until the player variable is valid. This isn't always the case right away.

@@ -1,5 +1,7 @@
 _unit = _this select 0;
 
+if (not local _unit) exitWith {};
+
 // Get the unit type, overriding if the caller passed in a specific value
 _unitType = _unit getVariable ["JTF2_UnitType", "rifleman"];
 if ((count _this) > 1) then
