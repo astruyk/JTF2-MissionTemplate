@@ -1,6 +1,10 @@
 _unit = _this select 0;
 
-if (not local _unit) exitWith {};
+if (not local _unit) exitWith { diag_log "_unit is not local. Aborting gear assignment."; };
+if (player != _unit) exitWith { diag_log "_unit is not player. Aborting gear assignment."; };
+_hasGearBeenAssignedAlready = _unit getVariable ["JTF2_Gear_Assigned", false];
+if (_hasGearBeenAssignedAlready) exitWith { diag_log "Gear already assigned." };
+_unit setVariable ["JTF2_Gear_Assigned", true];
 
 // Get the unit type, overriding if the caller passed in a specific value
 _unitType = _unit getVariable ["JTF2_UnitType", "rifleman"];

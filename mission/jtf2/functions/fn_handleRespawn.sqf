@@ -1,3 +1,6 @@
+_unit = _this select 0;
+if (not local _unit) exitWith { diag_log "HandleRespawn called for non-local unit."; };
+
 // Handle player-specific tickets
 _defaultTickets = ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue);
 if (_defaultTickets >= 0) then

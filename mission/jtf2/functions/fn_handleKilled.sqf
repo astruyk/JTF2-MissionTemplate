@@ -1,6 +1,8 @@
 _killedUnit = _this select 0;
 if (not local _killedUnit) exitWith {};
 
+player setVariable ["JTF2_Gear_Assigned", false];
+
 _defaultTickets = ("jtf2_param_respawn_tickets" call BIS_fnc_getParamValue);
 if (_defaultTickets >= 0) then
 {
