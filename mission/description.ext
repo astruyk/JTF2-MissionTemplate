@@ -93,7 +93,7 @@ class Params
 		title = "Simulation Level";
 		values[] = { 0, 1 };
 		texts[] = { "Simple", "Advanced" };
-		default = 1;
+		default = 0;
 	};
 };
 
