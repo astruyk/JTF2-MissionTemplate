@@ -1,39 +1,36 @@
-comment "Exported from Arsenal by Anton WO.";
-
 comment "Remove existing items";
-removeAllWeapons player;
-removeAllItems player;
-removeAllAssignedItems player;
-removeUniform player;
-removeVest player;
-removeBackpack player;
-removeHeadgear player;
-removeGoggles player;
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
 
 comment "Add containers";
-player forceAddUniform "CFB_TW_Uniform";
-player addItemToUniform "rhsusf_100Rnd_556x45_soft_pouch";
-player addVest "CFB_TW_Vest_PlateCarrier2";
-for "_i" from 1 to 3 do {player addItemToVest "SmokeShell";};
-for "_i" from 1 to 3 do {player addItemToVest "SmokeShellGreen";};
-for "_i" from 1 to 3 do {player addItemToVest "rhsusf_100Rnd_556x45_soft_pouch";};
-player addBackpack "CFB_TW_Backpack_Kitbag";
-for "_i" from 1 to 4 do {player addItemToBackpack "ACE_fieldDressing";};
-for "_i" from 1 to 3 do {player addItemToBackpack "ACE_elasticBandage";};
-for "_i" from 1 to 3 do {player addItemToBackpack "ACE_quikclot";};
-for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
-for "_i" from 1 to 2 do {player addItemToBackpack "ACE_epinephrine";};
-for "_i" from 1 to 1 do {player addItemToBackpack "ACE_tourniquet";};
-player addItemToBackpack "ACE_EarPlugs";
-player addItemToBackpack "ACE_SpareBarrel";
-for "_i" from 1 to 6 do {player addItemToBackpack "rhsusf_100Rnd_556x45_soft_pouch";};
-player addHeadgear "CFB_TW_Helmet";
+this forceAddUniform "CFB_TW_Rolled_Uniform";
+for "_i" from 1 to 10 do {this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 4 do {this addItemToUniform "ACE_morphine";};
+this addItemToUniform "ACE_EarPlugs";
+this addItemToUniform "ACE_epinephrine";
+for "_i" from 1 to 2 do {this addItemToUniform "ACE_CableTie";};
+this addItemToUniform "ACE_IR_Strobe_Item";
+this addVest "CFB_TW_Vest_PlateCarrier2";
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+this addItemToVest "HandGrenade";
+for "_i" from 1 to 2 do {this addItemToVest "rhs_200rnd_556x45_M_SAW";};
+this addHeadgear "CFB_TW_Helmet";
 
 comment "Add weapons";
-player addWeapon "rhs_weap_m249_pip";
+this addWeapon "rhs_weap_m249_pip_L";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15A";
+this addPrimaryWeaponItem "rhsusf_acc_ELCAN";
+this addItemToVest "rhs_200rnd_556x45_M_SAW"; //must do this or you are left with half-empty vest
 
 comment "Add items";
-player linkItem "ItemMap";
-player linkItem "ItemCompass";
-player linkItem "ItemWatch";
-player linkItem "tf_anprc152_1";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_1";
+this linkItem "NVGoggles_INDEP";
