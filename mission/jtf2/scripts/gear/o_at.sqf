@@ -16,17 +16,19 @@ player addItemToUniform "ACE_epinephrine";
 player addItemToUniform "ACE_EarPlugs";
 player addItemToUniform "rhs_mag_rgd5";
 for "_i" from 1 to 2 do {player addItemToUniform "SmokeShell";};
-player addVest "rhs_6b23_digi_sniper";
+player addVest "rhs_6b23_digi_6sh92_vog";
 player addItemToVest "ACE_EarPlugs";
-for "_i" from 1 to 13 do {player addItemToVest "rhs_10Rnd_762x54mmR_7N1";};
-for "_i" from 1 to 2 do {player addItemToVest "rhs_mag_9x19_17";};
+for "_i" from 1 to 10 do {player addItemToVest "rhs_30Rnd_545x39_AK";};
+player addBackpack "rhs_rpg_empty";
+player addItemToBackpack "ACE_MapTools";
+for "_i" from 1 to 4 do {player addItemToBackpack "rhs_rpg7_PG7VL_mag";};
 player addHeadgear "rhs_6b27m_digi";
 
 comment "Add weapons";
-player addWeapon "rhs_weap_svd";
-player addPrimaryWeaponItem "rhs_acc_pso1m2";
-player addWeapon "rhs_weap_pya";
-player addWeapon "Rangefinder";
+player addWeapon "rhs_weap_ak74m";
+player addPrimaryWeaponItem "rhs_acc_dtk";
+player addWeapon "rhs_weap_rpg7";
+player addSecondaryWeaponItem "rhs_acc_pgo7v";
 
 comment "Add items";
 player linkItem "ItemMap";

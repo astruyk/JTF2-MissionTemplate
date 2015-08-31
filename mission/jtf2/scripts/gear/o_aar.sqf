@@ -1,5 +1,3 @@
-comment "Exported from Arsenal by Anton WO.";
-
 comment "Remove existing items";
 removeAllWeapons player;
 removeAllItems player;
@@ -11,29 +9,28 @@ removeHeadgear player;
 removeGoggles player;
 
 comment "Add containers";
-player forceAddUniform "rhs_uniform_flora";
-for "_i" from 1 to 3 do {player addItemToUniform "rhs_30Rnd_545x39_7n10_AK";};
-player addVest "rhs_6b23_6sh92";
-for "_i" from 1 to 5 do {player addItemToVest "SmokeShell";};
-for "_i" from 1 to 5 do {player addItemToVest "SmokeShellGreen";};
-for "_i" from 1 to 5 do {player addItemToVest "rhs_30Rnd_545x39_7n10_AK";};
-for "_i" from 1 to 10 do {player addItemToVest "AGM_Bandage";};
-for "_i" from 1 to 4 do {player addItemToVest "AGM_Morphine";};
-for "_i" from 1 to 2 do {player addItemToVest "AGM_Epipen";};
-player addItemToVest "AGM_Bloodbag";
-player addItemToVest "AGM_EarBuds";
-player addBackpack "B_Kitbag_sgg";
-for "_i" from 1 to 4 do {player addItemToBackpack "rhs_100Rnd_762x54mmR";};
-for "_i" from 1 to 12 do {player addItemToBackpack "rhs_30Rnd_545x39_7n10_AK";};
-for "_i" from 1 to 6 do {player addItemToBackpack "rhs_VOG25";};
-player addHeadgear "rhs_6b27m_ess";
+player forceAddUniform "rhs_uniform_emr_patchless";
+for "_i" from 1 to 8 do {player addItemToUniform "ACE_fieldDressing";};
+player addItemToUniform "ACE_epinephrine";
+for "_i" from 1 to 4 do {player addItemToUniform "ACE_morphine";};
+for "_i" from 1 to 2 do {player addItemToUniform "SmokeShell";};
+player addItemToUniform "SmokeShellGreen";
+player addItemToUniform "SmokeShellRed";
+player addItemToUniform "rhs_mag_rgd5";
+player addVest "rhs_6b23_digi_6sh92_vog";
+for "_i" from 1 to 10 do {player addItemToVest "rhs_30Rnd_545x39_AK";};
+player addItemToVest "rhs_mag_rgd5";
+player addBackpack "rhs_sidor";
+for "_i" from 1 to 7 do {player addItemToBackpack "rhs_45Rnd_545X39_AK_Green";};
+player addHeadgear "rhs_6b27m_digi";
 
 comment "Add weapons";
 player addWeapon "rhs_weap_ak74m";
-player addPrimaryWeaponItem "rhs_acc_pkas";
+player addPrimaryWeaponItem "rhs_acc_dtk";
 
 comment "Add items";
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "ItemWatch";
-player linkItem "tf_anprc152_1";
+player linkItem "tf_fadak_2";
+player linkItem "NVGoggles_INDEP";
